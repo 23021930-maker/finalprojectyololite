@@ -1,0 +1,2494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="topp.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_topp_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="AESL_inst_topp_group">
+      <obj_property name="label">AESL_inst_topp</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/conv1_U0_activity">
+         <obj_property name="ElementShortName">conv1_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">conv1_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/maxpool1_U0_activity">
+         <obj_property name="ElementShortName">maxpool1_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">maxpool1_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/conv2_U0_activity">
+         <obj_property name="ElementShortName">conv2_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">conv2_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/maxpool2_U0_activity">
+         <obj_property name="ElementShortName">maxpool2_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">maxpool2_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/conv3_U0_activity">
+         <obj_property name="ElementShortName">conv3_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">conv3_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/conv4_U0_activity">
+         <obj_property name="ElementShortName">conv4_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">conv4_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/conv5_U0_activity">
+         <obj_property name="ElementShortName">conv5_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">conv5_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/detection_head_U0_activity">
+         <obj_property name="ElementShortName">detection_head_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">detection_head_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="conv1_U0_group">
+         <obj_property name="label">conv1_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="conv1_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="in_0_group">
+               <obj_property name="label">in_0(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/in_0_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/in_0_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/in_0_ce0">
+                  <obj_property name="ElementShortName">in_0_ce0</obj_property>
+                  <obj_property name="ObjectShortName">in_0_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="in_1_group">
+               <obj_property name="label">in_1(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/in_1_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/in_1_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/in_1_ce0">
+                  <obj_property name="ElementShortName">in_1_ce0</obj_property>
+                  <obj_property name="ObjectShortName">in_1_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="in_2_group">
+               <obj_property name="label">in_2(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/in_2_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/in_2_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/in_2_ce0">
+                  <obj_property name="ElementShortName">in_2_ce0</obj_property>
+                  <obj_property name="ObjectShortName">in_2_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="conv1_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="conv1_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_0_group">
+               <obj_property name="label">out_0(f1_0_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_0_blk_n">
+                  <obj_property name="ElementShortName">out_0_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_0_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_0_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_0_full_n">
+                  <obj_property name="ElementShortName">out_0_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_0_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_0_write">
+                  <obj_property name="ElementShortName">out_0_write</obj_property>
+                  <obj_property name="ObjectShortName">out_0_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_1_group">
+               <obj_property name="label">out_1(f1_1_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_1_blk_n">
+                  <obj_property name="ElementShortName">out_1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_1_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_1_full_n">
+                  <obj_property name="ElementShortName">out_1_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_1_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_1_write">
+                  <obj_property name="ElementShortName">out_1_write</obj_property>
+                  <obj_property name="ObjectShortName">out_1_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_2_group">
+               <obj_property name="label">out_2(f1_2_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_2_blk_n">
+                  <obj_property name="ElementShortName">out_2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_2_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_2_full_n">
+                  <obj_property name="ElementShortName">out_2_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_2_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_2_write">
+                  <obj_property name="ElementShortName">out_2_write</obj_property>
+                  <obj_property name="ObjectShortName">out_2_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_3_group">
+               <obj_property name="label">out_3(f1_3_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_3_blk_n">
+                  <obj_property name="ElementShortName">out_3_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_3_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_3_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_3_full_n">
+                  <obj_property name="ElementShortName">out_3_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_3_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_3_write">
+                  <obj_property name="ElementShortName">out_3_write</obj_property>
+                  <obj_property name="ObjectShortName">out_3_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_4_group">
+               <obj_property name="label">out_4(f1_4_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_4_blk_n">
+                  <obj_property name="ElementShortName">out_4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_4_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_4_full_n">
+                  <obj_property name="ElementShortName">out_4_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_4_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_4_write">
+                  <obj_property name="ElementShortName">out_4_write</obj_property>
+                  <obj_property name="ObjectShortName">out_4_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_5_group">
+               <obj_property name="label">out_5(f1_5_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_5_blk_n">
+                  <obj_property name="ElementShortName">out_5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_5_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_5_full_n">
+                  <obj_property name="ElementShortName">out_5_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_5_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_5_write">
+                  <obj_property name="ElementShortName">out_5_write</obj_property>
+                  <obj_property name="ObjectShortName">out_5_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_6_group">
+               <obj_property name="label">out_6(f1_6_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_6_blk_n">
+                  <obj_property name="ElementShortName">out_6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_6_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_6_full_n">
+                  <obj_property name="ElementShortName">out_6_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_6_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_6_write">
+                  <obj_property name="ElementShortName">out_6_write</obj_property>
+                  <obj_property name="ObjectShortName">out_6_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_7_group">
+               <obj_property name="label">out_7(f1_7_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_7_blk_n">
+                  <obj_property name="ElementShortName">out_7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_7_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_7_full_n">
+                  <obj_property name="ElementShortName">out_7_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_7_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv1_U0/out_7_write">
+                  <obj_property name="ElementShortName">out_7_write</obj_property>
+                  <obj_property name="ObjectShortName">out_7_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="maxpool1_U0_group">
+         <obj_property name="label">maxpool1_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="maxpool1_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="f1_0_group">
+               <obj_property name="label">f1_0(f1_0_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_0_blk_n">
+                  <obj_property name="ElementShortName">f1_0_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_0_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_0_dout">
+                  <obj_property name="ElementShortName">f1_0_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f1_0_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_0_empty_n">
+                  <obj_property name="ElementShortName">f1_0_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_0_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_0_read">
+                  <obj_property name="ElementShortName">f1_0_read</obj_property>
+                  <obj_property name="ObjectShortName">f1_0_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f1_1_group">
+               <obj_property name="label">f1_1(f1_1_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_1_blk_n">
+                  <obj_property name="ElementShortName">f1_1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_1_dout">
+                  <obj_property name="ElementShortName">f1_1_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f1_1_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_1_empty_n">
+                  <obj_property name="ElementShortName">f1_1_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_1_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_1_read">
+                  <obj_property name="ElementShortName">f1_1_read</obj_property>
+                  <obj_property name="ObjectShortName">f1_1_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f1_2_group">
+               <obj_property name="label">f1_2(f1_2_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_2_blk_n">
+                  <obj_property name="ElementShortName">f1_2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_2_dout">
+                  <obj_property name="ElementShortName">f1_2_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f1_2_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_2_empty_n">
+                  <obj_property name="ElementShortName">f1_2_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_2_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_2_read">
+                  <obj_property name="ElementShortName">f1_2_read</obj_property>
+                  <obj_property name="ObjectShortName">f1_2_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f1_3_group">
+               <obj_property name="label">f1_3(f1_3_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_3_blk_n">
+                  <obj_property name="ElementShortName">f1_3_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_3_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_3_dout">
+                  <obj_property name="ElementShortName">f1_3_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f1_3_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_3_empty_n">
+                  <obj_property name="ElementShortName">f1_3_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_3_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_3_read">
+                  <obj_property name="ElementShortName">f1_3_read</obj_property>
+                  <obj_property name="ObjectShortName">f1_3_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f1_4_group">
+               <obj_property name="label">f1_4(f1_4_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_4_blk_n">
+                  <obj_property name="ElementShortName">f1_4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_4_dout">
+                  <obj_property name="ElementShortName">f1_4_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f1_4_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_4_empty_n">
+                  <obj_property name="ElementShortName">f1_4_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_4_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_4_read">
+                  <obj_property name="ElementShortName">f1_4_read</obj_property>
+                  <obj_property name="ObjectShortName">f1_4_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f1_5_group">
+               <obj_property name="label">f1_5(f1_5_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_5_blk_n">
+                  <obj_property name="ElementShortName">f1_5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_5_dout">
+                  <obj_property name="ElementShortName">f1_5_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f1_5_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_5_empty_n">
+                  <obj_property name="ElementShortName">f1_5_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_5_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_5_read">
+                  <obj_property name="ElementShortName">f1_5_read</obj_property>
+                  <obj_property name="ObjectShortName">f1_5_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f1_6_group">
+               <obj_property name="label">f1_6(f1_6_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_6_blk_n">
+                  <obj_property name="ElementShortName">f1_6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_6_dout">
+                  <obj_property name="ElementShortName">f1_6_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f1_6_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_6_empty_n">
+                  <obj_property name="ElementShortName">f1_6_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_6_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_6_read">
+                  <obj_property name="ElementShortName">f1_6_read</obj_property>
+                  <obj_property name="ObjectShortName">f1_6_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f1_7_group">
+               <obj_property name="label">f1_7(f1_7_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_7_blk_n">
+                  <obj_property name="ElementShortName">f1_7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_7_dout">
+                  <obj_property name="ElementShortName">f1_7_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f1_7_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_7_empty_n">
+                  <obj_property name="ElementShortName">f1_7_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f1_7_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/f1_7_read">
+                  <obj_property name="ElementShortName">f1_7_read</obj_property>
+                  <obj_property name="ObjectShortName">f1_7_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="maxpool1_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="maxpool1_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_0_group">
+               <obj_property name="label">out_0(p1_0_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_0_blk_n">
+                  <obj_property name="ElementShortName">out_0_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_0_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_0_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_0_full_n">
+                  <obj_property name="ElementShortName">out_0_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_0_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_0_write">
+                  <obj_property name="ElementShortName">out_0_write</obj_property>
+                  <obj_property name="ObjectShortName">out_0_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_1_group">
+               <obj_property name="label">out_1(p1_1_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_1_blk_n">
+                  <obj_property name="ElementShortName">out_1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_1_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_1_full_n">
+                  <obj_property name="ElementShortName">out_1_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_1_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_1_write">
+                  <obj_property name="ElementShortName">out_1_write</obj_property>
+                  <obj_property name="ObjectShortName">out_1_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_2_group">
+               <obj_property name="label">out_2(p1_2_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_2_blk_n">
+                  <obj_property name="ElementShortName">out_2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_2_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_2_full_n">
+                  <obj_property name="ElementShortName">out_2_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_2_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_2_write">
+                  <obj_property name="ElementShortName">out_2_write</obj_property>
+                  <obj_property name="ObjectShortName">out_2_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_3_group">
+               <obj_property name="label">out_3(p1_3_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_3_blk_n">
+                  <obj_property name="ElementShortName">out_3_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_3_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_3_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_3_full_n">
+                  <obj_property name="ElementShortName">out_3_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_3_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_3_write">
+                  <obj_property name="ElementShortName">out_3_write</obj_property>
+                  <obj_property name="ObjectShortName">out_3_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_4_group">
+               <obj_property name="label">out_4(p1_4_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_4_blk_n">
+                  <obj_property name="ElementShortName">out_4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_4_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_4_full_n">
+                  <obj_property name="ElementShortName">out_4_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_4_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_4_write">
+                  <obj_property name="ElementShortName">out_4_write</obj_property>
+                  <obj_property name="ObjectShortName">out_4_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_5_group">
+               <obj_property name="label">out_5(p1_5_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_5_blk_n">
+                  <obj_property name="ElementShortName">out_5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_5_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_5_full_n">
+                  <obj_property name="ElementShortName">out_5_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_5_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_5_write">
+                  <obj_property name="ElementShortName">out_5_write</obj_property>
+                  <obj_property name="ObjectShortName">out_5_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_6_group">
+               <obj_property name="label">out_6(p1_6_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_6_blk_n">
+                  <obj_property name="ElementShortName">out_6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_6_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_6_full_n">
+                  <obj_property name="ElementShortName">out_6_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_6_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_6_write">
+                  <obj_property name="ElementShortName">out_6_write</obj_property>
+                  <obj_property name="ObjectShortName">out_6_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_7_group">
+               <obj_property name="label">out_7(p1_7_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_7_blk_n">
+                  <obj_property name="ElementShortName">out_7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_7_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_7_full_n">
+                  <obj_property name="ElementShortName">out_7_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_7_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool1_U0/out_7_write">
+                  <obj_property name="ElementShortName">out_7_write</obj_property>
+                  <obj_property name="ObjectShortName">out_7_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="conv2_U0_group">
+         <obj_property name="label">conv2_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="conv2_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="p1_0_group">
+               <obj_property name="label">p1_0(p1_0_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_0_blk_n">
+                  <obj_property name="ElementShortName">p1_0_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_0_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_0_dout">
+                  <obj_property name="ElementShortName">p1_0_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p1_0_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_0_empty_n">
+                  <obj_property name="ElementShortName">p1_0_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_0_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_0_read">
+                  <obj_property name="ElementShortName">p1_0_read</obj_property>
+                  <obj_property name="ObjectShortName">p1_0_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p1_1_group">
+               <obj_property name="label">p1_1(p1_1_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_1_blk_n">
+                  <obj_property name="ElementShortName">p1_1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_1_dout">
+                  <obj_property name="ElementShortName">p1_1_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p1_1_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_1_empty_n">
+                  <obj_property name="ElementShortName">p1_1_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_1_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_1_read">
+                  <obj_property name="ElementShortName">p1_1_read</obj_property>
+                  <obj_property name="ObjectShortName">p1_1_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p1_2_group">
+               <obj_property name="label">p1_2(p1_2_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_2_blk_n">
+                  <obj_property name="ElementShortName">p1_2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_2_dout">
+                  <obj_property name="ElementShortName">p1_2_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p1_2_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_2_empty_n">
+                  <obj_property name="ElementShortName">p1_2_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_2_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_2_read">
+                  <obj_property name="ElementShortName">p1_2_read</obj_property>
+                  <obj_property name="ObjectShortName">p1_2_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p1_3_group">
+               <obj_property name="label">p1_3(p1_3_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_3_blk_n">
+                  <obj_property name="ElementShortName">p1_3_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_3_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_3_dout">
+                  <obj_property name="ElementShortName">p1_3_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p1_3_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_3_empty_n">
+                  <obj_property name="ElementShortName">p1_3_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_3_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_3_read">
+                  <obj_property name="ElementShortName">p1_3_read</obj_property>
+                  <obj_property name="ObjectShortName">p1_3_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p1_4_group">
+               <obj_property name="label">p1_4(p1_4_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_4_blk_n">
+                  <obj_property name="ElementShortName">p1_4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_4_dout">
+                  <obj_property name="ElementShortName">p1_4_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p1_4_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_4_empty_n">
+                  <obj_property name="ElementShortName">p1_4_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_4_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_4_read">
+                  <obj_property name="ElementShortName">p1_4_read</obj_property>
+                  <obj_property name="ObjectShortName">p1_4_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p1_5_group">
+               <obj_property name="label">p1_5(p1_5_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_5_blk_n">
+                  <obj_property name="ElementShortName">p1_5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_5_dout">
+                  <obj_property name="ElementShortName">p1_5_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p1_5_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_5_empty_n">
+                  <obj_property name="ElementShortName">p1_5_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_5_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_5_read">
+                  <obj_property name="ElementShortName">p1_5_read</obj_property>
+                  <obj_property name="ObjectShortName">p1_5_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p1_6_group">
+               <obj_property name="label">p1_6(p1_6_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_6_blk_n">
+                  <obj_property name="ElementShortName">p1_6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_6_dout">
+                  <obj_property name="ElementShortName">p1_6_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p1_6_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_6_empty_n">
+                  <obj_property name="ElementShortName">p1_6_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_6_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_6_read">
+                  <obj_property name="ElementShortName">p1_6_read</obj_property>
+                  <obj_property name="ObjectShortName">p1_6_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p1_7_group">
+               <obj_property name="label">p1_7(p1_7_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_7_blk_n">
+                  <obj_property name="ElementShortName">p1_7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_7_dout">
+                  <obj_property name="ElementShortName">p1_7_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p1_7_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_7_empty_n">
+                  <obj_property name="ElementShortName">p1_7_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p1_7_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/p1_7_read">
+                  <obj_property name="ElementShortName">p1_7_read</obj_property>
+                  <obj_property name="ObjectShortName">p1_7_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="conv2_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="conv2_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_0_group">
+               <obj_property name="label">out_0(f2_0_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_0_blk_n">
+                  <obj_property name="ElementShortName">out_0_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_0_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_0_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_0_full_n">
+                  <obj_property name="ElementShortName">out_0_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_0_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_0_write">
+                  <obj_property name="ElementShortName">out_0_write</obj_property>
+                  <obj_property name="ObjectShortName">out_0_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_1_group">
+               <obj_property name="label">out_1(f2_1_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_1_blk_n">
+                  <obj_property name="ElementShortName">out_1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_1_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_1_full_n">
+                  <obj_property name="ElementShortName">out_1_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_1_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_1_write">
+                  <obj_property name="ElementShortName">out_1_write</obj_property>
+                  <obj_property name="ObjectShortName">out_1_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_2_group">
+               <obj_property name="label">out_2(f2_2_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_2_blk_n">
+                  <obj_property name="ElementShortName">out_2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_2_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_2_full_n">
+                  <obj_property name="ElementShortName">out_2_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_2_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_2_write">
+                  <obj_property name="ElementShortName">out_2_write</obj_property>
+                  <obj_property name="ObjectShortName">out_2_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_3_group">
+               <obj_property name="label">out_3(f2_3_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_3_blk_n">
+                  <obj_property name="ElementShortName">out_3_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_3_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_3_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_3_full_n">
+                  <obj_property name="ElementShortName">out_3_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_3_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_3_write">
+                  <obj_property name="ElementShortName">out_3_write</obj_property>
+                  <obj_property name="ObjectShortName">out_3_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_4_group">
+               <obj_property name="label">out_4(f2_4_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_4_blk_n">
+                  <obj_property name="ElementShortName">out_4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_4_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_4_full_n">
+                  <obj_property name="ElementShortName">out_4_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_4_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_4_write">
+                  <obj_property name="ElementShortName">out_4_write</obj_property>
+                  <obj_property name="ObjectShortName">out_4_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_5_group">
+               <obj_property name="label">out_5(f2_5_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_5_blk_n">
+                  <obj_property name="ElementShortName">out_5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_5_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_5_full_n">
+                  <obj_property name="ElementShortName">out_5_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_5_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_5_write">
+                  <obj_property name="ElementShortName">out_5_write</obj_property>
+                  <obj_property name="ObjectShortName">out_5_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_6_group">
+               <obj_property name="label">out_6(f2_6_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_6_blk_n">
+                  <obj_property name="ElementShortName">out_6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_6_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_6_full_n">
+                  <obj_property name="ElementShortName">out_6_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_6_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_6_write">
+                  <obj_property name="ElementShortName">out_6_write</obj_property>
+                  <obj_property name="ObjectShortName">out_6_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_7_group">
+               <obj_property name="label">out_7(f2_7_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_7_blk_n">
+                  <obj_property name="ElementShortName">out_7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_7_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_7_full_n">
+                  <obj_property name="ElementShortName">out_7_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_7_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv2_U0/out_7_write">
+                  <obj_property name="ElementShortName">out_7_write</obj_property>
+                  <obj_property name="ObjectShortName">out_7_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="maxpool2_U0_group">
+         <obj_property name="label">maxpool2_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="maxpool2_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="f2_0_group">
+               <obj_property name="label">f2_0(f2_0_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_0_blk_n">
+                  <obj_property name="ElementShortName">f2_0_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_0_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_0_dout">
+                  <obj_property name="ElementShortName">f2_0_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2_0_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_0_empty_n">
+                  <obj_property name="ElementShortName">f2_0_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_0_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_0_read">
+                  <obj_property name="ElementShortName">f2_0_read</obj_property>
+                  <obj_property name="ObjectShortName">f2_0_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f2_1_group">
+               <obj_property name="label">f2_1(f2_1_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_1_blk_n">
+                  <obj_property name="ElementShortName">f2_1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_1_dout">
+                  <obj_property name="ElementShortName">f2_1_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2_1_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_1_empty_n">
+                  <obj_property name="ElementShortName">f2_1_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_1_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_1_read">
+                  <obj_property name="ElementShortName">f2_1_read</obj_property>
+                  <obj_property name="ObjectShortName">f2_1_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f2_2_group">
+               <obj_property name="label">f2_2(f2_2_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_2_blk_n">
+                  <obj_property name="ElementShortName">f2_2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_2_dout">
+                  <obj_property name="ElementShortName">f2_2_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2_2_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_2_empty_n">
+                  <obj_property name="ElementShortName">f2_2_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_2_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_2_read">
+                  <obj_property name="ElementShortName">f2_2_read</obj_property>
+                  <obj_property name="ObjectShortName">f2_2_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f2_3_group">
+               <obj_property name="label">f2_3(f2_3_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_3_blk_n">
+                  <obj_property name="ElementShortName">f2_3_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_3_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_3_dout">
+                  <obj_property name="ElementShortName">f2_3_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2_3_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_3_empty_n">
+                  <obj_property name="ElementShortName">f2_3_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_3_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_3_read">
+                  <obj_property name="ElementShortName">f2_3_read</obj_property>
+                  <obj_property name="ObjectShortName">f2_3_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f2_4_group">
+               <obj_property name="label">f2_4(f2_4_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_4_blk_n">
+                  <obj_property name="ElementShortName">f2_4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_4_dout">
+                  <obj_property name="ElementShortName">f2_4_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2_4_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_4_empty_n">
+                  <obj_property name="ElementShortName">f2_4_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_4_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_4_read">
+                  <obj_property name="ElementShortName">f2_4_read</obj_property>
+                  <obj_property name="ObjectShortName">f2_4_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f2_5_group">
+               <obj_property name="label">f2_5(f2_5_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_5_blk_n">
+                  <obj_property name="ElementShortName">f2_5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_5_dout">
+                  <obj_property name="ElementShortName">f2_5_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2_5_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_5_empty_n">
+                  <obj_property name="ElementShortName">f2_5_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_5_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_5_read">
+                  <obj_property name="ElementShortName">f2_5_read</obj_property>
+                  <obj_property name="ObjectShortName">f2_5_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f2_6_group">
+               <obj_property name="label">f2_6(f2_6_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_6_blk_n">
+                  <obj_property name="ElementShortName">f2_6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_6_dout">
+                  <obj_property name="ElementShortName">f2_6_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2_6_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_6_empty_n">
+                  <obj_property name="ElementShortName">f2_6_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_6_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_6_read">
+                  <obj_property name="ElementShortName">f2_6_read</obj_property>
+                  <obj_property name="ObjectShortName">f2_6_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f2_7_group">
+               <obj_property name="label">f2_7(f2_7_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_7_blk_n">
+                  <obj_property name="ElementShortName">f2_7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_7_dout">
+                  <obj_property name="ElementShortName">f2_7_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f2_7_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_7_empty_n">
+                  <obj_property name="ElementShortName">f2_7_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f2_7_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/f2_7_read">
+                  <obj_property name="ElementShortName">f2_7_read</obj_property>
+                  <obj_property name="ObjectShortName">f2_7_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="maxpool2_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="maxpool2_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_0_group">
+               <obj_property name="label">out_0(p2_0_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_0_blk_n">
+                  <obj_property name="ElementShortName">out_0_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_0_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_0_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_0_full_n">
+                  <obj_property name="ElementShortName">out_0_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_0_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_0_write">
+                  <obj_property name="ElementShortName">out_0_write</obj_property>
+                  <obj_property name="ObjectShortName">out_0_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_1_group">
+               <obj_property name="label">out_1(p2_1_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_1_blk_n">
+                  <obj_property name="ElementShortName">out_1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_1_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_1_full_n">
+                  <obj_property name="ElementShortName">out_1_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_1_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_1_write">
+                  <obj_property name="ElementShortName">out_1_write</obj_property>
+                  <obj_property name="ObjectShortName">out_1_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_2_group">
+               <obj_property name="label">out_2(p2_2_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_2_blk_n">
+                  <obj_property name="ElementShortName">out_2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_2_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_2_full_n">
+                  <obj_property name="ElementShortName">out_2_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_2_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_2_write">
+                  <obj_property name="ElementShortName">out_2_write</obj_property>
+                  <obj_property name="ObjectShortName">out_2_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_3_group">
+               <obj_property name="label">out_3(p2_3_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_3_blk_n">
+                  <obj_property name="ElementShortName">out_3_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_3_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_3_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_3_full_n">
+                  <obj_property name="ElementShortName">out_3_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_3_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_3_write">
+                  <obj_property name="ElementShortName">out_3_write</obj_property>
+                  <obj_property name="ObjectShortName">out_3_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_4_group">
+               <obj_property name="label">out_4(p2_4_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_4_blk_n">
+                  <obj_property name="ElementShortName">out_4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_4_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_4_full_n">
+                  <obj_property name="ElementShortName">out_4_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_4_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_4_write">
+                  <obj_property name="ElementShortName">out_4_write</obj_property>
+                  <obj_property name="ObjectShortName">out_4_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_5_group">
+               <obj_property name="label">out_5(p2_5_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_5_blk_n">
+                  <obj_property name="ElementShortName">out_5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_5_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_5_full_n">
+                  <obj_property name="ElementShortName">out_5_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_5_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_5_write">
+                  <obj_property name="ElementShortName">out_5_write</obj_property>
+                  <obj_property name="ObjectShortName">out_5_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_6_group">
+               <obj_property name="label">out_6(p2_6_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_6_blk_n">
+                  <obj_property name="ElementShortName">out_6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_6_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_6_full_n">
+                  <obj_property name="ElementShortName">out_6_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_6_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_6_write">
+                  <obj_property name="ElementShortName">out_6_write</obj_property>
+                  <obj_property name="ObjectShortName">out_6_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_7_group">
+               <obj_property name="label">out_7(p2_7_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_7_blk_n">
+                  <obj_property name="ElementShortName">out_7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_7_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_7_full_n">
+                  <obj_property name="ElementShortName">out_7_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_7_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/maxpool2_U0/out_7_write">
+                  <obj_property name="ElementShortName">out_7_write</obj_property>
+                  <obj_property name="ObjectShortName">out_7_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="conv3_U0_group">
+         <obj_property name="label">conv3_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="conv3_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="p2_0_group">
+               <obj_property name="label">p2_0(p2_0_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_0_blk_n">
+                  <obj_property name="ElementShortName">p2_0_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_0_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_0_dout">
+                  <obj_property name="ElementShortName">p2_0_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p2_0_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_0_empty_n">
+                  <obj_property name="ElementShortName">p2_0_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_0_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_0_read">
+                  <obj_property name="ElementShortName">p2_0_read</obj_property>
+                  <obj_property name="ObjectShortName">p2_0_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p2_1_group">
+               <obj_property name="label">p2_1(p2_1_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_1_blk_n">
+                  <obj_property name="ElementShortName">p2_1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_1_dout">
+                  <obj_property name="ElementShortName">p2_1_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p2_1_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_1_empty_n">
+                  <obj_property name="ElementShortName">p2_1_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_1_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_1_read">
+                  <obj_property name="ElementShortName">p2_1_read</obj_property>
+                  <obj_property name="ObjectShortName">p2_1_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p2_2_group">
+               <obj_property name="label">p2_2(p2_2_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_2_blk_n">
+                  <obj_property name="ElementShortName">p2_2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_2_dout">
+                  <obj_property name="ElementShortName">p2_2_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p2_2_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_2_empty_n">
+                  <obj_property name="ElementShortName">p2_2_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_2_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_2_read">
+                  <obj_property name="ElementShortName">p2_2_read</obj_property>
+                  <obj_property name="ObjectShortName">p2_2_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p2_3_group">
+               <obj_property name="label">p2_3(p2_3_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_3_blk_n">
+                  <obj_property name="ElementShortName">p2_3_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_3_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_3_dout">
+                  <obj_property name="ElementShortName">p2_3_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p2_3_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_3_empty_n">
+                  <obj_property name="ElementShortName">p2_3_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_3_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_3_read">
+                  <obj_property name="ElementShortName">p2_3_read</obj_property>
+                  <obj_property name="ObjectShortName">p2_3_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p2_4_group">
+               <obj_property name="label">p2_4(p2_4_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_4_blk_n">
+                  <obj_property name="ElementShortName">p2_4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_4_dout">
+                  <obj_property name="ElementShortName">p2_4_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p2_4_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_4_empty_n">
+                  <obj_property name="ElementShortName">p2_4_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_4_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_4_read">
+                  <obj_property name="ElementShortName">p2_4_read</obj_property>
+                  <obj_property name="ObjectShortName">p2_4_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p2_5_group">
+               <obj_property name="label">p2_5(p2_5_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_5_blk_n">
+                  <obj_property name="ElementShortName">p2_5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_5_dout">
+                  <obj_property name="ElementShortName">p2_5_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p2_5_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_5_empty_n">
+                  <obj_property name="ElementShortName">p2_5_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_5_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_5_read">
+                  <obj_property name="ElementShortName">p2_5_read</obj_property>
+                  <obj_property name="ObjectShortName">p2_5_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p2_6_group">
+               <obj_property name="label">p2_6(p2_6_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_6_blk_n">
+                  <obj_property name="ElementShortName">p2_6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_6_dout">
+                  <obj_property name="ElementShortName">p2_6_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p2_6_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_6_empty_n">
+                  <obj_property name="ElementShortName">p2_6_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_6_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_6_read">
+                  <obj_property name="ElementShortName">p2_6_read</obj_property>
+                  <obj_property name="ObjectShortName">p2_6_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="p2_7_group">
+               <obj_property name="label">p2_7(p2_7_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_7_blk_n">
+                  <obj_property name="ElementShortName">p2_7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_7_dout">
+                  <obj_property name="ElementShortName">p2_7_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">p2_7_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_7_empty_n">
+                  <obj_property name="ElementShortName">p2_7_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">p2_7_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/p2_7_read">
+                  <obj_property name="ElementShortName">p2_7_read</obj_property>
+                  <obj_property name="ObjectShortName">p2_7_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="conv3_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="conv3_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_0_group">
+               <obj_property name="label">out_0(f3_0_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_0_blk_n">
+                  <obj_property name="ElementShortName">out_0_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_0_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_0_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_0_full_n">
+                  <obj_property name="ElementShortName">out_0_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_0_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_0_write">
+                  <obj_property name="ElementShortName">out_0_write</obj_property>
+                  <obj_property name="ObjectShortName">out_0_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_1_group">
+               <obj_property name="label">out_1(f3_1_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_1_blk_n">
+                  <obj_property name="ElementShortName">out_1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_1_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_1_full_n">
+                  <obj_property name="ElementShortName">out_1_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_1_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_1_write">
+                  <obj_property name="ElementShortName">out_1_write</obj_property>
+                  <obj_property name="ObjectShortName">out_1_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_2_group">
+               <obj_property name="label">out_2(f3_2_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_2_blk_n">
+                  <obj_property name="ElementShortName">out_2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_2_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_2_full_n">
+                  <obj_property name="ElementShortName">out_2_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_2_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_2_write">
+                  <obj_property name="ElementShortName">out_2_write</obj_property>
+                  <obj_property name="ObjectShortName">out_2_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_3_group">
+               <obj_property name="label">out_3(f3_3_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_3_blk_n">
+                  <obj_property name="ElementShortName">out_3_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_3_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_3_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_3_full_n">
+                  <obj_property name="ElementShortName">out_3_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_3_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_3_write">
+                  <obj_property name="ElementShortName">out_3_write</obj_property>
+                  <obj_property name="ObjectShortName">out_3_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_4_group">
+               <obj_property name="label">out_4(f3_4_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_4_blk_n">
+                  <obj_property name="ElementShortName">out_4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_4_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_4_full_n">
+                  <obj_property name="ElementShortName">out_4_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_4_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_4_write">
+                  <obj_property name="ElementShortName">out_4_write</obj_property>
+                  <obj_property name="ObjectShortName">out_4_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_5_group">
+               <obj_property name="label">out_5(f3_5_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_5_blk_n">
+                  <obj_property name="ElementShortName">out_5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_5_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_5_full_n">
+                  <obj_property name="ElementShortName">out_5_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_5_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_5_write">
+                  <obj_property name="ElementShortName">out_5_write</obj_property>
+                  <obj_property name="ObjectShortName">out_5_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_6_group">
+               <obj_property name="label">out_6(f3_6_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_6_blk_n">
+                  <obj_property name="ElementShortName">out_6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_6_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_6_full_n">
+                  <obj_property name="ElementShortName">out_6_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_6_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_6_write">
+                  <obj_property name="ElementShortName">out_6_write</obj_property>
+                  <obj_property name="ObjectShortName">out_6_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_7_group">
+               <obj_property name="label">out_7(f3_7_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_7_blk_n">
+                  <obj_property name="ElementShortName">out_7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_7_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_7_full_n">
+                  <obj_property name="ElementShortName">out_7_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_7_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv3_U0/out_7_write">
+                  <obj_property name="ElementShortName">out_7_write</obj_property>
+                  <obj_property name="ObjectShortName">out_7_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="conv4_U0_group">
+         <obj_property name="label">conv4_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="conv4_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="f3_0_group">
+               <obj_property name="label">f3_0(f3_0_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_0_blk_n">
+                  <obj_property name="ElementShortName">f3_0_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_0_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_0_dout">
+                  <obj_property name="ElementShortName">f3_0_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f3_0_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_0_empty_n">
+                  <obj_property name="ElementShortName">f3_0_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_0_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_0_read">
+                  <obj_property name="ElementShortName">f3_0_read</obj_property>
+                  <obj_property name="ObjectShortName">f3_0_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f3_1_group">
+               <obj_property name="label">f3_1(f3_1_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_1_blk_n">
+                  <obj_property name="ElementShortName">f3_1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_1_dout">
+                  <obj_property name="ElementShortName">f3_1_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f3_1_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_1_empty_n">
+                  <obj_property name="ElementShortName">f3_1_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_1_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_1_read">
+                  <obj_property name="ElementShortName">f3_1_read</obj_property>
+                  <obj_property name="ObjectShortName">f3_1_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f3_2_group">
+               <obj_property name="label">f3_2(f3_2_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_2_blk_n">
+                  <obj_property name="ElementShortName">f3_2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_2_dout">
+                  <obj_property name="ElementShortName">f3_2_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f3_2_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_2_empty_n">
+                  <obj_property name="ElementShortName">f3_2_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_2_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_2_read">
+                  <obj_property name="ElementShortName">f3_2_read</obj_property>
+                  <obj_property name="ObjectShortName">f3_2_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f3_3_group">
+               <obj_property name="label">f3_3(f3_3_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_3_blk_n">
+                  <obj_property name="ElementShortName">f3_3_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_3_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_3_dout">
+                  <obj_property name="ElementShortName">f3_3_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f3_3_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_3_empty_n">
+                  <obj_property name="ElementShortName">f3_3_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_3_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_3_read">
+                  <obj_property name="ElementShortName">f3_3_read</obj_property>
+                  <obj_property name="ObjectShortName">f3_3_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f3_4_group">
+               <obj_property name="label">f3_4(f3_4_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_4_blk_n">
+                  <obj_property name="ElementShortName">f3_4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_4_dout">
+                  <obj_property name="ElementShortName">f3_4_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f3_4_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_4_empty_n">
+                  <obj_property name="ElementShortName">f3_4_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_4_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_4_read">
+                  <obj_property name="ElementShortName">f3_4_read</obj_property>
+                  <obj_property name="ObjectShortName">f3_4_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f3_5_group">
+               <obj_property name="label">f3_5(f3_5_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_5_blk_n">
+                  <obj_property name="ElementShortName">f3_5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_5_dout">
+                  <obj_property name="ElementShortName">f3_5_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f3_5_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_5_empty_n">
+                  <obj_property name="ElementShortName">f3_5_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_5_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_5_read">
+                  <obj_property name="ElementShortName">f3_5_read</obj_property>
+                  <obj_property name="ObjectShortName">f3_5_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f3_6_group">
+               <obj_property name="label">f3_6(f3_6_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_6_blk_n">
+                  <obj_property name="ElementShortName">f3_6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_6_dout">
+                  <obj_property name="ElementShortName">f3_6_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f3_6_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_6_empty_n">
+                  <obj_property name="ElementShortName">f3_6_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_6_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_6_read">
+                  <obj_property name="ElementShortName">f3_6_read</obj_property>
+                  <obj_property name="ObjectShortName">f3_6_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f3_7_group">
+               <obj_property name="label">f3_7(f3_7_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_7_blk_n">
+                  <obj_property name="ElementShortName">f3_7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_7_dout">
+                  <obj_property name="ElementShortName">f3_7_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f3_7_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_7_empty_n">
+                  <obj_property name="ElementShortName">f3_7_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f3_7_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/f3_7_read">
+                  <obj_property name="ElementShortName">f3_7_read</obj_property>
+                  <obj_property name="ObjectShortName">f3_7_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="conv4_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="conv4_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_0_group">
+               <obj_property name="label">out_0(f4_0_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_0_blk_n">
+                  <obj_property name="ElementShortName">out_0_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_0_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_0_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_0_full_n">
+                  <obj_property name="ElementShortName">out_0_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_0_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_0_write">
+                  <obj_property name="ElementShortName">out_0_write</obj_property>
+                  <obj_property name="ObjectShortName">out_0_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_1_group">
+               <obj_property name="label">out_1(f4_1_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_1_blk_n">
+                  <obj_property name="ElementShortName">out_1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_1_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_1_full_n">
+                  <obj_property name="ElementShortName">out_1_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_1_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_1_write">
+                  <obj_property name="ElementShortName">out_1_write</obj_property>
+                  <obj_property name="ObjectShortName">out_1_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_2_group">
+               <obj_property name="label">out_2(f4_2_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_2_blk_n">
+                  <obj_property name="ElementShortName">out_2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_2_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_2_full_n">
+                  <obj_property name="ElementShortName">out_2_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_2_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_2_write">
+                  <obj_property name="ElementShortName">out_2_write</obj_property>
+                  <obj_property name="ObjectShortName">out_2_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_3_group">
+               <obj_property name="label">out_3(f4_3_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_3_blk_n">
+                  <obj_property name="ElementShortName">out_3_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_3_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_3_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_3_full_n">
+                  <obj_property name="ElementShortName">out_3_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_3_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_3_write">
+                  <obj_property name="ElementShortName">out_3_write</obj_property>
+                  <obj_property name="ObjectShortName">out_3_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_4_group">
+               <obj_property name="label">out_4(f4_4_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_4_blk_n">
+                  <obj_property name="ElementShortName">out_4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_4_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_4_full_n">
+                  <obj_property name="ElementShortName">out_4_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_4_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_4_write">
+                  <obj_property name="ElementShortName">out_4_write</obj_property>
+                  <obj_property name="ObjectShortName">out_4_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_5_group">
+               <obj_property name="label">out_5(f4_5_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_5_blk_n">
+                  <obj_property name="ElementShortName">out_5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_5_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_5_full_n">
+                  <obj_property name="ElementShortName">out_5_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_5_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_5_write">
+                  <obj_property name="ElementShortName">out_5_write</obj_property>
+                  <obj_property name="ObjectShortName">out_5_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_6_group">
+               <obj_property name="label">out_6(f4_6_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_6_blk_n">
+                  <obj_property name="ElementShortName">out_6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_6_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_6_full_n">
+                  <obj_property name="ElementShortName">out_6_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_6_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_6_write">
+                  <obj_property name="ElementShortName">out_6_write</obj_property>
+                  <obj_property name="ObjectShortName">out_6_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_7_group">
+               <obj_property name="label">out_7(f4_7_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_7_blk_n">
+                  <obj_property name="ElementShortName">out_7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_7_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_7_full_n">
+                  <obj_property name="ElementShortName">out_7_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_7_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv4_U0/out_7_write">
+                  <obj_property name="ElementShortName">out_7_write</obj_property>
+                  <obj_property name="ObjectShortName">out_7_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="conv5_U0_group">
+         <obj_property name="label">conv5_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="conv5_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="f4_0_group">
+               <obj_property name="label">f4_0(f4_0_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_0_blk_n">
+                  <obj_property name="ElementShortName">f4_0_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_0_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_0_dout">
+                  <obj_property name="ElementShortName">f4_0_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f4_0_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_0_empty_n">
+                  <obj_property name="ElementShortName">f4_0_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_0_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_0_read">
+                  <obj_property name="ElementShortName">f4_0_read</obj_property>
+                  <obj_property name="ObjectShortName">f4_0_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f4_1_group">
+               <obj_property name="label">f4_1(f4_1_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_1_blk_n">
+                  <obj_property name="ElementShortName">f4_1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_1_dout">
+                  <obj_property name="ElementShortName">f4_1_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f4_1_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_1_empty_n">
+                  <obj_property name="ElementShortName">f4_1_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_1_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_1_read">
+                  <obj_property name="ElementShortName">f4_1_read</obj_property>
+                  <obj_property name="ObjectShortName">f4_1_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f4_2_group">
+               <obj_property name="label">f4_2(f4_2_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_2_blk_n">
+                  <obj_property name="ElementShortName">f4_2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_2_dout">
+                  <obj_property name="ElementShortName">f4_2_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f4_2_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_2_empty_n">
+                  <obj_property name="ElementShortName">f4_2_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_2_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_2_read">
+                  <obj_property name="ElementShortName">f4_2_read</obj_property>
+                  <obj_property name="ObjectShortName">f4_2_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f4_3_group">
+               <obj_property name="label">f4_3(f4_3_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_3_blk_n">
+                  <obj_property name="ElementShortName">f4_3_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_3_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_3_dout">
+                  <obj_property name="ElementShortName">f4_3_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f4_3_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_3_empty_n">
+                  <obj_property name="ElementShortName">f4_3_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_3_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_3_read">
+                  <obj_property name="ElementShortName">f4_3_read</obj_property>
+                  <obj_property name="ObjectShortName">f4_3_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f4_4_group">
+               <obj_property name="label">f4_4(f4_4_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_4_blk_n">
+                  <obj_property name="ElementShortName">f4_4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_4_dout">
+                  <obj_property name="ElementShortName">f4_4_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f4_4_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_4_empty_n">
+                  <obj_property name="ElementShortName">f4_4_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_4_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_4_read">
+                  <obj_property name="ElementShortName">f4_4_read</obj_property>
+                  <obj_property name="ObjectShortName">f4_4_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f4_5_group">
+               <obj_property name="label">f4_5(f4_5_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_5_blk_n">
+                  <obj_property name="ElementShortName">f4_5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_5_dout">
+                  <obj_property name="ElementShortName">f4_5_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f4_5_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_5_empty_n">
+                  <obj_property name="ElementShortName">f4_5_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_5_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_5_read">
+                  <obj_property name="ElementShortName">f4_5_read</obj_property>
+                  <obj_property name="ObjectShortName">f4_5_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f4_6_group">
+               <obj_property name="label">f4_6(f4_6_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_6_blk_n">
+                  <obj_property name="ElementShortName">f4_6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_6_dout">
+                  <obj_property name="ElementShortName">f4_6_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f4_6_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_6_empty_n">
+                  <obj_property name="ElementShortName">f4_6_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_6_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_6_read">
+                  <obj_property name="ElementShortName">f4_6_read</obj_property>
+                  <obj_property name="ObjectShortName">f4_6_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f4_7_group">
+               <obj_property name="label">f4_7(f4_7_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_7_blk_n">
+                  <obj_property name="ElementShortName">f4_7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_7_dout">
+                  <obj_property name="ElementShortName">f4_7_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f4_7_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_7_empty_n">
+                  <obj_property name="ElementShortName">f4_7_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f4_7_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/f4_7_read">
+                  <obj_property name="ElementShortName">f4_7_read</obj_property>
+                  <obj_property name="ObjectShortName">f4_7_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="conv5_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="conv5_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_0_group">
+               <obj_property name="label">out_0(f5_0_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_0_blk_n">
+                  <obj_property name="ElementShortName">out_0_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_0_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_0_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_0_full_n">
+                  <obj_property name="ElementShortName">out_0_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_0_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_0_write">
+                  <obj_property name="ElementShortName">out_0_write</obj_property>
+                  <obj_property name="ObjectShortName">out_0_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_1_group">
+               <obj_property name="label">out_1(f5_1_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_1_blk_n">
+                  <obj_property name="ElementShortName">out_1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_1_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_1_full_n">
+                  <obj_property name="ElementShortName">out_1_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_1_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_1_write">
+                  <obj_property name="ElementShortName">out_1_write</obj_property>
+                  <obj_property name="ObjectShortName">out_1_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_2_group">
+               <obj_property name="label">out_2(f5_2_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_2_blk_n">
+                  <obj_property name="ElementShortName">out_2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_2_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_2_full_n">
+                  <obj_property name="ElementShortName">out_2_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_2_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_2_write">
+                  <obj_property name="ElementShortName">out_2_write</obj_property>
+                  <obj_property name="ObjectShortName">out_2_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_3_group">
+               <obj_property name="label">out_3(f5_3_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_3_blk_n">
+                  <obj_property name="ElementShortName">out_3_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_3_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_3_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_3_full_n">
+                  <obj_property name="ElementShortName">out_3_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_3_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_3_write">
+                  <obj_property name="ElementShortName">out_3_write</obj_property>
+                  <obj_property name="ObjectShortName">out_3_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_4_group">
+               <obj_property name="label">out_4(f5_4_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_4_blk_n">
+                  <obj_property name="ElementShortName">out_4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_4_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_4_full_n">
+                  <obj_property name="ElementShortName">out_4_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_4_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_4_write">
+                  <obj_property name="ElementShortName">out_4_write</obj_property>
+                  <obj_property name="ObjectShortName">out_4_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_5_group">
+               <obj_property name="label">out_5(f5_5_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_5_blk_n">
+                  <obj_property name="ElementShortName">out_5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_5_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_5_full_n">
+                  <obj_property name="ElementShortName">out_5_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_5_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_5_write">
+                  <obj_property name="ElementShortName">out_5_write</obj_property>
+                  <obj_property name="ObjectShortName">out_5_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_6_group">
+               <obj_property name="label">out_6(f5_6_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_6_blk_n">
+                  <obj_property name="ElementShortName">out_6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_6_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_6_full_n">
+                  <obj_property name="ElementShortName">out_6_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_6_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_6_write">
+                  <obj_property name="ElementShortName">out_6_write</obj_property>
+                  <obj_property name="ObjectShortName">out_6_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_7_group">
+               <obj_property name="label">out_7(f5_7_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_7_blk_n">
+                  <obj_property name="ElementShortName">out_7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_7_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_7_full_n">
+                  <obj_property name="ElementShortName">out_7_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_7_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/conv5_U0/out_7_write">
+                  <obj_property name="ElementShortName">out_7_write</obj_property>
+                  <obj_property name="ObjectShortName">out_7_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="detection_head_U0_group">
+         <obj_property name="label">detection_head_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="detection_head_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="f5_0_group">
+               <obj_property name="label">f5_0(f5_0_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_0_blk_n">
+                  <obj_property name="ElementShortName">f5_0_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_0_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_0_dout">
+                  <obj_property name="ElementShortName">f5_0_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f5_0_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_0_empty_n">
+                  <obj_property name="ElementShortName">f5_0_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_0_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_0_read">
+                  <obj_property name="ElementShortName">f5_0_read</obj_property>
+                  <obj_property name="ObjectShortName">f5_0_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f5_1_group">
+               <obj_property name="label">f5_1(f5_1_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_1_blk_n">
+                  <obj_property name="ElementShortName">f5_1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_1_dout">
+                  <obj_property name="ElementShortName">f5_1_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f5_1_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_1_empty_n">
+                  <obj_property name="ElementShortName">f5_1_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_1_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_1_read">
+                  <obj_property name="ElementShortName">f5_1_read</obj_property>
+                  <obj_property name="ObjectShortName">f5_1_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f5_2_group">
+               <obj_property name="label">f5_2(f5_2_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_2_blk_n">
+                  <obj_property name="ElementShortName">f5_2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_2_dout">
+                  <obj_property name="ElementShortName">f5_2_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f5_2_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_2_empty_n">
+                  <obj_property name="ElementShortName">f5_2_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_2_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_2_read">
+                  <obj_property name="ElementShortName">f5_2_read</obj_property>
+                  <obj_property name="ObjectShortName">f5_2_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f5_3_group">
+               <obj_property name="label">f5_3(f5_3_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_3_blk_n">
+                  <obj_property name="ElementShortName">f5_3_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_3_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_3_dout">
+                  <obj_property name="ElementShortName">f5_3_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f5_3_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_3_empty_n">
+                  <obj_property name="ElementShortName">f5_3_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_3_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_3_read">
+                  <obj_property name="ElementShortName">f5_3_read</obj_property>
+                  <obj_property name="ObjectShortName">f5_3_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f5_4_group">
+               <obj_property name="label">f5_4(f5_4_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_4_blk_n">
+                  <obj_property name="ElementShortName">f5_4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_4_dout">
+                  <obj_property name="ElementShortName">f5_4_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f5_4_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_4_empty_n">
+                  <obj_property name="ElementShortName">f5_4_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_4_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_4_read">
+                  <obj_property name="ElementShortName">f5_4_read</obj_property>
+                  <obj_property name="ObjectShortName">f5_4_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f5_5_group">
+               <obj_property name="label">f5_5(f5_5_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_5_blk_n">
+                  <obj_property name="ElementShortName">f5_5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_5_dout">
+                  <obj_property name="ElementShortName">f5_5_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f5_5_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_5_empty_n">
+                  <obj_property name="ElementShortName">f5_5_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_5_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_5_read">
+                  <obj_property name="ElementShortName">f5_5_read</obj_property>
+                  <obj_property name="ObjectShortName">f5_5_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f5_6_group">
+               <obj_property name="label">f5_6(f5_6_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_6_blk_n">
+                  <obj_property name="ElementShortName">f5_6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_6_dout">
+                  <obj_property name="ElementShortName">f5_6_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f5_6_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_6_empty_n">
+                  <obj_property name="ElementShortName">f5_6_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_6_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_6_read">
+                  <obj_property name="ElementShortName">f5_6_read</obj_property>
+                  <obj_property name="ObjectShortName">f5_6_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="f5_7_group">
+               <obj_property name="label">f5_7(f5_7_local_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_7_blk_n">
+                  <obj_property name="ElementShortName">f5_7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_7_dout">
+                  <obj_property name="ElementShortName">f5_7_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">f5_7_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_7_empty_n">
+                  <obj_property name="ElementShortName">f5_7_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">f5_7_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/f5_7_read">
+                  <obj_property name="ElementShortName">f5_7_read</obj_property>
+                  <obj_property name="ObjectShortName">f5_7_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="detection_head_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="detection_head_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_r_group">
+               <obj_property name="label">out_r(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/out_r_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/out_r_d0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/out_r_ce0">
+                  <obj_property name="ElementShortName">out_r_ce0</obj_property>
+                  <obj_property name="ObjectShortName">out_r_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_topp_top/AESL_inst_topp/detection_head_U0/out_r_we0">
+                  <obj_property name="ElementShortName">out_r_we0</obj_property>
+                  <obj_property name="ObjectShortName">out_r_we0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

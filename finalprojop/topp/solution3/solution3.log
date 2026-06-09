@@ -1,0 +1,800 @@
+==============================================================
+File generated on Tue Jun 09 11:11:19 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'topp.c' ... 
+WARNING: [HLS 214-111] Static variables and non-static stream cannot be used inside a dataflow region: topp.c:474:15
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file topp.c
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 104.055 ; gain = 19.176
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 104.055 ; gain = 19.176
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 106.641 ; gain = 21.762
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'detection_head' (topp.c:459) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 107.586 ; gain = 22.707
+INFO: [XFORM 203-101] Partitioning array 'f1'  in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'p1'  in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'f2'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'p2'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'f3'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'f4'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'f5'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'linbu'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:360) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.7'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:295) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.6'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:230) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.5'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:133) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.4'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:33) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:360) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.7'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:295) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.6'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:230) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.5'  in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:133) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.4'  in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:33) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:360) in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:295) in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:230) in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:133) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:33) in dimension 3 completely.
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'detection_head' (topp.c:459) automatically.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.0'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.1'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.2'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.3'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.4'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.5'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.6'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.7'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.0'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.1'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.2'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.3'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.4'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.5'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.6'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.7'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.0'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.1'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.2'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.3'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.4'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.5'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.6'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.7'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.0'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.1'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.2'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.3'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.4'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.5'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.6'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.7'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.0'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.1'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.2'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.3'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.4'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.5'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.6'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.7'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.0'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.1'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.2'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.3'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.4'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.5'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.6'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.7'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.0'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.1'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.2'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.3'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.4'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.5'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.6'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.7'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'output' should be updated in process function 'detection_head', otherwise it may not be synthesized correctly.
+INFO: [XFORM 203-712] Applying dataflow to function 'topp', detected/extracted 8 process function(s): 
+	 'conv1'
+	 'maxpool1'
+	 'conv2'
+	 'maxpool2'
+	 'conv3'
+	 'conv4'
+	 'conv5'
+	 'detection_head'.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[62 x [62 x float]]P.i3.i64.i64' into 'maxpool1' (topp.c:110).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[62 x [62 x float]]P.i3.i64.i64' into 'maxpool1' (topp.c:109).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[62 x [62 x float]]P.i3.i64.i64' into 'maxpool1' (topp.c:108).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[62 x [62 x float]]P.i3.i64.i64' into 'maxpool1' (topp.c:107).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64' into 'conv2' (topp.c:157).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[29 x [29 x [2 x float]]]P.i32.i64.i64.i64' into 'maxpool2' (topp.c:207).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[29 x [29 x [2 x float]]]P.i32.i64.i64.i64' into 'maxpool2' (topp.c:206).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[29 x [29 x [2 x float]]]P.i32.i64.i64.i64' into 'maxpool2' (topp.c:205).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[29 x [29 x [2 x float]]]P.i32.i64.i64.i64' into 'maxpool2' (topp.c:204).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[14 x [14 x [2 x float]]]P.i32.i64.i64.i64' into 'conv3' (topp.c:254).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[12 x [12 x [4 x float]]]P.i32.i64.i64.i64' into 'conv4' (topp.c:319).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[10 x [10 x [4 x float]]]P.i32.i64.i64.i64' into 'conv5' (topp.c:384).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[8 x [8 x [4 x float]]]P.i32.i64.i64.i64' into 'detection_head' (topp.c:450).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 135.230 ; gain = 50.352
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 225.547 ; gain = 140.668
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'topp' ...
+WARNING: [SYN 201-107] Renaming port name 'topp/image' to 'topp/image_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'topp/output' to 'topp/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 15.811 seconds; current allocated memory: 179.218 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.241 seconds; current allocated memory: 180.092 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.299 seconds; current allocated memory: 180.720 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.223 seconds; current allocated memory: 181.473 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.408 seconds; current allocated memory: 182.831 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.319 seconds; current allocated memory: 184.333 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.383 seconds; current allocated memory: 185.079 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.228 seconds; current allocated memory: 185.958 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.572 seconds; current allocated memory: 187.726 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.52 seconds; current allocated memory: 189.856 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.861 seconds; current allocated memory: 191.547 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.5 seconds; current allocated memory: 193.709 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.808 seconds; current allocated memory: 195.392 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.497 seconds; current allocated memory: 197.470 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.554 seconds; current allocated memory: 197.878 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.197 seconds; current allocated memory: 198.405 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'topp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.228 seconds; current allocated memory: 198.536 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.569 seconds; current allocated memory: 199.930 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'topp_fadd_32ns_32ns_32_5_full_dsp_1' to 'topp_fadd_32ns_32bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'topp_fmul_32ns_32ns_32_4_max_dsp_1' to 'topp_fmul_32ns_32cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'topp_fcmp_32ns_32ns_1_1_1' to 'topp_fcmp_32ns_32dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'topp_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fcmp_32ns_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fmul_32ns_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_275_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_32_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
+INFO: [HLS 200-111]  Elapsed time: 0.962 seconds; current allocated memory: 201.764 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'topp_fcmp_32ns_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool1'.
+INFO: [HLS 200-111]  Elapsed time: 0.5 seconds; current allocated memory: 203.300 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'topp_am_addmul_5ns_2s_6ns_11_1_1' to 'topp_am_addmul_5neOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'topp_am_addmul_5neOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fcmp_32ns_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fmul_32ns_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_727_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_83_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2'.
+INFO: [HLS 200-111]  Elapsed time: 0.722 seconds; current allocated memory: 206.333 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'topp_fcmp_32ns_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool2'.
+INFO: [HLS 200-111]  Elapsed time: 0.727 seconds; current allocated memory: 208.161 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'topp_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fcmp_32ns_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fmul_32ns_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_727_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_832_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3'.
+INFO: [HLS 200-111]  Elapsed time: 0.864 seconds; current allocated memory: 212.752 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'topp_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fcmp_32ns_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fmul_32ns_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_727_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_832_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv4'.
+INFO: [HLS 200-111]  Elapsed time: 1.466 seconds; current allocated memory: 217.671 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'topp_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fmul_32ns_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_727_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_832_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv5'.
+INFO: [HLS 200-111]  Elapsed time: 1.435 seconds; current allocated memory: 222.440 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'topp_fdiv_32ns_32ns_32_16_1' to 'topp_fdiv_32ns_32fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'topp_fexp_32ns_32ns_32_9_full_dsp_1' to 'topp_fexp_32ns_32g8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'topp_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fdiv_32ns_32fYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fexp_32ns_32g8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fmul_32ns_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 1.238 seconds; current allocated memory: 224.114 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'topp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'topp/image_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'topp/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'topp' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'topp'.
+INFO: [HLS 200-111]  Elapsed time: 1.036 seconds; current allocated memory: 229.658 MB.
+INFO: [RTMG 210-278] Implementing memory 'conv1_linbu_4_0_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'conv2_linbu_5_0_0_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'conv3_linbu_6_0_0_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'conv3_win_buf_0_0_0_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'conv4_linbu_7_0_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'conv4_win_buf_0_0_0_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'conv5_linbu_0_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'detection_head_sum_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'topp_f1_0_memcore_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'topp_p1_0_memcore_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'topp_f2_0_memcore_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'topp_p2_0_memcore_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'topp_f3_0_memcore_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'topp_f4_0_memcore_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'topp_f5_0_memcore_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 346.836 ; gain = 261.957
+INFO: [SYSC 207-301] Generating SystemC RTL for topp.
+INFO: [VHDL 208-304] Generating VHDL RTL for topp.
+INFO: [VLOG 209-307] Generating Verilog RTL for topp.
+INFO: [HLS 200-112] Total elapsed time: 41.551 seconds; peak allocated memory: 229.658 MB.
+==============================================================
+File generated on Tue Jun 09 11:13:57 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-701] Set the default channel type in dataflow to FIFO.
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 16.
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 2 (for scalar propagation only).
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 16 (for start propagation only).
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 16.
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 2 (for scalar propagation only).
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 16 (for start propagation only).
+INFO: [XFORM 203-701] Set the default channel type in dataflow to FIFO.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'topp.c' ... 
+WARNING: [HLS 214-111] Static variables and non-static stream cannot be used inside a dataflow region: topp.c:474:15
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file topp.c
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 104.125 ; gain = 19.094
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 104.125 ; gain = 19.094
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 106.613 ; gain = 21.582
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'detection_head' (topp.c:459) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 107.430 ; gain = 22.398
+INFO: [XFORM 203-101] Partitioning array 'f1'  in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'p1'  in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'f2'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'p2'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'f3'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'f4'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'f5'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'linbu'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:360) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.7'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:295) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.6'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:230) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.5'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:133) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.4'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:33) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:360) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.7'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:295) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.6'  in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:230) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.5'  in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:133) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'linbu.4'  in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:33) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:360) in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:295) in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:230) in dimension 3 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:133) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'win_buf' (topp.c:33) in dimension 3 completely.
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'detection_head' (topp.c:459) automatically.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.0'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.1'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.2'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.3'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.4'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.5'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.6'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f1.7'  should be updated in process function 'conv1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.0'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.1'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.2'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.3'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.4'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.5'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.6'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p1.7'  should be updated in process function 'maxpool1', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.0'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.1'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.2'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.3'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.4'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.5'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.6'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f2.7'  should be updated in process function 'conv2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.0'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.1'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.2'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.3'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.4'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.5'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.6'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'p2.7'  should be updated in process function 'maxpool2', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.0'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.1'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.2'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.3'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.4'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.5'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.6'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f3.7'  should be updated in process function 'conv3', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.0'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.1'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.2'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.3'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.4'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.5'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.6'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f4.7'  should be updated in process function 'conv4', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.0'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.1'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.2'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.3'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.4'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.5'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.6'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'f5.7'  should be updated in process function 'conv5', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'output' should be updated in process function 'detection_head', otherwise it may not be synthesized correctly.
+INFO: [XFORM 203-712] Applying dataflow to function 'topp', detected/extracted 8 process function(s): 
+	 'conv1'
+	 'maxpool1'
+	 'conv2'
+	 'maxpool2'
+	 'conv3'
+	 'conv4'
+	 'conv5'
+	 'detection_head'.
+WARNING: [XFORM 203-124] Array  'f5.7.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f5.6.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f5.5.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f5.4.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f5.3.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f5.2.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f5.1.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f5.0.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f4.7.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f4.6.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f4.5.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f4.4.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f4.3.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f4.2.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f4.1.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f4.0.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f3.7.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f3.6.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f3.5.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f3.4.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f3.3.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f3.2.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f3.1.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f3.0.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p2.7.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p2.6.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p2.5.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p2.4.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p2.3.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p2.2.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p2.1.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p2.0.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f2.7.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f2.6.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f2.5.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f2.4.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f2.3.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f2.2.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f2.1.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f2.0.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p1.7.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p1.6.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p1.5.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p1.4.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p1.3.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p1.2.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p1.1.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'p1.0.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f1.7.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f1.6.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f1.5.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f1.4.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f1.3.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f1.2.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f1.1.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'f1.0.local' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[62 x [62 x float]]P.i3.i64.i64' into 'maxpool1' (topp.c:107).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64' into 'conv2' (topp.c:157).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[29 x [29 x [2 x float]]]P.i32.i64.i64.i64' into 'maxpool2' (topp.c:204).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[14 x [14 x [2 x float]]]P.i32.i64.i64.i64' into 'conv3' (topp.c:254).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[12 x [12 x [4 x float]]]P.i32.i64.i64.i64' into 'conv4' (topp.c:319).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[10 x [10 x [4 x float]]]P.i32.i64.i64.i64' into 'conv5' (topp.c:384).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[8 x [8 x [4 x float]]]P.i32.i64.i64.i64' into 'detection_head' (topp.c:450).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 136.281 ; gain = 51.250
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function '_ssdm_op_FRecip.f32' (topp.c:421:27) in function 'detection_head' and propagating its result(s) since all actual argument(s) to the function are constants.
+WARNING: [XFORM 203-561] Updating loop upper bound from 16 to 17 for loop 'Loop-0-0-0' in function 'detection_head'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 16 to 17 for loop 'Loop-0-0-0' in function 'detection_head'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 226.629 ; gain = 141.598
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'topp' ...
+WARNING: [SYN 201-107] Renaming port name 'topp/image' to 'topp/image_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'topp/output' to 'topp/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.34 seconds; current allocated memory: 180.106 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.238 seconds; current allocated memory: 180.850 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.439 seconds; current allocated memory: 181.092 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.173 seconds; current allocated memory: 181.430 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.516 seconds; current allocated memory: 182.507 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.282 seconds; current allocated memory: 183.880 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.507 seconds; current allocated memory: 184.108 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.161 seconds; current allocated memory: 184.446 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.678 seconds; current allocated memory: 185.970 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.488 seconds; current allocated memory: 187.979 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.033 seconds; current allocated memory: 189.536 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.467 seconds; current allocated memory: 191.559 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.02 seconds; current allocated memory: 193.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.491 seconds; current allocated memory: 195.139 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.632 seconds; current allocated memory: 195.328 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.182 seconds; current allocated memory: 195.632 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'topp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 195.999 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.167 seconds; current allocated memory: 197.841 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_275_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_32_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
+INFO: [HLS 200-111]  Elapsed time: 0.643 seconds; current allocated memory: 199.210 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool1'.
+INFO: [HLS 200-111]  Elapsed time: 0.447 seconds; current allocated memory: 199.950 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_727_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_83_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2'.
+INFO: [HLS 200-111]  Elapsed time: 0.364 seconds; current allocated memory: 202.176 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool2'.
+INFO: [HLS 200-111]  Elapsed time: 0.623 seconds; current allocated memory: 203.077 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_727_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_832_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3'.
+INFO: [HLS 200-111]  Elapsed time: 0.495 seconds; current allocated memory: 206.891 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_727_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_832_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv4'.
+INFO: [HLS 200-111]  Elapsed time: 1.272 seconds; current allocated memory: 211.315 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_727_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_mux_832_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv5'.
+INFO: [HLS 200-111]  Elapsed time: 1.265 seconds; current allocated memory: 215.702 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 1.04 seconds; current allocated memory: 216.709 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'topp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'topp/image_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'topp/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'topp' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'start_for_maxpool1_U0' to 'start_for_maxpoolbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_maxpool2_U0' to 'start_for_maxpoolcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_detection_head_U0' to 'start_for_detectidEe' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'topp'.
+INFO: [HLS 200-111]  Elapsed time: 0.514 seconds; current allocated memory: 218.813 MB.
+INFO: [RTMG 210-278] Implementing memory 'conv1_linbu_4_0_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'conv2_linbu_5_0_0_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'conv3_linbu_6_0_0_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'conv3_win_buf_0_0_0_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'conv4_linbu_7_0_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'conv4_win_buf_0_0_0_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'conv5_linbu_0_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-285] Implementing FIFO 'f1_0_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f1_1_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f1_2_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f1_3_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f1_4_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f1_5_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f1_6_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f1_7_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p1_0_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p1_1_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p1_2_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p1_3_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p1_4_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p1_5_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p1_6_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p1_7_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f2_0_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f2_1_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f2_2_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f2_3_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f2_4_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f2_5_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f2_6_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f2_7_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p2_0_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p2_1_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p2_2_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p2_3_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p2_4_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p2_5_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p2_6_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p2_7_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f3_0_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f3_1_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f3_2_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f3_3_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f3_4_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f3_5_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f3_6_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f3_7_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f4_0_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f4_1_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f4_2_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f4_3_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f4_4_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f4_5_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f4_6_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f4_7_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f5_0_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f5_1_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f5_2_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f5_3_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f5_4_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f5_5_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f5_6_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'f5_7_local_channel_U(fifo_w32_d16_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_maxpoolbkb_U(start_for_maxpoolbkb)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_conv2_U0_U(start_for_conv2_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_maxpoolcud_U(start_for_maxpoolcud)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_conv3_U0_U(start_for_conv3_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_conv4_U0_U(start_for_conv4_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_conv5_U0_U(start_for_conv5_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_detectidEe_U(start_for_detectidEe)' using Shift Registers.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 323.941 ; gain = 238.910
+INFO: [SYSC 207-301] Generating SystemC RTL for topp.
+INFO: [VHDL 208-304] Generating VHDL RTL for topp.
+INFO: [VLOG 209-307] Generating Verilog RTL for topp.
+INFO: [HLS 200-112] Total elapsed time: 36.987 seconds; peak allocated memory: 218.813 MB.

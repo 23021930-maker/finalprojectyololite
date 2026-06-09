@@ -1,0 +1,237 @@
+==============================================================
+File generated on Tue Jun 09 10:57:19 +0700 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'topp.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 103.094 ; gain = 18.242
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 103.094 ; gain = 18.242
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 105.996 ; gain = 21.145
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'detection_head' (topp.c:454) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 106.520 ; gain = 21.668
+INFO: [XFORM 203-102] Partitioning array 'linbu.7' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'linbu.6' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'linbu.5' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'linbu.4' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'linbu' in dimension 1 automatically.
+INFO: [XFORM 203-602] Inlining function 'sigmoid' into 'detection_head' (topp.c:454) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 127.426 ; gain = 42.574
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 202.664 ; gain = 117.812
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'topp' ...
+WARNING: [SYN 201-107] Renaming port name 'topp/image' to 'topp/image_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'topp/output' to 'topp/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 5.598 seconds; current allocated memory: 161.209 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.164 seconds; current allocated memory: 161.848 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.222 seconds; current allocated memory: 162.215 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 162.622 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 163.092 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.156 seconds; current allocated memory: 163.607 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 164.016 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.137 seconds; current allocated memory: 164.388 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.222 seconds; current allocated memory: 164.831 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.154 seconds; current allocated memory: 165.321 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.229 seconds; current allocated memory: 165.732 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.154 seconds; current allocated memory: 166.258 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.211 seconds; current allocated memory: 166.638 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.146 seconds; current allocated memory: 167.128 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.193 seconds; current allocated memory: 167.450 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.152 seconds; current allocated memory: 167.834 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'topp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.177 seconds; current allocated memory: 167.914 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.719 seconds; current allocated memory: 168.666 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'topp_fadd_32ns_32ns_32_5_full_dsp_1' to 'topp_fadd_32ns_32bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'topp_fmul_32ns_32ns_32_4_max_dsp_1' to 'topp_fmul_32ns_32cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'topp_fcmp_32ns_32ns_1_1_1' to 'topp_fcmp_32ns_32dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'topp_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fcmp_32ns_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fmul_32ns_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
+INFO: [HLS 200-111]  Elapsed time: 0.495 seconds; current allocated memory: 169.955 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'topp_fcmp_32ns_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool1'.
+INFO: [HLS 200-111]  Elapsed time: 0.411 seconds; current allocated memory: 170.933 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'topp_am_addmul_5ns_2s_6ns_11_1_1' to 'topp_am_addmul_5neOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'topp_am_addmul_5neOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fcmp_32ns_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fmul_32ns_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2'.
+INFO: [HLS 200-111]  Elapsed time: 0.452 seconds; current allocated memory: 172.046 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'topp_fcmp_32ns_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool2'.
+INFO: [HLS 200-111]  Elapsed time: 0.355 seconds; current allocated memory: 172.917 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'topp_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fcmp_32ns_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fmul_32ns_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3'.
+INFO: [HLS 200-111]  Elapsed time: 0.409 seconds; current allocated memory: 174.080 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'topp_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fcmp_32ns_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fmul_32ns_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv4'.
+INFO: [HLS 200-111]  Elapsed time: 0.475 seconds; current allocated memory: 175.224 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'topp_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fmul_32ns_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv5'.
+INFO: [HLS 200-111]  Elapsed time: 0.448 seconds; current allocated memory: 176.281 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'detection_head' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'topp_fdiv_32ns_32ns_32_16_1' to 'topp_fdiv_32ns_32fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'topp_fexp_32ns_32ns_32_9_full_dsp_1' to 'topp_fexp_32ns_32g8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'topp_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fdiv_32ns_32fYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fexp_32ns_32g8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'topp_fmul_32ns_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'detection_head'.
+INFO: [HLS 200-111]  Elapsed time: 0.493 seconds; current allocated memory: 177.243 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'topp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'topp/image_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'topp/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'topp' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'topp'.
+INFO: [HLS 200-111]  Elapsed time: 0.385 seconds; current allocated memory: 178.072 MB.
+INFO: [RTMG 210-278] Implementing memory 'conv1_linbu_4_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'conv1_win_buf_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'conv2_linbu_5_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'conv2_win_buf_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'conv3_linbu_6_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'conv3_win_buf_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'conv4_linbu_7_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'conv4_win_buf_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'conv5_linbu_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'detection_head_sum_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'topp_f1_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'topp_p1_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'topp_f2_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'topp_p2_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'topp_f3_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'topp_f4_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'topp_f5_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 248.461 ; gain = 163.609
+INFO: [SYSC 207-301] Generating SystemC RTL for topp.
+INFO: [VHDL 208-304] Generating VHDL RTL for topp.
+INFO: [VLOG 209-307] Generating Verilog RTL for topp.
+INFO: [HLS 200-112] Total elapsed time: 19.027 seconds; peak allocated memory: 178.072 MB.

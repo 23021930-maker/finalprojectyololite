@@ -1,0 +1,524 @@
+
+
+================================================================
+== Vivado HLS Report for 'conv5'
+================================================================
+* Date:           Tue Jun  9 11:01:39 2026
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        topp
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.256|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+----------+-------+----------+---------+
+    |      Latency     |     Interval     | Pipeline|
+    |  min  |    max   |  min  |    max   |   Type  |
+    +-------+----------+-------+----------+---------+
+    |  25921|  10246721|  25921|  10246721|   none  |
+    +-------+----------+-------+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------+--------+----------+----------------+-----------+-----------+------+----------+
+        |                             |      Latency      |    Iteration   |  Initiation Interval  | Trip |          |
+        |          Loop Name          |   min  |    max   |     Latency    |  achieved |   target  | Count| Pipelined|
+        +-----------------------------+--------+----------+----------------+-----------+-----------+------+----------+
+        |- Loop 1                     |   25920|  10246720| 2592 ~ 1024672 |          -|          -|    10|    no    |
+        | + Loop 1.1                  |    2590|   1024670|  259 ~ 102467  |          -|          -|    10|    no    |
+        |  ++ Loop 1.1.1              |     256|       256|               8|          -|          -|    32|    no    |
+        |  ++ Loop 1.1.2              |  102208|    102208|            3194|          -|          -|    32|    no    |
+        |   +++ Loop 1.1.2.1          |    3192|      3192|            1064|          -|          -|     3|    no    |
+        |    ++++ Loop 1.1.2.1.1      |    1062|      1062|             354|          -|          -|     3|    no    |
+        |     +++++ Loop 1.1.2.1.1.1  |     352|       352|              11|          -|          -|    32|    no    |
+        +-----------------------------+--------+----------+----------------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 25
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond6_i)
+3 --> 
+	4  / (!exitcond5_i)
+	2  / (exitcond5_i)
+4 --> 
+	5  / (!exitcond4_i)
+	12  / (exitcond4_i)
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	4  / true
+12 --> 
+	13  / (or_cond_i & !exitcond3_i)
+	3  / (exitcond3_i) | (!or_cond_i)
+13 --> 
+	14  / (!exitcond2_i)
+	12  / (exitcond2_i)
+14 --> 
+	15  / (!exitcond1_i)
+	13  / (exitcond1_i)
+15 --> 
+	16  / (!exitcond_i)
+	14  / (exitcond_i)
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	15  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%win_buf = alloca [288 x float], align 4" [topp.c:356]   --->   Operation 26 'alloca' 'win_buf' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_1 : Operation 27 [1/1] (1.76ns)   --->   "br label %.loopexit9" [topp.c:366]   --->   Operation 27 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 1.87>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%r_i = phi i4 [ 0, %entry ], [ %r, %.loopexit9.loopexit ]"   --->   Operation 28 'phi' 'r_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (1.30ns)   --->   "%exitcond6_i = icmp eq i4 %r_i, -6" [topp.c:366]   --->   Operation 29 'icmp' 'exitcond6_i' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)"   --->   Operation 30 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (1.73ns)   --->   "%r = add i4 %r_i, 1" [topp.c:366]   --->   Operation 31 'add' 'r' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "br i1 %exitcond6_i, label %conv5.exit, label %.preheader10.preheader.i" [topp.c:366]   --->   Operation 32 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%tmp = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %r_i, i3 0)" [topp.c:366]   --->   Operation 33 'bitconcatenate' 'tmp' <Predicate = (!exitcond6_i)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i7 %tmp to i8" [topp.c:366]   --->   Operation 34 'zext' 'p_shl_cast' <Predicate = (!exitcond6_i)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_s = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %r_i, i1 false)" [topp.c:366]   --->   Operation 35 'bitconcatenate' 'tmp_s' <Predicate = (!exitcond6_i)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%p_shl1_cast = zext i5 %tmp_s to i8" [topp.c:379]   --->   Operation 36 'zext' 'p_shl1_cast' <Predicate = (!exitcond6_i)> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (1.87ns)   --->   "%tmp_83 = add i8 %p_shl1_cast, %p_shl_cast" [topp.c:379]   --->   Operation 37 'add' 'tmp_83' <Predicate = (!exitcond6_i)> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_87 = call i3 @_ssdm_op_PartSelect.i3.i4.i32.i32(i4 %r_i, i32 1, i32 3)" [topp.c:389]   --->   Operation 38 'partselect' 'tmp_87' <Predicate = (!exitcond6_i)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (1.13ns)   --->   "%icmp = icmp ne i3 %tmp_87, 0" [topp.c:389]   --->   Operation 39 'icmp' 'icmp' <Predicate = (!exitcond6_i)> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (1.73ns)   --->   "%tmp_32_i = add i4 %r_i, -2" [topp.c:403]   --->   Operation 40 'add' 'tmp_32_i' <Predicate = (!exitcond6_i)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_84 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %tmp_32_i, i3 0)" [topp.c:403]   --->   Operation 41 'bitconcatenate' 'tmp_84' <Predicate = (!exitcond6_i)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_100_cast = sext i7 %tmp_84 to i8" [topp.c:367]   --->   Operation 42 'sext' 'tmp_100_cast' <Predicate = (!exitcond6_i)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (1.76ns)   --->   "br label %.preheader10.i" [topp.c:367]   --->   Operation 43 'br' <Predicate = (!exitcond6_i)> <Delay = 1.76>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 44 'ret' <Predicate = (exitcond6_i)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.91>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%c_i = phi i4 [ %c, %.loopexit.i ], [ 0, %.preheader10.preheader.i ]"   --->   Operation 45 'phi' 'c_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (1.30ns)   --->   "%exitcond5_i = icmp eq i4 %c_i, -6" [topp.c:367]   --->   Operation 46 'icmp' 'exitcond5_i' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)"   --->   Operation 47 'speclooptripcount' 'empty_24' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (1.73ns)   --->   "%c = add i4 %c_i, 1" [topp.c:367]   --->   Operation 48 'add' 'c' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "br i1 %exitcond5_i, label %.loopexit9.loopexit, label %.preheader9.preheader.i" [topp.c:367]   --->   Operation 49 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_34_i_cast = zext i4 %c_i to i8" [topp.c:379]   --->   Operation 50 'zext' 'tmp_34_i_cast' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (1.91ns)   --->   "%tmp_85 = add i8 %tmp_34_i_cast, %tmp_83" [topp.c:379]   --->   Operation 51 'add' 'tmp_85' <Predicate = (!exitcond5_i)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_103_cast = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %tmp_85, i5 0)" [topp.c:379]   --->   Operation 52 'bitconcatenate' 'tmp_103_cast' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_86 = call i9 @_ssdm_op_BitConcatenate.i9.i4.i5(i4 %c_i, i5 0)" [topp.c:367]   --->   Operation 53 'bitconcatenate' 'tmp_86' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_105_cast = zext i9 %tmp_86 to i10" [topp.c:368]   --->   Operation 54 'zext' 'tmp_105_cast' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (1.76ns)   --->   "br label %.preheader9.i" [topp.c:368]   --->   Operation 55 'br' <Predicate = (!exitcond5_i)> <Delay = 1.76>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "br label %.loopexit9"   --->   Operation 56 'br' <Predicate = (exitcond5_i)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 4.23>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%ic_i = phi i6 [ %ic, %0 ], [ 0, %.preheader9.preheader.i ]"   --->   Operation 57 'phi' 'ic_i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (1.42ns)   --->   "%exitcond4_i = icmp eq i6 %ic_i, -32" [topp.c:368]   --->   Operation 58 'icmp' 'exitcond4_i' <Predicate = true> <Delay = 1.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%empty_25 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)"   --->   Operation 59 'speclooptripcount' 'empty_25' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 60 [1/1] (1.82ns)   --->   "%ic = add i6 %ic_i, 1" [topp.c:368]   --->   Operation 60 'add' 'ic' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "br i1 %exitcond4_i, label %1, label %0" [topp.c:368]   --->   Operation 61 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.97ns)   --->   "%tmp_91 = xor i6 %ic_i, -32" [topp.c:370]   --->   Operation 62 'xor' 'tmp_91' <Predicate = (!exitcond4_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_108_cast = zext i6 %tmp_91 to i64" [topp.c:370]   --->   Operation 63 'zext' 'tmp_108_cast' <Predicate = (!exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%win_buf_addr = getelementptr [288 x float]* %win_buf, i64 0, i64 %tmp_108_cast" [topp.c:370]   --->   Operation 64 'getelementptr' 'win_buf_addr' <Predicate = (!exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%tmp_92 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 1, i6 %ic_i)" [topp.c:371]   --->   Operation 65 'bitconcatenate' 'tmp_92' <Predicate = (!exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%win_buf_addr_2 = getelementptr [288 x float]* %win_buf, i64 0, i64 %tmp_92" [topp.c:371]   --->   Operation 66 'getelementptr' 'win_buf_addr_2' <Predicate = (!exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 67 [2/2] (3.25ns)   --->   "%win_buf_load = load float* %win_buf_addr, align 4" [topp.c:370]   --->   Operation 67 'load' 'win_buf_load' <Predicate = (!exitcond4_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_4 : Operation 68 [2/2] (3.25ns)   --->   "%win_buf_load_1 = load float* %win_buf_addr_2, align 4" [topp.c:371]   --->   Operation 68 'load' 'win_buf_load_1' <Predicate = (!exitcond4_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%tmp_88 = call i3 @_ssdm_op_PartSelect.i3.i4.i32.i32(i4 %c_i, i32 1, i32 3)" [topp.c:389]   --->   Operation 69 'partselect' 'tmp_88' <Predicate = (exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 70 [1/1] (1.13ns)   --->   "%icmp1 = icmp ne i3 %tmp_88, 0" [topp.c:389]   --->   Operation 70 'icmp' 'icmp1' <Predicate = (exitcond4_i)> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 71 [1/1] (0.97ns)   --->   "%or_cond_i = and i1 %icmp, %icmp1" [topp.c:389]   --->   Operation 71 'and' 'or_cond_i' <Predicate = (exitcond4_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "br i1 %or_cond_i, label %.preheader8.preheader.i, label %.loopexit.i" [topp.c:389]   --->   Operation 72 'br' <Predicate = (exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 73 [1/1] (1.73ns)   --->   "%tmp_37_i = add i4 %c_i, -2" [topp.c:403]   --->   Operation 73 'add' 'tmp_37_i' <Predicate = (exitcond4_i & or_cond_i)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "%tmp_38_i_cast = zext i4 %tmp_37_i to i8" [topp.c:403]   --->   Operation 74 'zext' 'tmp_38_i_cast' <Predicate = (exitcond4_i & or_cond_i)> <Delay = 0.00>
+ST_4 : Operation 75 [1/1] (1.87ns)   --->   "%tmp_97 = add i8 %tmp_38_i_cast, %tmp_100_cast" [topp.c:403]   --->   Operation 75 'add' 'tmp_97' <Predicate = (exitcond4_i & or_cond_i)> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "%tmp_118_cast = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %tmp_97, i5 0)" [topp.c:390]   --->   Operation 76 'bitconcatenate' 'tmp_118_cast' <Predicate = (exitcond4_i & or_cond_i)> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (1.76ns)   --->   "br label %.preheader8.i" [topp.c:390]   --->   Operation 77 'br' <Predicate = (exitcond4_i & or_cond_i)> <Delay = 1.76>
+
+State 5 <SV = 4> <Delay = 5.16>
+ST_5 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_36_i_cast6 = zext i6 %ic_i to i8" [topp.c:379]   --->   Operation 78 'zext' 'tmp_36_i_cast6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 79 [1/1] (0.00ns)   --->   "%tmp_93 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 2, i6 %ic_i)" [topp.c:372]   --->   Operation 79 'bitconcatenate' 'tmp_93' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 80 [1/1] (0.00ns)   --->   "%win_buf_addr_3 = getelementptr [288 x float]* %win_buf, i64 0, i64 %tmp_93" [topp.c:372]   --->   Operation 80 'getelementptr' 'win_buf_addr_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 81 [1/1] (1.91ns)   --->   "%tmp_94 = add i8 %tmp_36_i_cast6, -96" [topp.c:373]   --->   Operation 81 'add' 'tmp_94' <Predicate = true> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_112_cast = zext i8 %tmp_94 to i64" [topp.c:373]   --->   Operation 82 'zext' 'tmp_112_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 83 [1/1] (0.00ns)   --->   "%win_buf_addr_5 = getelementptr [288 x float]* %win_buf, i64 0, i64 %tmp_112_cast" [topp.c:373]   --->   Operation 83 'getelementptr' 'win_buf_addr_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 84 [1/2] (3.25ns)   --->   "%win_buf_load = load float* %win_buf_addr, align 4" [topp.c:370]   --->   Operation 84 'load' 'win_buf_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_5 : Operation 85 [1/2] (3.25ns)   --->   "%win_buf_load_1 = load float* %win_buf_addr_2, align 4" [topp.c:371]   --->   Operation 85 'load' 'win_buf_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_5 : Operation 86 [2/2] (3.25ns)   --->   "%win_buf_load_2 = load float* %win_buf_addr_3, align 4" [topp.c:372]   --->   Operation 86 'load' 'win_buf_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_5 : Operation 87 [2/2] (3.25ns)   --->   "%win_buf_load_3 = load float* %win_buf_addr_5, align 4" [topp.c:373]   --->   Operation 87 'load' 'win_buf_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+
+State 6 <SV = 5> <Delay = 3.25>
+ST_6 : Operation 88 [1/1] (0.00ns)   --->   "%tmp_113_cast7 = sext i6 %tmp_91 to i8" [topp.c:374]   --->   Operation 88 'sext' 'tmp_113_cast7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 89 [1/1] (0.00ns)   --->   "%tmp_113_cast = zext i8 %tmp_113_cast7 to i64" [topp.c:374]   --->   Operation 89 'zext' 'tmp_113_cast' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 90 [1/1] (0.00ns)   --->   "%win_buf_addr_6 = getelementptr [288 x float]* %win_buf, i64 0, i64 %tmp_113_cast" [topp.c:374]   --->   Operation 90 'getelementptr' 'win_buf_addr_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_96 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 4, i6 %ic_i)" [topp.c:375]   --->   Operation 91 'bitconcatenate' 'tmp_96' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 92 [1/1] (0.00ns)   --->   "%win_buf_addr_8 = getelementptr [288 x float]* %win_buf, i64 0, i64 %tmp_96" [topp.c:375]   --->   Operation 92 'getelementptr' 'win_buf_addr_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 93 [1/2] (3.25ns)   --->   "%win_buf_load_2 = load float* %win_buf_addr_3, align 4" [topp.c:372]   --->   Operation 93 'load' 'win_buf_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_6 : Operation 94 [1/2] (3.25ns)   --->   "%win_buf_load_3 = load float* %win_buf_addr_5, align 4" [topp.c:373]   --->   Operation 94 'load' 'win_buf_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_6 : Operation 95 [2/2] (3.25ns)   --->   "%win_buf_load_4 = load float* %win_buf_addr_6, align 4" [topp.c:374]   --->   Operation 95 'load' 'win_buf_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_6 : Operation 96 [2/2] (3.25ns)   --->   "%win_buf_load_5 = load float* %win_buf_addr_8, align 4" [topp.c:375]   --->   Operation 96 'load' 'win_buf_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+
+State 7 <SV = 6> <Delay = 3.25>
+ST_7 : Operation 97 [1/1] (0.00ns)   --->   "%tmp_36_i = zext i6 %ic_i to i64" [topp.c:370]   --->   Operation 97 'zext' 'tmp_36_i' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 98 [1/1] (0.00ns)   --->   "%win_buf_addr_1 = getelementptr [288 x float]* %win_buf, i64 0, i64 %tmp_36_i" [topp.c:370]   --->   Operation 98 'getelementptr' 'win_buf_addr_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 99 [1/1] (3.25ns)   --->   "store float %win_buf_load, float* %win_buf_addr_1, align 4" [topp.c:370]   --->   Operation 99 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_7 : Operation 100 [1/1] (3.25ns)   --->   "store float %win_buf_load_1, float* %win_buf_addr, align 4" [topp.c:371]   --->   Operation 100 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_7 : Operation 101 [1/2] (3.25ns)   --->   "%win_buf_load_4 = load float* %win_buf_addr_6, align 4" [topp.c:374]   --->   Operation 101 'load' 'win_buf_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_7 : Operation 102 [1/2] (3.25ns)   --->   "%win_buf_load_5 = load float* %win_buf_addr_8, align 4" [topp.c:375]   --->   Operation 102 'load' 'win_buf_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+
+State 8 <SV = 7> <Delay = 3.25>
+ST_8 : Operation 103 [1/1] (0.00ns)   --->   "%tmp_111_cast8 = sext i6 %tmp_91 to i7" [topp.c:372]   --->   Operation 103 'sext' 'tmp_111_cast8' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_111_cast = zext i7 %tmp_111_cast8 to i64" [topp.c:372]   --->   Operation 104 'zext' 'tmp_111_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 105 [1/1] (0.00ns)   --->   "%win_buf_addr_4 = getelementptr [288 x float]* %win_buf, i64 0, i64 %tmp_111_cast" [topp.c:372]   --->   Operation 105 'getelementptr' 'win_buf_addr_4' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 106 [1/1] (3.25ns)   --->   "store float %win_buf_load_2, float* %win_buf_addr_4, align 4" [topp.c:372]   --->   Operation 106 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_8 : Operation 107 [1/1] (3.25ns)   --->   "store float %win_buf_load_3, float* %win_buf_addr_3, align 4" [topp.c:373]   --->   Operation 107 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+
+State 9 <SV = 8> <Delay = 5.07>
+ST_9 : Operation 108 [1/1] (0.00ns)   --->   "%tmp_36_i_cast3 = zext i6 %ic_i to i10" [topp.c:379]   --->   Operation 108 'zext' 'tmp_36_i_cast3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 109 [1/1] (0.00ns)   --->   "%tmp_36_i_cast = zext i6 %ic_i to i13" [topp.c:379]   --->   Operation 109 'zext' 'tmp_36_i_cast' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 110 [1/1] (1.67ns)   --->   "%tmp_89 = add i13 %tmp_103_cast, %tmp_36_i_cast" [topp.c:379]   --->   Operation 110 'add' 'tmp_89' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 111 [1/1] (1.82ns)   --->   "%tmp_90 = add i10 %tmp_105_cast, %tmp_36_i_cast3" [topp.c:377]   --->   Operation 111 'add' 'tmp_90' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 112 [1/1] (0.00ns)   --->   "%tmp_107_cast = zext i10 %tmp_90 to i64" [topp.c:377]   --->   Operation 112 'zext' 'tmp_107_cast' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 113 [1/1] (0.00ns)   --->   "%linbu_0_addr = getelementptr [320 x float]* @linbu_0, i64 0, i64 %tmp_107_cast" [topp.c:377]   --->   Operation 113 'getelementptr' 'linbu_0_addr' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 114 [1/1] (0.00ns)   --->   "%linbu_1_addr = getelementptr [320 x float]* @linbu_1, i64 0, i64 %tmp_107_cast" [topp.c:378]   --->   Operation 114 'getelementptr' 'linbu_1_addr' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 115 [1/1] (0.00ns)   --->   "%tmp_95 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 3, i6 %ic_i)" [topp.c:374]   --->   Operation 115 'bitconcatenate' 'tmp_95' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 116 [1/1] (0.00ns)   --->   "%win_buf_addr_7 = getelementptr [288 x float]* %win_buf, i64 0, i64 %tmp_95" [topp.c:374]   --->   Operation 116 'getelementptr' 'win_buf_addr_7' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 117 [1/1] (3.25ns)   --->   "store float %win_buf_load_4, float* %win_buf_addr_7, align 4" [topp.c:374]   --->   Operation 117 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_9 : Operation 118 [1/1] (3.25ns)   --->   "store float %win_buf_load_5, float* %win_buf_addr_6, align 4" [topp.c:375]   --->   Operation 118 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_9 : Operation 119 [2/2] (3.25ns)   --->   "%val0 = load float* %linbu_0_addr, align 4" [topp.c:377]   --->   Operation 119 'load' 'val0' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_9 : Operation 120 [2/2] (3.25ns)   --->   "%val1 = load float* %linbu_1_addr, align 4" [topp.c:378]   --->   Operation 120 'load' 'val1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+
+State 10 <SV = 9> <Delay = 6.50>
+ST_10 : Operation 121 [1/1] (0.00ns)   --->   "%tmp_106_cast = zext i13 %tmp_89 to i64" [topp.c:379]   --->   Operation 121 'zext' 'tmp_106_cast' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 122 [1/1] (0.00ns)   --->   "%f4_addr = getelementptr [3200 x float]* @f4, i64 0, i64 %tmp_106_cast" [topp.c:379]   --->   Operation 122 'getelementptr' 'f4_addr' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 123 [1/2] (3.25ns)   --->   "%val0 = load float* %linbu_0_addr, align 4" [topp.c:377]   --->   Operation 123 'load' 'val0' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_10 : Operation 124 [1/2] (3.25ns)   --->   "%val1 = load float* %linbu_1_addr, align 4" [topp.c:378]   --->   Operation 124 'load' 'val1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_10 : Operation 125 [2/2] (3.25ns)   --->   "%val2 = load float* %f4_addr, align 4" [topp.c:379]   --->   Operation 125 'load' 'val2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_10 : Operation 126 [1/1] (3.25ns)   --->   "store float %val1, float* %linbu_0_addr, align 4" [topp.c:381]   --->   Operation 126 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_10 : Operation 127 [1/1] (3.25ns)   --->   "store float %val0, float* %win_buf_addr_2, align 4" [topp.c:384]   --->   Operation 127 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_10 : Operation 128 [1/1] (3.25ns)   --->   "store float %val1, float* %win_buf_addr_5, align 4" [topp.c:385]   --->   Operation 128 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+
+State 11 <SV = 10> <Delay = 6.50>
+ST_11 : Operation 129 [1/2] (3.25ns)   --->   "%val2 = load float* %f4_addr, align 4" [topp.c:379]   --->   Operation 129 'load' 'val2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_11 : Operation 130 [1/1] (3.25ns)   --->   "store float %val2, float* %linbu_1_addr, align 4" [topp.c:382]   --->   Operation 130 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_11 : Operation 131 [1/1] (3.25ns)   --->   "store float %val2, float* %win_buf_addr_8, align 4" [topp.c:386]   --->   Operation 131 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_11 : Operation 132 [1/1] (0.00ns)   --->   "br label %.preheader9.i" [topp.c:368]   --->   Operation 132 'br' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 4> <Delay = 1.82>
+ST_12 : Operation 133 [1/1] (0.00ns)   --->   "%oc_i = phi i6 [ %oc, %4 ], [ 0, %.preheader8.preheader.i ]"   --->   Operation 133 'phi' 'oc_i' <Predicate = (or_cond_i)> <Delay = 0.00>
+ST_12 : Operation 134 [1/1] (1.42ns)   --->   "%exitcond3_i = icmp eq i6 %oc_i, -32" [topp.c:390]   --->   Operation 134 'icmp' 'exitcond3_i' <Predicate = (or_cond_i)> <Delay = 1.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 135 [1/1] (0.00ns)   --->   "%empty_26 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)"   --->   Operation 135 'speclooptripcount' 'empty_26' <Predicate = (or_cond_i)> <Delay = 0.00>
+ST_12 : Operation 136 [1/1] (1.82ns)   --->   "%oc = add i6 %oc_i, 1" [topp.c:390]   --->   Operation 136 'add' 'oc' <Predicate = (or_cond_i)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 137 [1/1] (0.00ns)   --->   "br i1 %exitcond3_i, label %.loopexit.i.loopexit, label %2" [topp.c:390]   --->   Operation 137 'br' <Predicate = (or_cond_i)> <Delay = 0.00>
+ST_12 : Operation 138 [1/1] (0.00ns)   --->   "%tmp_39_i_cast = zext i6 %oc_i to i13" [topp.c:403]   --->   Operation 138 'zext' 'tmp_39_i_cast' <Predicate = (or_cond_i & !exitcond3_i)> <Delay = 0.00>
+ST_12 : Operation 139 [1/1] (1.67ns)   --->   "%tmp_98 = add i13 %tmp_118_cast, %tmp_39_i_cast" [topp.c:403]   --->   Operation 139 'add' 'tmp_98' <Predicate = (or_cond_i & !exitcond3_i)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 140 [1/1] (0.00ns)   --->   "%tmp_119_cast = zext i13 %tmp_98 to i64" [topp.c:403]   --->   Operation 140 'zext' 'tmp_119_cast' <Predicate = (or_cond_i & !exitcond3_i)> <Delay = 0.00>
+ST_12 : Operation 141 [1/1] (0.00ns)   --->   "%out_addr = getelementptr [2048 x float]* %out_r, i64 0, i64 %tmp_119_cast" [topp.c:403]   --->   Operation 141 'getelementptr' 'out_addr' <Predicate = (or_cond_i & !exitcond3_i)> <Delay = 0.00>
+ST_12 : Operation 142 [1/1] (1.76ns)   --->   "br label %.loopexit" [topp.c:393]   --->   Operation 142 'br' <Predicate = (or_cond_i & !exitcond3_i)> <Delay = 1.76>
+ST_12 : Operation 143 [1/1] (0.00ns)   --->   "br label %.loopexit.i"   --->   Operation 143 'br' <Predicate = (or_cond_i & exitcond3_i)> <Delay = 0.00>
+ST_12 : Operation 144 [1/1] (0.00ns)   --->   "br label %.preheader10.i" [topp.c:367]   --->   Operation 144 'br' <Predicate = (exitcond3_i) | (!or_cond_i)> <Delay = 0.00>
+
+State 13 <SV = 5> <Delay = 3.25>
+ST_13 : Operation 145 [1/1] (0.00ns)   --->   "%kr_i = phi i2 [ 0, %2 ], [ %kr, %.loopexit.loopexit ]"   --->   Operation 145 'phi' 'kr_i' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 146 [1/1] (0.00ns)   --->   "%sum1_i = phi float [ 0.000000e+00, %2 ], [ %sum_1_i, %.loopexit.loopexit ]" [topp.c:398]   --->   Operation 146 'phi' 'sum1_i' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 147 [1/1] (0.95ns)   --->   "%exitcond2_i = icmp eq i2 %kr_i, -1" [topp.c:393]   --->   Operation 147 'icmp' 'exitcond2_i' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 148 [1/1] (0.00ns)   --->   "%empty_27 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 148 'speclooptripcount' 'empty_27' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 149 [1/1] (1.56ns)   --->   "%kr = add i2 %kr_i, 1" [topp.c:393]   --->   Operation 149 'add' 'kr' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 150 [1/1] (0.00ns)   --->   "br i1 %exitcond2_i, label %4, label %.preheader7.preheader.i" [topp.c:393]   --->   Operation 150 'br' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 151 [1/1] (0.00ns)   --->   "%tmp_40_i_cast = zext i2 %kr_i to i5" [topp.c:393]   --->   Operation 151 'zext' 'tmp_40_i_cast' <Predicate = (!exitcond2_i)> <Delay = 0.00>
+ST_13 : Operation 152 [1/1] (0.00ns)   --->   "%tmp_99 = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %kr_i, i2 0)" [topp.c:393]   --->   Operation 152 'bitconcatenate' 'tmp_99' <Predicate = (!exitcond2_i)> <Delay = 0.00>
+ST_13 : Operation 153 [1/1] (0.00ns)   --->   "%p_shl2_cast = zext i4 %tmp_99 to i5" [topp.c:398]   --->   Operation 153 'zext' 'p_shl2_cast' <Predicate = (!exitcond2_i)> <Delay = 0.00>
+ST_13 : Operation 154 [1/1] (1.73ns)   --->   "%tmp_100 = sub i5 %p_shl2_cast, %tmp_40_i_cast" [topp.c:398]   --->   Operation 154 'sub' 'tmp_100' <Predicate = (!exitcond2_i)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 155 [1/1] (1.76ns)   --->   "br label %.preheader7.i" [topp.c:395]   --->   Operation 155 'br' <Predicate = (!exitcond2_i)> <Delay = 1.76>
+ST_13 : Operation 156 [1/1] (3.25ns)   --->   "store float %sum1_i, float* %out_addr, align 4" [topp.c:403]   --->   Operation 156 'store' <Predicate = (exitcond2_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_13 : Operation 157 [1/1] (0.00ns)   --->   "br label %.preheader8.i" [topp.c:390]   --->   Operation 157 'br' <Predicate = (exitcond2_i)> <Delay = 0.00>
+
+State 14 <SV = 6> <Delay = 1.78>
+ST_14 : Operation 158 [1/1] (0.00ns)   --->   "%kc_i = phi i2 [ 0, %.preheader7.preheader.i ], [ %kc, %.preheader7.i.loopexit ]"   --->   Operation 158 'phi' 'kc_i' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 159 [1/1] (0.00ns)   --->   "%sum_1_i = phi float [ %sum1_i, %.preheader7.preheader.i ], [ %sum_2_i, %.preheader7.i.loopexit ]" [topp.c:398]   --->   Operation 159 'phi' 'sum_1_i' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 160 [1/1] (0.95ns)   --->   "%exitcond1_i = icmp eq i2 %kc_i, -1" [topp.c:395]   --->   Operation 160 'icmp' 'exitcond1_i' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 161 [1/1] (0.00ns)   --->   "%empty_28 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 161 'speclooptripcount' 'empty_28' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 162 [1/1] (1.56ns)   --->   "%kc = add i2 %kc_i, 1" [topp.c:395]   --->   Operation 162 'add' 'kc' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 163 [1/1] (0.00ns)   --->   "br i1 %exitcond1_i, label %.loopexit.loopexit, label %.preheader.preheader.i" [topp.c:395]   --->   Operation 163 'br' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 164 [1/1] (0.00ns)   --->   "%tmp_41_i_cast = zext i2 %kc_i to i5" [topp.c:395]   --->   Operation 164 'zext' 'tmp_41_i_cast' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_14 : Operation 165 [1/1] (1.78ns)   --->   "%tmp_101 = add i5 %tmp_41_i_cast, %tmp_100" [topp.c:395]   --->   Operation 165 'add' 'tmp_101' <Predicate = (!exitcond1_i)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 166 [1/1] (0.00ns)   --->   "%tmp_124_cast = call i10 @_ssdm_op_BitConcatenate.i10.i5.i5(i5 %tmp_101, i5 0)" [topp.c:397]   --->   Operation 166 'bitconcatenate' 'tmp_124_cast' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_14 : Operation 167 [1/1] (1.76ns)   --->   "br label %.preheader.i" [topp.c:397]   --->   Operation 167 'br' <Predicate = (!exitcond1_i)> <Delay = 1.76>
+ST_14 : Operation 168 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 168 'br' <Predicate = (exitcond1_i)> <Delay = 0.00>
+
+State 15 <SV = 7> <Delay = 4.98>
+ST_15 : Operation 169 [1/1] (0.00ns)   --->   "%ic_1_i = phi i6 [ %ic_1, %3 ], [ 0, %.preheader.preheader.i ]"   --->   Operation 169 'phi' 'ic_1_i' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 170 [1/1] (0.00ns)   --->   "%sum_2_i = phi float [ %sum, %3 ], [ %sum_1_i, %.preheader.preheader.i ]"   --->   Operation 170 'phi' 'sum_2_i' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 171 [1/1] (1.42ns)   --->   "%exitcond_i = icmp eq i6 %ic_1_i, -32" [topp.c:397]   --->   Operation 171 'icmp' 'exitcond_i' <Predicate = true> <Delay = 1.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 172 [1/1] (0.00ns)   --->   "%empty_29 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)"   --->   Operation 172 'speclooptripcount' 'empty_29' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 173 [1/1] (1.82ns)   --->   "%ic_1 = add i6 %ic_1_i, 1" [topp.c:397]   --->   Operation 173 'add' 'ic_1' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 174 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %.preheader7.i.loopexit, label %3" [topp.c:397]   --->   Operation 174 'br' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 175 [1/1] (0.00ns)   --->   "%tmp_42_i_cast = zext i6 %ic_1_i to i10" [topp.c:398]   --->   Operation 175 'zext' 'tmp_42_i_cast' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_15 : Operation 176 [1/1] (1.73ns)   --->   "%tmp_102 = add i10 %tmp_124_cast, %tmp_42_i_cast" [topp.c:398]   --->   Operation 176 'add' 'tmp_102' <Predicate = (!exitcond_i)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 177 [1/1] (0.00ns)   --->   "%tmp_125_cast = zext i10 %tmp_102 to i64" [topp.c:398]   --->   Operation 177 'zext' 'tmp_125_cast' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_15 : Operation 178 [1/1] (0.00ns)   --->   "%win_buf_addr_9 = getelementptr [288 x float]* %win_buf, i64 0, i64 %tmp_125_cast" [topp.c:398]   --->   Operation 178 'getelementptr' 'win_buf_addr_9' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_15 : Operation 179 [2/2] (3.25ns)   --->   "%win_buf_load_6 = load float* %win_buf_addr_9, align 4" [topp.c:398]   --->   Operation 179 'load' 'win_buf_load_6' <Predicate = (!exitcond_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_15 : Operation 180 [1/1] (0.00ns)   --->   "br label %.preheader7.i"   --->   Operation 180 'br' <Predicate = (exitcond_i)> <Delay = 0.00>
+
+State 16 <SV = 8> <Delay = 3.25>
+ST_16 : Operation 181 [1/2] (3.25ns)   --->   "%win_buf_load_6 = load float* %win_buf_addr_9, align 4" [topp.c:398]   --->   Operation 181 'load' 'win_buf_load_6' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+
+State 17 <SV = 9> <Delay = 5.70>
+ST_17 : Operation 182 [4/4] (5.70ns)   --->   "%tmp_43_i = fmul float %win_buf_load_6, 0.000000e+00" [topp.c:398]   --->   Operation 182 'fmul' 'tmp_43_i' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 10> <Delay = 5.70>
+ST_18 : Operation 183 [3/4] (5.70ns)   --->   "%tmp_43_i = fmul float %win_buf_load_6, 0.000000e+00" [topp.c:398]   --->   Operation 183 'fmul' 'tmp_43_i' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 11> <Delay = 5.70>
+ST_19 : Operation 184 [2/4] (5.70ns)   --->   "%tmp_43_i = fmul float %win_buf_load_6, 0.000000e+00" [topp.c:398]   --->   Operation 184 'fmul' 'tmp_43_i' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 12> <Delay = 5.70>
+ST_20 : Operation 185 [1/4] (5.70ns)   --->   "%tmp_43_i = fmul float %win_buf_load_6, 0.000000e+00" [topp.c:398]   --->   Operation 185 'fmul' 'tmp_43_i' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 13> <Delay = 7.25>
+ST_21 : Operation 186 [5/5] (7.25ns)   --->   "%sum = fadd float %sum_2_i, %tmp_43_i" [topp.c:398]   --->   Operation 186 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 14> <Delay = 7.25>
+ST_22 : Operation 187 [4/5] (7.25ns)   --->   "%sum = fadd float %sum_2_i, %tmp_43_i" [topp.c:398]   --->   Operation 187 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 15> <Delay = 7.25>
+ST_23 : Operation 188 [3/5] (7.25ns)   --->   "%sum = fadd float %sum_2_i, %tmp_43_i" [topp.c:398]   --->   Operation 188 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 16> <Delay = 7.25>
+ST_24 : Operation 189 [2/5] (7.25ns)   --->   "%sum = fadd float %sum_2_i, %tmp_43_i" [topp.c:398]   --->   Operation 189 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 17> <Delay = 7.25>
+ST_25 : Operation 190 [1/5] (7.25ns)   --->   "%sum = fadd float %sum_2_i, %tmp_43_i" [topp.c:398]   --->   Operation 190 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 191 [1/1] (0.00ns)   --->   "br label %.preheader.i" [topp.c:397]   --->   Operation 191 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('r') with incoming values : ('r', topp.c:366) [8]  (1.77 ns)
+
+ <State 2>: 1.87ns
+The critical path consists of the following:
+	'phi' operation ('r') with incoming values : ('r', topp.c:366) [8]  (0 ns)
+	'add' operation ('tmp_83', topp.c:379) [18]  (1.87 ns)
+
+ <State 3>: 1.92ns
+The critical path consists of the following:
+	'phi' operation ('c') with incoming values : ('c', topp.c:367) [26]  (0 ns)
+	'add' operation ('tmp_85', topp.c:379) [33]  (1.92 ns)
+
+ <State 4>: 4.23ns
+The critical path consists of the following:
+	'phi' operation ('ic') with incoming values : ('ic', topp.c:368) [39]  (0 ns)
+	'xor' operation ('tmp_91', topp.c:370) [56]  (0.978 ns)
+	'getelementptr' operation ('win_buf_addr', topp.c:370) [58]  (0 ns)
+	'load' operation ('win_buf_load', topp.c:370) on array 'win_buf', topp.c:356 [77]  (3.25 ns)
+
+ <State 5>: 5.17ns
+The critical path consists of the following:
+	'add' operation ('tmp_94', topp.c:373) [67]  (1.92 ns)
+	'getelementptr' operation ('win_buf_addr_5', topp.c:373) [69]  (0 ns)
+	'load' operation ('win_buf_load_3', topp.c:373) on array 'win_buf', topp.c:356 [83]  (3.25 ns)
+
+ <State 6>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('win_buf_addr_6', topp.c:374) [72]  (0 ns)
+	'load' operation ('win_buf_load_4', topp.c:374) on array 'win_buf', topp.c:356 [85]  (3.25 ns)
+
+ <State 7>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('win_buf_addr_1', topp.c:370) [59]  (0 ns)
+	'store' operation (topp.c:370) of variable 'win_buf_load', topp.c:370 on array 'win_buf', topp.c:356 [78]  (3.25 ns)
+
+ <State 8>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('win_buf_addr_4', topp.c:372) [66]  (0 ns)
+	'store' operation (topp.c:372) of variable 'win_buf_load_2', topp.c:372 on array 'win_buf', topp.c:356 [82]  (3.25 ns)
+
+ <State 9>: 5.08ns
+The critical path consists of the following:
+	'add' operation ('tmp_90', topp.c:377) [52]  (1.82 ns)
+	'getelementptr' operation ('linbu_0_addr', topp.c:377) [54]  (0 ns)
+	'load' operation ('val0', topp.c:377) on array 'linbu_0' [89]  (3.25 ns)
+
+ <State 10>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('val0', topp.c:377) on array 'linbu_0' [89]  (3.25 ns)
+	'store' operation (topp.c:384) of variable 'val0', topp.c:377 on array 'win_buf', topp.c:356 [94]  (3.25 ns)
+
+ <State 11>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('val2', topp.c:379) on array 'f4' [91]  (3.25 ns)
+	'store' operation (topp.c:382) of variable 'val2', topp.c:379 on array 'linbu_1' [93]  (3.25 ns)
+
+ <State 12>: 1.83ns
+The critical path consists of the following:
+	'phi' operation ('oc') with incoming values : ('oc', topp.c:390) [110]  (0 ns)
+	'add' operation ('oc', topp.c:390) [113]  (1.83 ns)
+
+ <State 13>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('sum1_i', topp.c:398) with incoming values : ('sum', topp.c:398) [123]  (0 ns)
+	'store' operation (topp.c:403) of variable 'sum1_i', topp.c:398 on array 'out_r' [167]  (3.25 ns)
+
+ <State 14>: 1.78ns
+The critical path consists of the following:
+	'phi' operation ('kc') with incoming values : ('kc', topp.c:395) [135]  (0 ns)
+	'add' operation ('tmp_101', topp.c:395) [143]  (1.78 ns)
+
+ <State 15>: 4.98ns
+The critical path consists of the following:
+	'phi' operation ('ic') with incoming values : ('ic', topp.c:397) [147]  (0 ns)
+	'add' operation ('tmp_102', topp.c:398) [155]  (1.73 ns)
+	'getelementptr' operation ('win_buf_addr_9', topp.c:398) [157]  (0 ns)
+	'load' operation ('win_buf_load_6', topp.c:398) on array 'win_buf', topp.c:356 [158]  (3.25 ns)
+
+ <State 16>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('win_buf_load_6', topp.c:398) on array 'win_buf', topp.c:356 [158]  (3.25 ns)
+
+ <State 17>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_43_i', topp.c:398) [159]  (5.7 ns)
+
+ <State 18>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_43_i', topp.c:398) [159]  (5.7 ns)
+
+ <State 19>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_43_i', topp.c:398) [159]  (5.7 ns)
+
+ <State 20>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_43_i', topp.c:398) [159]  (5.7 ns)
+
+ <State 21>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', topp.c:398) [160]  (7.26 ns)
+
+ <State 22>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', topp.c:398) [160]  (7.26 ns)
+
+ <State 23>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', topp.c:398) [160]  (7.26 ns)
+
+ <State 24>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', topp.c:398) [160]  (7.26 ns)
+
+ <State 25>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', topp.c:398) [160]  (7.26 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

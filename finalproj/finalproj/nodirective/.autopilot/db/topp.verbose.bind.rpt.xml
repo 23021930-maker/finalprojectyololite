@@ -1,0 +1,53 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'topp'" level="0">
+<item name = "Date">Sun Jun  7 19:29:34 2026
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">finalproj</item>
+<item name = "Solution">nodirective</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.677, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">48873231, 48873231, 48873231, 48873231, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_detection_head_fu_40">detection_head, 393505, 393505, 393505, 393505, none</column>
+<column name="grp_conv2_fu_48">conv2, 11559665, 11559665, 11559665, 11559665, none</column>
+<column name="grp_conv1_fu_56">conv1, 10794961, 10794961, 10794961, 10794961, none</column>
+<column name="grp_conv4_fu_64">conv4, 10967105, 10967105, 10967105, 10967105, none</column>
+<column name="grp_conv3_fu_72">conv3, 7903553, 7903553, 7903553, 7903553, none</column>
+<column name="grp_conv5_fu_80">conv5, 7017025, 7017025, 7017025, 7017025, none</column>
+<column name="grp_maxpool1_fu_88">maxpool1, 177337, 177337, 177337, 177337, none</column>
+<column name="grp_maxpool2_fu_96">maxpool2, 60065, 60065, 60065, 60065, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

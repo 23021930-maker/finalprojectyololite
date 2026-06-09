@@ -1,0 +1,53 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'topp'" level="0">
+<item name = "Date">Tue Jun  9 11:04:39 2026
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">topp</item>
+<item name = "Solution">solution2</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.677, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">567061, 14823765, 309522, 14759882, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_detection_head_fu_138">detection_head, 309521, 309521, 309521, 309521, none</column>
+<column name="grp_conv1_fu_145">conv1, 110721, 9842817, 110721, 9842817, none</column>
+<column name="grp_conv4_fu_156">conv4, 37321, 14759881, 37321, 14759881, none</column>
+<column name="grp_conv3_fu_166">conv3, 25705, 10129897, 25705, 10129897, none</column>
+<column name="grp_conv2_fu_176">conv2, 64450, 12657394, 64450, 12657394, none</column>
+<column name="grp_conv5_fu_186">conv5, 25921, 10246721, 25921, 10246721, none</column>
+<column name="grp_maxpool1_fu_196">maxpool1, 48113, 48113, 48113, 48113, none</column>
+<column name="grp_maxpool2_fu_202">maxpool2, 19237, 19237, 19237, 19237, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

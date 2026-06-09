@@ -1,0 +1,53 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'topp'" level="0">
+<item name = "Date">Tue Jun  9 11:54:44 2026
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">finalproj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.489, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">158119, 158119, 153905, 153905, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_detection_head_fu_516">detection_head, 4290, 4290, 4290, 4290, none</column>
+<column name="grp_conv4_fu_530">conv4, 116613, 116613, 116613, 116613, none</column>
+<column name="grp_conv5_fu_550">conv5, 75140, 75140, 75140, 75140, none</column>
+<column name="grp_conv3_fu_570">conv3, 83655, 83655, 83655, 83655, none</column>
+<column name="grp_conv2_fu_590">conv2, 121464, 121464, 121464, 121464, none</column>
+<column name="grp_conv1_fu_610">conv1, 153904, 153904, 153904, 153904, none</column>
+<column name="grp_maxpool1_fu_628">maxpool1, 7691, 7691, 7691, 7691, none</column>
+<column name="grp_maxpool2_fu_648">maxpool2, 3139, 3139, 3139, 3139, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

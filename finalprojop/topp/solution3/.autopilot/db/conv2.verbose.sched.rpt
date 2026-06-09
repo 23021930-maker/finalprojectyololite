@@ -1,0 +1,893 @@
+
+
+================================================================
+== Vivado HLS Report for 'conv2'
+================================================================
+* Date:           Tue Jun  9 11:14:12 2026
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        topp
+* Solution:       solution3
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.957|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+---------+-------+---------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |  min  |   max   |  min  |   max   |   Type  |
+    +-------+---------+-------+---------+---------+
+    |  41386|  1563610|  41386|  1563610|   none  |
+    +-------+---------+-------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------+-------+---------+--------------+-----------+-----------+------+----------+
+        |                             |     Latency     |   Iteration  |  Initiation Interval  | Trip |          |
+        |          Loop Name          |  min  |   max   |    Latency   |  achieved |   target  | Count| Pipelined|
+        +-----------------------------+-------+---------+--------------+-----------+-----------+------+----------+
+        |- Loop 1                     |  41385|  1563609| 1335 ~ 50439 |          -|          -|    31|    no    |
+        | + Loop 1.1                  |   1333|    50437|   43 ~ 1627  |          -|          -|    31|    no    |
+        |  ++ Loop 1.1.1              |     40|       40|             5|          -|          -|     8|    no    |
+        |  ++ Loop 1.1.2              |   1584|     1584|            99|          -|          -|    16|    no    |
+        |   +++ Loop 1.1.2.1          |     96|       96|            32|          -|          -|     3|    no    |
+        |    ++++ Loop 1.1.2.1.1      |     30|       30|            10|          -|          -|     3|    no    |
+        |     +++++ Loop 1.1.2.1.1.1  |      8|        8|             1|          -|          -|     8|    no    |
+        +-----------------------------+-------+---------+--------------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 13
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond6_i)
+3 --> 
+	4  / (!exitcond5_i)
+	2  / (exitcond5_i)
+4 --> 
+	5  / (!exitcond4_i)
+	9  / (exitcond4_i)
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	4  / true
+9 --> 
+	10  / (or_cond_i & !exitcond3_i)
+	3  / (exitcond3_i) | (!or_cond_i)
+10 --> 
+	11  / (!exitcond2_i)
+	13  / (exitcond2_i)
+11 --> 
+	12  / (!exitcond1_i)
+	10  / (exitcond1_i)
+12 --> 
+	12  / (!exitcond_i)
+	11  / (exitcond_i)
+13 --> 
+	9  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%win_buf_0_0_7 = alloca float"   --->   Operation 14 'alloca' 'win_buf_0_0_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%win_buf_0_0_7_1 = alloca float"   --->   Operation 15 'alloca' 'win_buf_0_0_7_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%win_buf_0_0_7_2 = alloca float"   --->   Operation 16 'alloca' 'win_buf_0_0_7_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%win_buf_0_0_7_3 = alloca float"   --->   Operation 17 'alloca' 'win_buf_0_0_7_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%win_buf_0_0_7_4 = alloca float"   --->   Operation 18 'alloca' 'win_buf_0_0_7_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%win_buf_0_0_7_5 = alloca float"   --->   Operation 19 'alloca' 'win_buf_0_0_7_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%win_buf_0_0_7_6 = alloca float"   --->   Operation 20 'alloca' 'win_buf_0_0_7_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%win_buf_0_0_7_7 = alloca float"   --->   Operation 21 'alloca' 'win_buf_0_0_7_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%win_buf_0_1_7 = alloca float"   --->   Operation 22 'alloca' 'win_buf_0_1_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_1 = alloca float"   --->   Operation 23 'alloca' 'win_buf_0_1_7_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_2 = alloca float"   --->   Operation 24 'alloca' 'win_buf_0_1_7_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_3 = alloca float"   --->   Operation 25 'alloca' 'win_buf_0_1_7_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_4 = alloca float"   --->   Operation 26 'alloca' 'win_buf_0_1_7_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_5 = alloca float"   --->   Operation 27 'alloca' 'win_buf_0_1_7_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_6 = alloca float"   --->   Operation 28 'alloca' 'win_buf_0_1_7_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_7 = alloca float"   --->   Operation 29 'alloca' 'win_buf_0_1_7_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%win_buf_0_2_7 = alloca float"   --->   Operation 30 'alloca' 'win_buf_0_2_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_1 = alloca float"   --->   Operation 31 'alloca' 'win_buf_0_2_7_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_2 = alloca float"   --->   Operation 32 'alloca' 'win_buf_0_2_7_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_3 = alloca float"   --->   Operation 33 'alloca' 'win_buf_0_2_7_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_4 = alloca float"   --->   Operation 34 'alloca' 'win_buf_0_2_7_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_5 = alloca float"   --->   Operation 35 'alloca' 'win_buf_0_2_7_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_6 = alloca float"   --->   Operation 36 'alloca' 'win_buf_0_2_7_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_7 = alloca float"   --->   Operation 37 'alloca' 'win_buf_0_2_7_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%win_buf_1_0_7 = alloca float"   --->   Operation 38 'alloca' 'win_buf_1_0_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%win_buf_1_0_7_1 = alloca float"   --->   Operation 39 'alloca' 'win_buf_1_0_7_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%win_buf_1_0_7_2 = alloca float"   --->   Operation 40 'alloca' 'win_buf_1_0_7_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%win_buf_1_0_7_3 = alloca float"   --->   Operation 41 'alloca' 'win_buf_1_0_7_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%win_buf_1_0_7_4 = alloca float"   --->   Operation 42 'alloca' 'win_buf_1_0_7_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%win_buf_1_0_7_5 = alloca float"   --->   Operation 43 'alloca' 'win_buf_1_0_7_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%win_buf_1_0_7_6 = alloca float"   --->   Operation 44 'alloca' 'win_buf_1_0_7_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%win_buf_1_0_7_7 = alloca float"   --->   Operation 45 'alloca' 'win_buf_1_0_7_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%win_buf_1_1_7 = alloca float"   --->   Operation 46 'alloca' 'win_buf_1_1_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_1 = alloca float"   --->   Operation 47 'alloca' 'win_buf_1_1_7_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_2 = alloca float"   --->   Operation 48 'alloca' 'win_buf_1_1_7_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_3 = alloca float"   --->   Operation 49 'alloca' 'win_buf_1_1_7_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_4 = alloca float"   --->   Operation 50 'alloca' 'win_buf_1_1_7_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_5 = alloca float"   --->   Operation 51 'alloca' 'win_buf_1_1_7_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_6 = alloca float"   --->   Operation 52 'alloca' 'win_buf_1_1_7_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_7 = alloca float"   --->   Operation 53 'alloca' 'win_buf_1_1_7_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%win_buf_1_2_7 = alloca float"   --->   Operation 54 'alloca' 'win_buf_1_2_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_1 = alloca float"   --->   Operation 55 'alloca' 'win_buf_1_2_7_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_2 = alloca float"   --->   Operation 56 'alloca' 'win_buf_1_2_7_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_3 = alloca float"   --->   Operation 57 'alloca' 'win_buf_1_2_7_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_4 = alloca float"   --->   Operation 58 'alloca' 'win_buf_1_2_7_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_5 = alloca float"   --->   Operation 59 'alloca' 'win_buf_1_2_7_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_6 = alloca float"   --->   Operation 60 'alloca' 'win_buf_1_2_7_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_7 = alloca float"   --->   Operation 61 'alloca' 'win_buf_1_2_7_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%win_buf_2_0_7 = alloca float"   --->   Operation 62 'alloca' 'win_buf_2_0_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%win_buf_2_0_7_1 = alloca float"   --->   Operation 63 'alloca' 'win_buf_2_0_7_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%win_buf_2_0_7_2 = alloca float"   --->   Operation 64 'alloca' 'win_buf_2_0_7_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%win_buf_2_0_7_3 = alloca float"   --->   Operation 65 'alloca' 'win_buf_2_0_7_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%win_buf_2_0_7_4 = alloca float"   --->   Operation 66 'alloca' 'win_buf_2_0_7_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%win_buf_2_0_7_5 = alloca float"   --->   Operation 67 'alloca' 'win_buf_2_0_7_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%win_buf_2_0_7_6 = alloca float"   --->   Operation 68 'alloca' 'win_buf_2_0_7_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%win_buf_2_0_7_7 = alloca float"   --->   Operation 69 'alloca' 'win_buf_2_0_7_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%win_buf_2_1_7 = alloca float"   --->   Operation 70 'alloca' 'win_buf_2_1_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_1 = alloca float"   --->   Operation 71 'alloca' 'win_buf_2_1_7_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_2 = alloca float"   --->   Operation 72 'alloca' 'win_buf_2_1_7_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_3 = alloca float"   --->   Operation 73 'alloca' 'win_buf_2_1_7_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_4 = alloca float"   --->   Operation 74 'alloca' 'win_buf_2_1_7_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_5 = alloca float"   --->   Operation 75 'alloca' 'win_buf_2_1_7_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_6 = alloca float"   --->   Operation 76 'alloca' 'win_buf_2_1_7_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_7 = alloca float"   --->   Operation 77 'alloca' 'win_buf_2_1_7_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%win_buf_2_2_7 = alloca float"   --->   Operation 78 'alloca' 'win_buf_2_2_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_1 = alloca float"   --->   Operation 79 'alloca' 'win_buf_2_2_7_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_2 = alloca float"   --->   Operation 80 'alloca' 'win_buf_2_2_7_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_3 = alloca float"   --->   Operation 81 'alloca' 'win_buf_2_2_7_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_4 = alloca float"   --->   Operation 82 'alloca' 'win_buf_2_2_7_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_5 = alloca float"   --->   Operation 83 'alloca' 'win_buf_2_2_7_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_6 = alloca float"   --->   Operation 84 'alloca' 'win_buf_2_2_7_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_7 = alloca float"   --->   Operation 85 'alloca' 'win_buf_2_2_7_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_7, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 86 'specinterface' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%empty_400 = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_6, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 87 'specinterface' 'empty_400' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%empty_401 = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_5, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 88 'specinterface' 'empty_401' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%empty_402 = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_4, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 89 'specinterface' 'empty_402' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%empty_403 = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_3, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 90 'specinterface' 'empty_403' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%empty_404 = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 91 'specinterface' 'empty_404' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%empty_405 = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 92 'specinterface' 'empty_405' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%empty_406 = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_0, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 93 'specinterface' 'empty_406' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%empty_407 = call i32 (...)* @_ssdm_op_SpecInterface(float* %out_7, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 94 'specinterface' 'empty_407' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%empty_408 = call i32 (...)* @_ssdm_op_SpecInterface(float* %out_6, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 95 'specinterface' 'empty_408' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%empty_409 = call i32 (...)* @_ssdm_op_SpecInterface(float* %out_5, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 96 'specinterface' 'empty_409' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%empty_410 = call i32 (...)* @_ssdm_op_SpecInterface(float* %out_4, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 97 'specinterface' 'empty_410' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%empty_411 = call i32 (...)* @_ssdm_op_SpecInterface(float* %out_3, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 98 'specinterface' 'empty_411' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%empty_412 = call i32 (...)* @_ssdm_op_SpecInterface(float* %out_2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 99 'specinterface' 'empty_412' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%empty_413 = call i32 (...)* @_ssdm_op_SpecInterface(float* %out_1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 100 'specinterface' 'empty_413' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%empty_414 = call i32 (...)* @_ssdm_op_SpecInterface(float* %out_0, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 101 'specinterface' 'empty_414' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (1.76ns)   --->   "br label %.loopexit" [topp.c:144]   --->   Operation 102 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 1.78>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%r_i = phi i5 [ 0, %entry ], [ %r, %.loopexit.loopexit ]"   --->   Operation 103 'phi' 'r_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 104 [1/1] (1.36ns)   --->   "%exitcond6_i = icmp eq i5 %r_i, -1" [topp.c:144]   --->   Operation 104 'icmp' 'exitcond6_i' <Predicate = true> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%empty_415 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 31, i64 31, i64 31)"   --->   Operation 105 'speclooptripcount' 'empty_415' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 106 [1/1] (1.78ns)   --->   "%r = add i5 %r_i, 1" [topp.c:144]   --->   Operation 106 'add' 'r' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "br i1 %exitcond6_i, label %conv2.exit, label %.preheader10.preheader.i" [topp.c:144]   --->   Operation 107 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 108 [1/1] (0.00ns)   --->   "%tmp = call i4 @_ssdm_op_PartSelect.i4.i5.i32.i32(i5 %r_i, i32 1, i32 4)" [topp.c:167]   --->   Operation 108 'partselect' 'tmp' <Predicate = (!exitcond6_i)> <Delay = 0.00>
+ST_2 : Operation 109 [1/1] (1.30ns)   --->   "%icmp = icmp ne i4 %tmp, 0" [topp.c:167]   --->   Operation 109 'icmp' 'icmp' <Predicate = (!exitcond6_i)> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 110 [1/1] (1.76ns)   --->   "br label %.preheader10.i" [topp.c:145]   --->   Operation 110 'br' <Predicate = (!exitcond6_i)> <Delay = 1.76>
+ST_2 : Operation 111 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 111 'ret' <Predicate = (exitcond6_i)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.78>
+ST_3 : Operation 112 [1/1] (0.00ns)   --->   "%c_i = phi i5 [ 0, %.preheader10.preheader.i ], [ %c, %.loopexit.i ]"   --->   Operation 112 'phi' 'c_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 113 [1/1] (1.36ns)   --->   "%exitcond5_i = icmp eq i5 %c_i, -1" [topp.c:145]   --->   Operation 113 'icmp' 'exitcond5_i' <Predicate = true> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 114 [1/1] (0.00ns)   --->   "%empty_416 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 31, i64 31, i64 31)"   --->   Operation 114 'speclooptripcount' 'empty_416' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 115 [1/1] (1.78ns)   --->   "%c = add i5 %c_i, 1" [topp.c:145]   --->   Operation 115 'add' 'c' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 116 [1/1] (0.00ns)   --->   "br i1 %exitcond5_i, label %.loopexit.loopexit, label %.preheader9.preheader.i" [topp.c:145]   --->   Operation 116 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 117 [1/1] (0.00ns)   --->   "%tmp_70_i = zext i5 %c_i to i64" [topp.c:155]   --->   Operation 117 'zext' 'tmp_70_i' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 118 [1/1] (0.00ns)   --->   "%linbu_5_0_0_addr = getelementptr [31 x float]* @linbu_5_0_0, i64 0, i64 %tmp_70_i" [topp.c:155]   --->   Operation 118 'getelementptr' 'linbu_5_0_0_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 119 [1/1] (0.00ns)   --->   "%linbu_5_0_1_addr = getelementptr [31 x float]* @linbu_5_0_1, i64 0, i64 %tmp_70_i" [topp.c:155]   --->   Operation 119 'getelementptr' 'linbu_5_0_1_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 120 [1/1] (0.00ns)   --->   "%linbu_5_0_2_addr = getelementptr [31 x float]* @linbu_5_0_2, i64 0, i64 %tmp_70_i" [topp.c:155]   --->   Operation 120 'getelementptr' 'linbu_5_0_2_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 121 [1/1] (0.00ns)   --->   "%linbu_5_0_3_addr = getelementptr [31 x float]* @linbu_5_0_3, i64 0, i64 %tmp_70_i" [topp.c:155]   --->   Operation 121 'getelementptr' 'linbu_5_0_3_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 122 [1/1] (0.00ns)   --->   "%linbu_5_0_4_addr = getelementptr [31 x float]* @linbu_5_0_4, i64 0, i64 %tmp_70_i" [topp.c:155]   --->   Operation 122 'getelementptr' 'linbu_5_0_4_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 123 [1/1] (0.00ns)   --->   "%linbu_5_0_5_addr = getelementptr [31 x float]* @linbu_5_0_5, i64 0, i64 %tmp_70_i" [topp.c:155]   --->   Operation 123 'getelementptr' 'linbu_5_0_5_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 124 [1/1] (0.00ns)   --->   "%linbu_5_0_6_addr = getelementptr [31 x float]* @linbu_5_0_6, i64 0, i64 %tmp_70_i" [topp.c:155]   --->   Operation 124 'getelementptr' 'linbu_5_0_6_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 125 [1/1] (0.00ns)   --->   "%linbu_5_0_7_addr = getelementptr [31 x float]* @linbu_5_0_7, i64 0, i64 %tmp_70_i" [topp.c:155]   --->   Operation 125 'getelementptr' 'linbu_5_0_7_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 126 [1/1] (0.00ns)   --->   "%linbu_5_1_0_addr = getelementptr [31 x float]* @linbu_5_1_0, i64 0, i64 %tmp_70_i" [topp.c:156]   --->   Operation 126 'getelementptr' 'linbu_5_1_0_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 127 [1/1] (0.00ns)   --->   "%linbu_5_1_1_addr = getelementptr [31 x float]* @linbu_5_1_1, i64 0, i64 %tmp_70_i" [topp.c:156]   --->   Operation 127 'getelementptr' 'linbu_5_1_1_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 128 [1/1] (0.00ns)   --->   "%linbu_5_1_2_addr = getelementptr [31 x float]* @linbu_5_1_2, i64 0, i64 %tmp_70_i" [topp.c:156]   --->   Operation 128 'getelementptr' 'linbu_5_1_2_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 129 [1/1] (0.00ns)   --->   "%linbu_5_1_3_addr = getelementptr [31 x float]* @linbu_5_1_3, i64 0, i64 %tmp_70_i" [topp.c:156]   --->   Operation 129 'getelementptr' 'linbu_5_1_3_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 130 [1/1] (0.00ns)   --->   "%linbu_5_1_4_addr = getelementptr [31 x float]* @linbu_5_1_4, i64 0, i64 %tmp_70_i" [topp.c:156]   --->   Operation 130 'getelementptr' 'linbu_5_1_4_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 131 [1/1] (0.00ns)   --->   "%linbu_5_1_5_addr = getelementptr [31 x float]* @linbu_5_1_5, i64 0, i64 %tmp_70_i" [topp.c:156]   --->   Operation 131 'getelementptr' 'linbu_5_1_5_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 132 [1/1] (0.00ns)   --->   "%linbu_5_1_6_addr = getelementptr [31 x float]* @linbu_5_1_6, i64 0, i64 %tmp_70_i" [topp.c:156]   --->   Operation 132 'getelementptr' 'linbu_5_1_6_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 133 [1/1] (0.00ns)   --->   "%linbu_5_1_7_addr = getelementptr [31 x float]* @linbu_5_1_7, i64 0, i64 %tmp_70_i" [topp.c:156]   --->   Operation 133 'getelementptr' 'linbu_5_1_7_addr' <Predicate = (!exitcond5_i)> <Delay = 0.00>
+ST_3 : Operation 134 [1/1] (1.76ns)   --->   "br label %.preheader9.i" [topp.c:146]   --->   Operation 134 'br' <Predicate = (!exitcond5_i)> <Delay = 1.76>
+ST_3 : Operation 135 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 135 'br' <Predicate = (exitcond5_i)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 2.47>
+ST_4 : Operation 136 [1/1] (0.00ns)   --->   "%ic_i = phi i4 [ 0, %.preheader9.preheader.i ], [ %ic_4, %.preheader9.i.backedge ]"   --->   Operation 136 'phi' 'ic_i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 137 [1/1] (1.30ns)   --->   "%exitcond4_i = icmp eq i4 %ic_i, -8" [topp.c:146]   --->   Operation 137 'icmp' 'exitcond4_i' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 138 [1/1] (0.00ns)   --->   "%empty_417 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 138 'speclooptripcount' 'empty_417' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 139 [1/1] (1.73ns)   --->   "%ic_4 = add i4 %ic_i, 1" [topp.c:146]   --->   Operation 139 'add' 'ic_4' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 140 [1/1] (0.00ns)   --->   "br i1 %exitcond4_i, label %2, label %0" [topp.c:146]   --->   Operation 140 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 141 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_loa = load float* %win_buf_0_1_7" [topp.c:148]   --->   Operation 141 'load' 'win_buf_0_1_7_loa' <Predicate = (!exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 142 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_1_l = load float* %win_buf_0_1_7_1" [topp.c:148]   --->   Operation 142 'load' 'win_buf_0_1_7_1_l' <Predicate = (!exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 143 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_2_l = load float* %win_buf_0_1_7_2" [topp.c:148]   --->   Operation 143 'load' 'win_buf_0_1_7_2_l' <Predicate = (!exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 144 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_3_l = load float* %win_buf_0_1_7_3" [topp.c:148]   --->   Operation 144 'load' 'win_buf_0_1_7_3_l' <Predicate = (!exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 145 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_4_l = load float* %win_buf_0_1_7_4" [topp.c:148]   --->   Operation 145 'load' 'win_buf_0_1_7_4_l' <Predicate = (!exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 146 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_5_l = load float* %win_buf_0_1_7_5" [topp.c:148]   --->   Operation 146 'load' 'win_buf_0_1_7_5_l' <Predicate = (!exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 147 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_6_l = load float* %win_buf_0_1_7_6" [topp.c:148]   --->   Operation 147 'load' 'win_buf_0_1_7_6_l' <Predicate = (!exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 148 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_7_l = load float* %win_buf_0_1_7_7" [topp.c:148]   --->   Operation 148 'load' 'win_buf_0_1_7_7_l' <Predicate = (!exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 149 [1/1] (0.00ns)   --->   "%tmp_28 = trunc i4 %ic_i to i3" [topp.c:148]   --->   Operation 149 'trunc' 'tmp_28' <Predicate = (!exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 150 [1/1] (2.47ns)   --->   "%win_buf_0_0_0 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %win_buf_0_1_7_loa, float %win_buf_0_1_7_1_l, float %win_buf_0_1_7_2_l, float %win_buf_0_1_7_3_l, float %win_buf_0_1_7_4_l, float %win_buf_0_1_7_5_l, float %win_buf_0_1_7_6_l, float %win_buf_0_1_7_7_l, i3 %tmp_28)" [topp.c:148]   --->   Operation 150 'mux' 'win_buf_0_0_0' <Predicate = (!exitcond4_i)> <Delay = 2.47> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 151 [1/1] (1.36ns)   --->   "switch i3 %tmp_28, label %branch23.i [
+    i3 0, label %.branch16.i_crit_edge
+    i3 1, label %branch17.i
+    i3 2, label %branch18.i
+    i3 3, label %branch19.i
+    i3 -4, label %branch20.i
+    i3 -3, label %branch21.i
+    i3 -2, label %branch22.i
+  ]" [topp.c:148]   --->   Operation 151 'switch' <Predicate = (!exitcond4_i)> <Delay = 1.36>
+ST_4 : Operation 152 [1/1] (0.00ns)   --->   "store float %win_buf_0_0_0, float* %win_buf_0_0_7_6" [topp.c:148]   --->   Operation 152 'store' <Predicate = (!exitcond4_i & tmp_28 == 6)> <Delay = 0.00>
+ST_4 : Operation 153 [1/1] (0.00ns)   --->   "br label %branch16.i" [topp.c:148]   --->   Operation 153 'br' <Predicate = (!exitcond4_i & tmp_28 == 6)> <Delay = 0.00>
+ST_4 : Operation 154 [1/1] (0.00ns)   --->   "store float %win_buf_0_0_0, float* %win_buf_0_0_7_5" [topp.c:148]   --->   Operation 154 'store' <Predicate = (!exitcond4_i & tmp_28 == 5)> <Delay = 0.00>
+ST_4 : Operation 155 [1/1] (0.00ns)   --->   "br label %branch16.i" [topp.c:148]   --->   Operation 155 'br' <Predicate = (!exitcond4_i & tmp_28 == 5)> <Delay = 0.00>
+ST_4 : Operation 156 [1/1] (0.00ns)   --->   "store float %win_buf_0_0_0, float* %win_buf_0_0_7_4" [topp.c:148]   --->   Operation 156 'store' <Predicate = (!exitcond4_i & tmp_28 == 4)> <Delay = 0.00>
+ST_4 : Operation 157 [1/1] (0.00ns)   --->   "br label %branch16.i" [topp.c:148]   --->   Operation 157 'br' <Predicate = (!exitcond4_i & tmp_28 == 4)> <Delay = 0.00>
+ST_4 : Operation 158 [1/1] (0.00ns)   --->   "store float %win_buf_0_0_0, float* %win_buf_0_0_7_3" [topp.c:148]   --->   Operation 158 'store' <Predicate = (!exitcond4_i & tmp_28 == 3)> <Delay = 0.00>
+ST_4 : Operation 159 [1/1] (0.00ns)   --->   "br label %branch16.i" [topp.c:148]   --->   Operation 159 'br' <Predicate = (!exitcond4_i & tmp_28 == 3)> <Delay = 0.00>
+ST_4 : Operation 160 [1/1] (0.00ns)   --->   "store float %win_buf_0_0_0, float* %win_buf_0_0_7_2" [topp.c:148]   --->   Operation 160 'store' <Predicate = (!exitcond4_i & tmp_28 == 2)> <Delay = 0.00>
+ST_4 : Operation 161 [1/1] (0.00ns)   --->   "br label %branch16.i" [topp.c:148]   --->   Operation 161 'br' <Predicate = (!exitcond4_i & tmp_28 == 2)> <Delay = 0.00>
+ST_4 : Operation 162 [1/1] (0.00ns)   --->   "store float %win_buf_0_0_0, float* %win_buf_0_0_7_1" [topp.c:148]   --->   Operation 162 'store' <Predicate = (!exitcond4_i & tmp_28 == 1)> <Delay = 0.00>
+ST_4 : Operation 163 [1/1] (0.00ns)   --->   "br label %branch16.i" [topp.c:148]   --->   Operation 163 'br' <Predicate = (!exitcond4_i & tmp_28 == 1)> <Delay = 0.00>
+ST_4 : Operation 164 [1/1] (0.00ns)   --->   "store float %win_buf_0_0_0, float* %win_buf_0_0_7" [topp.c:148]   --->   Operation 164 'store' <Predicate = (!exitcond4_i & tmp_28 == 0)> <Delay = 0.00>
+ST_4 : Operation 165 [1/1] (0.00ns)   --->   "br label %branch16.i" [topp.c:148]   --->   Operation 165 'br' <Predicate = (!exitcond4_i & tmp_28 == 0)> <Delay = 0.00>
+ST_4 : Operation 166 [1/1] (0.00ns)   --->   "store float %win_buf_0_0_0, float* %win_buf_0_0_7_7" [topp.c:148]   --->   Operation 166 'store' <Predicate = (!exitcond4_i & tmp_28 == 7)> <Delay = 0.00>
+ST_4 : Operation 167 [1/1] (0.00ns)   --->   "br label %branch16.i" [topp.c:148]   --->   Operation 167 'br' <Predicate = (!exitcond4_i & tmp_28 == 7)> <Delay = 0.00>
+ST_4 : Operation 168 [1/1] (0.00ns)   --->   "%tmp_27 = call i4 @_ssdm_op_PartSelect.i4.i5.i32.i32(i5 %c_i, i32 1, i32 4)" [topp.c:167]   --->   Operation 168 'partselect' 'tmp_27' <Predicate = (exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 169 [1/1] (1.30ns)   --->   "%icmp4 = icmp ne i4 %tmp_27, 0" [topp.c:167]   --->   Operation 169 'icmp' 'icmp4' <Predicate = (exitcond4_i)> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 170 [1/1] (0.97ns)   --->   "%or_cond_i = and i1 %icmp, %icmp4" [topp.c:167]   --->   Operation 170 'and' 'or_cond_i' <Predicate = (exitcond4_i)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 171 [1/1] (0.00ns)   --->   "br i1 %or_cond_i, label %.preheader8.i.preheader, label %.loopexit.i" [topp.c:167]   --->   Operation 171 'br' <Predicate = (exitcond4_i)> <Delay = 0.00>
+ST_4 : Operation 172 [1/1] (1.76ns)   --->   "br label %.preheader8.i" [topp.c:169]   --->   Operation 172 'br' <Predicate = (exitcond4_i & or_cond_i)> <Delay = 1.76>
+
+State 5 <SV = 4> <Delay = 2.47>
+ST_5 : Operation 173 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_loa = load float* %win_buf_0_2_7" [topp.c:149]   --->   Operation 173 'load' 'win_buf_0_2_7_loa' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 174 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_1_l = load float* %win_buf_0_2_7_1" [topp.c:149]   --->   Operation 174 'load' 'win_buf_0_2_7_1_l' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 175 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_2_l = load float* %win_buf_0_2_7_2" [topp.c:149]   --->   Operation 175 'load' 'win_buf_0_2_7_2_l' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 176 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_3_l = load float* %win_buf_0_2_7_3" [topp.c:149]   --->   Operation 176 'load' 'win_buf_0_2_7_3_l' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 177 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_4_l = load float* %win_buf_0_2_7_4" [topp.c:149]   --->   Operation 177 'load' 'win_buf_0_2_7_4_l' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 178 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_5_l = load float* %win_buf_0_2_7_5" [topp.c:149]   --->   Operation 178 'load' 'win_buf_0_2_7_5_l' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 179 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_6_l = load float* %win_buf_0_2_7_6" [topp.c:149]   --->   Operation 179 'load' 'win_buf_0_2_7_6_l' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 180 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_7_l = load float* %win_buf_0_2_7_7" [topp.c:149]   --->   Operation 180 'load' 'win_buf_0_2_7_7_l' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 181 [1/1] (2.47ns)   --->   "%win_buf_0_1_0 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %win_buf_0_2_7_loa, float %win_buf_0_2_7_1_l, float %win_buf_0_2_7_2_l, float %win_buf_0_2_7_3_l, float %win_buf_0_2_7_4_l, float %win_buf_0_2_7_5_l, float %win_buf_0_2_7_6_l, float %win_buf_0_2_7_7_l, i3 %tmp_28)" [topp.c:149]   --->   Operation 181 'mux' 'win_buf_0_1_0' <Predicate = true> <Delay = 2.47> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 182 [1/1] (1.36ns)   --->   "switch i3 %tmp_28, label %branch31.i [
+    i3 0, label %branch16.i.branch24.i_crit_edge
+    i3 1, label %branch25.i
+    i3 2, label %branch26.i
+    i3 3, label %branch27.i
+    i3 -4, label %branch28.i
+    i3 -3, label %branch29.i
+    i3 -2, label %branch30.i
+  ]" [topp.c:149]   --->   Operation 182 'switch' <Predicate = true> <Delay = 1.36>
+ST_5 : Operation 183 [1/1] (0.00ns)   --->   "store float %win_buf_0_1_0, float* %win_buf_0_1_7_6" [topp.c:149]   --->   Operation 183 'store' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_5 : Operation 184 [1/1] (0.00ns)   --->   "br label %branch24.i" [topp.c:149]   --->   Operation 184 'br' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_5 : Operation 185 [1/1] (0.00ns)   --->   "store float %win_buf_0_1_0, float* %win_buf_0_1_7_5" [topp.c:149]   --->   Operation 185 'store' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_5 : Operation 186 [1/1] (0.00ns)   --->   "br label %branch24.i" [topp.c:149]   --->   Operation 186 'br' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_5 : Operation 187 [1/1] (0.00ns)   --->   "store float %win_buf_0_1_0, float* %win_buf_0_1_7_4" [topp.c:149]   --->   Operation 187 'store' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_5 : Operation 188 [1/1] (0.00ns)   --->   "br label %branch24.i" [topp.c:149]   --->   Operation 188 'br' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_5 : Operation 189 [1/1] (0.00ns)   --->   "store float %win_buf_0_1_0, float* %win_buf_0_1_7_3" [topp.c:149]   --->   Operation 189 'store' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_5 : Operation 190 [1/1] (0.00ns)   --->   "br label %branch24.i" [topp.c:149]   --->   Operation 190 'br' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_5 : Operation 191 [1/1] (0.00ns)   --->   "store float %win_buf_0_1_0, float* %win_buf_0_1_7_2" [topp.c:149]   --->   Operation 191 'store' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_5 : Operation 192 [1/1] (0.00ns)   --->   "br label %branch24.i" [topp.c:149]   --->   Operation 192 'br' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_5 : Operation 193 [1/1] (0.00ns)   --->   "store float %win_buf_0_1_0, float* %win_buf_0_1_7_1" [topp.c:149]   --->   Operation 193 'store' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_5 : Operation 194 [1/1] (0.00ns)   --->   "br label %branch24.i" [topp.c:149]   --->   Operation 194 'br' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_5 : Operation 195 [1/1] (0.00ns)   --->   "store float %win_buf_0_1_0, float* %win_buf_0_1_7" [topp.c:149]   --->   Operation 195 'store' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_5 : Operation 196 [1/1] (0.00ns)   --->   "br label %branch24.i" [topp.c:149]   --->   Operation 196 'br' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_5 : Operation 197 [1/1] (0.00ns)   --->   "store float %win_buf_0_1_0, float* %win_buf_0_1_7_7" [topp.c:149]   --->   Operation 197 'store' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+ST_5 : Operation 198 [1/1] (0.00ns)   --->   "br label %branch24.i" [topp.c:149]   --->   Operation 198 'br' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 2.47>
+ST_6 : Operation 199 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_loa = load float* %win_buf_1_1_7" [topp.c:150]   --->   Operation 199 'load' 'win_buf_1_1_7_loa' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 200 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_1_l = load float* %win_buf_1_1_7_1" [topp.c:150]   --->   Operation 200 'load' 'win_buf_1_1_7_1_l' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 201 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_2_l = load float* %win_buf_1_1_7_2" [topp.c:150]   --->   Operation 201 'load' 'win_buf_1_1_7_2_l' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 202 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_3_l = load float* %win_buf_1_1_7_3" [topp.c:150]   --->   Operation 202 'load' 'win_buf_1_1_7_3_l' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 203 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_4_l = load float* %win_buf_1_1_7_4" [topp.c:150]   --->   Operation 203 'load' 'win_buf_1_1_7_4_l' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 204 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_5_l = load float* %win_buf_1_1_7_5" [topp.c:150]   --->   Operation 204 'load' 'win_buf_1_1_7_5_l' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 205 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_6_l = load float* %win_buf_1_1_7_6" [topp.c:150]   --->   Operation 205 'load' 'win_buf_1_1_7_6_l' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 206 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_7_l = load float* %win_buf_1_1_7_7" [topp.c:150]   --->   Operation 206 'load' 'win_buf_1_1_7_7_l' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 207 [1/1] (2.47ns)   --->   "%win_buf_1_0_0 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %win_buf_1_1_7_loa, float %win_buf_1_1_7_1_l, float %win_buf_1_1_7_2_l, float %win_buf_1_1_7_3_l, float %win_buf_1_1_7_4_l, float %win_buf_1_1_7_5_l, float %win_buf_1_1_7_6_l, float %win_buf_1_1_7_7_l, i3 %tmp_28)" [topp.c:150]   --->   Operation 207 'mux' 'win_buf_1_0_0' <Predicate = true> <Delay = 2.47> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 208 [1/1] (1.36ns)   --->   "switch i3 %tmp_28, label %branch47.i [
+    i3 0, label %branch24.i.branch40.i_crit_edge
+    i3 1, label %branch41.i
+    i3 2, label %branch42.i
+    i3 3, label %branch43.i
+    i3 -4, label %branch44.i
+    i3 -3, label %branch45.i
+    i3 -2, label %branch46.i
+  ]" [topp.c:150]   --->   Operation 208 'switch' <Predicate = true> <Delay = 1.36>
+ST_6 : Operation 209 [1/1] (0.00ns)   --->   "store float %win_buf_1_0_0, float* %win_buf_1_0_7_6" [topp.c:150]   --->   Operation 209 'store' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_6 : Operation 210 [1/1] (0.00ns)   --->   "br label %branch40.i" [topp.c:150]   --->   Operation 210 'br' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_6 : Operation 211 [1/1] (0.00ns)   --->   "store float %win_buf_1_0_0, float* %win_buf_1_0_7_5" [topp.c:150]   --->   Operation 211 'store' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_6 : Operation 212 [1/1] (0.00ns)   --->   "br label %branch40.i" [topp.c:150]   --->   Operation 212 'br' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_6 : Operation 213 [1/1] (0.00ns)   --->   "store float %win_buf_1_0_0, float* %win_buf_1_0_7_4" [topp.c:150]   --->   Operation 213 'store' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_6 : Operation 214 [1/1] (0.00ns)   --->   "br label %branch40.i" [topp.c:150]   --->   Operation 214 'br' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_6 : Operation 215 [1/1] (0.00ns)   --->   "store float %win_buf_1_0_0, float* %win_buf_1_0_7_3" [topp.c:150]   --->   Operation 215 'store' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_6 : Operation 216 [1/1] (0.00ns)   --->   "br label %branch40.i" [topp.c:150]   --->   Operation 216 'br' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_6 : Operation 217 [1/1] (0.00ns)   --->   "store float %win_buf_1_0_0, float* %win_buf_1_0_7_2" [topp.c:150]   --->   Operation 217 'store' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_6 : Operation 218 [1/1] (0.00ns)   --->   "br label %branch40.i" [topp.c:150]   --->   Operation 218 'br' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_6 : Operation 219 [1/1] (0.00ns)   --->   "store float %win_buf_1_0_0, float* %win_buf_1_0_7_1" [topp.c:150]   --->   Operation 219 'store' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_6 : Operation 220 [1/1] (0.00ns)   --->   "br label %branch40.i" [topp.c:150]   --->   Operation 220 'br' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_6 : Operation 221 [1/1] (0.00ns)   --->   "store float %win_buf_1_0_0, float* %win_buf_1_0_7" [topp.c:150]   --->   Operation 221 'store' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_6 : Operation 222 [1/1] (0.00ns)   --->   "br label %branch40.i" [topp.c:150]   --->   Operation 222 'br' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_6 : Operation 223 [1/1] (0.00ns)   --->   "store float %win_buf_1_0_0, float* %win_buf_1_0_7_7" [topp.c:150]   --->   Operation 223 'store' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+ST_6 : Operation 224 [1/1] (0.00ns)   --->   "br label %branch40.i" [topp.c:150]   --->   Operation 224 'br' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 2.47>
+ST_7 : Operation 225 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_loa = load float* %win_buf_1_2_7" [topp.c:151]   --->   Operation 225 'load' 'win_buf_1_2_7_loa' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 226 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_1_l = load float* %win_buf_1_2_7_1" [topp.c:151]   --->   Operation 226 'load' 'win_buf_1_2_7_1_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 227 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_2_l = load float* %win_buf_1_2_7_2" [topp.c:151]   --->   Operation 227 'load' 'win_buf_1_2_7_2_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 228 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_3_l = load float* %win_buf_1_2_7_3" [topp.c:151]   --->   Operation 228 'load' 'win_buf_1_2_7_3_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 229 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_4_l = load float* %win_buf_1_2_7_4" [topp.c:151]   --->   Operation 229 'load' 'win_buf_1_2_7_4_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 230 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_5_l = load float* %win_buf_1_2_7_5" [topp.c:151]   --->   Operation 230 'load' 'win_buf_1_2_7_5_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 231 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_6_l = load float* %win_buf_1_2_7_6" [topp.c:151]   --->   Operation 231 'load' 'win_buf_1_2_7_6_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 232 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_7_l = load float* %win_buf_1_2_7_7" [topp.c:151]   --->   Operation 232 'load' 'win_buf_1_2_7_7_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 233 [1/1] (2.47ns)   --->   "%win_buf_1_1_0 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %win_buf_1_2_7_loa, float %win_buf_1_2_7_1_l, float %win_buf_1_2_7_2_l, float %win_buf_1_2_7_3_l, float %win_buf_1_2_7_4_l, float %win_buf_1_2_7_5_l, float %win_buf_1_2_7_6_l, float %win_buf_1_2_7_7_l, i3 %tmp_28)" [topp.c:151]   --->   Operation 233 'mux' 'win_buf_1_1_0' <Predicate = true> <Delay = 2.47> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 234 [1/1] (1.36ns)   --->   "switch i3 %tmp_28, label %branch55.i [
+    i3 0, label %branch40.i.branch48.i_crit_edge
+    i3 1, label %branch49.i
+    i3 2, label %branch50.i
+    i3 3, label %branch51.i
+    i3 -4, label %branch52.i
+    i3 -3, label %branch53.i
+    i3 -2, label %branch54.i
+  ]" [topp.c:151]   --->   Operation 234 'switch' <Predicate = true> <Delay = 1.36>
+ST_7 : Operation 235 [1/1] (0.00ns)   --->   "store float %win_buf_1_1_0, float* %win_buf_1_1_7_6" [topp.c:151]   --->   Operation 235 'store' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_7 : Operation 236 [1/1] (0.00ns)   --->   "br label %branch48.i" [topp.c:151]   --->   Operation 236 'br' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_7 : Operation 237 [1/1] (0.00ns)   --->   "store float %win_buf_1_1_0, float* %win_buf_1_1_7_5" [topp.c:151]   --->   Operation 237 'store' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_7 : Operation 238 [1/1] (0.00ns)   --->   "br label %branch48.i" [topp.c:151]   --->   Operation 238 'br' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_7 : Operation 239 [1/1] (0.00ns)   --->   "store float %win_buf_1_1_0, float* %win_buf_1_1_7_4" [topp.c:151]   --->   Operation 239 'store' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_7 : Operation 240 [1/1] (0.00ns)   --->   "br label %branch48.i" [topp.c:151]   --->   Operation 240 'br' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_7 : Operation 241 [1/1] (0.00ns)   --->   "store float %win_buf_1_1_0, float* %win_buf_1_1_7_3" [topp.c:151]   --->   Operation 241 'store' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_7 : Operation 242 [1/1] (0.00ns)   --->   "br label %branch48.i" [topp.c:151]   --->   Operation 242 'br' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_7 : Operation 243 [1/1] (0.00ns)   --->   "store float %win_buf_1_1_0, float* %win_buf_1_1_7_2" [topp.c:151]   --->   Operation 243 'store' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_7 : Operation 244 [1/1] (0.00ns)   --->   "br label %branch48.i" [topp.c:151]   --->   Operation 244 'br' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_7 : Operation 245 [1/1] (0.00ns)   --->   "store float %win_buf_1_1_0, float* %win_buf_1_1_7_1" [topp.c:151]   --->   Operation 245 'store' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_7 : Operation 246 [1/1] (0.00ns)   --->   "br label %branch48.i" [topp.c:151]   --->   Operation 246 'br' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_7 : Operation 247 [1/1] (0.00ns)   --->   "store float %win_buf_1_1_0, float* %win_buf_1_1_7" [topp.c:151]   --->   Operation 247 'store' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_7 : Operation 248 [1/1] (0.00ns)   --->   "br label %branch48.i" [topp.c:151]   --->   Operation 248 'br' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_7 : Operation 249 [1/1] (0.00ns)   --->   "store float %win_buf_1_1_0, float* %win_buf_1_1_7_7" [topp.c:151]   --->   Operation 249 'store' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+ST_7 : Operation 250 [1/1] (0.00ns)   --->   "br label %branch48.i" [topp.c:151]   --->   Operation 250 'br' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+ST_7 : Operation 251 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_loa = load float* %win_buf_2_1_7" [topp.c:152]   --->   Operation 251 'load' 'win_buf_2_1_7_loa' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 252 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_1_l = load float* %win_buf_2_1_7_1" [topp.c:152]   --->   Operation 252 'load' 'win_buf_2_1_7_1_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 253 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_2_l = load float* %win_buf_2_1_7_2" [topp.c:152]   --->   Operation 253 'load' 'win_buf_2_1_7_2_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 254 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_3_l = load float* %win_buf_2_1_7_3" [topp.c:152]   --->   Operation 254 'load' 'win_buf_2_1_7_3_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 255 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_4_l = load float* %win_buf_2_1_7_4" [topp.c:152]   --->   Operation 255 'load' 'win_buf_2_1_7_4_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 256 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_5_l = load float* %win_buf_2_1_7_5" [topp.c:152]   --->   Operation 256 'load' 'win_buf_2_1_7_5_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 257 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_6_l = load float* %win_buf_2_1_7_6" [topp.c:152]   --->   Operation 257 'load' 'win_buf_2_1_7_6_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 258 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_7_l = load float* %win_buf_2_1_7_7" [topp.c:152]   --->   Operation 258 'load' 'win_buf_2_1_7_7_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 259 [1/1] (2.47ns)   --->   "%win_buf_2_0_0 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %win_buf_2_1_7_loa, float %win_buf_2_1_7_1_l, float %win_buf_2_1_7_2_l, float %win_buf_2_1_7_3_l, float %win_buf_2_1_7_4_l, float %win_buf_2_1_7_5_l, float %win_buf_2_1_7_6_l, float %win_buf_2_1_7_7_l, i3 %tmp_28)" [topp.c:152]   --->   Operation 259 'mux' 'win_buf_2_0_0' <Predicate = true> <Delay = 2.47> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 260 [1/1] (1.36ns)   --->   "switch i3 %tmp_28, label %branch71.i [
+    i3 0, label %branch48.i.branch64.i_crit_edge
+    i3 1, label %branch65.i
+    i3 2, label %branch66.i
+    i3 3, label %branch67.i
+    i3 -4, label %branch68.i
+    i3 -3, label %branch69.i
+    i3 -2, label %branch70.i
+  ]" [topp.c:152]   --->   Operation 260 'switch' <Predicate = true> <Delay = 1.36>
+ST_7 : Operation 261 [1/1] (0.00ns)   --->   "store float %win_buf_2_0_0, float* %win_buf_2_0_7_6" [topp.c:152]   --->   Operation 261 'store' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_7 : Operation 262 [1/1] (0.00ns)   --->   "br label %branch64.i" [topp.c:152]   --->   Operation 262 'br' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_7 : Operation 263 [1/1] (0.00ns)   --->   "store float %win_buf_2_0_0, float* %win_buf_2_0_7_5" [topp.c:152]   --->   Operation 263 'store' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_7 : Operation 264 [1/1] (0.00ns)   --->   "br label %branch64.i" [topp.c:152]   --->   Operation 264 'br' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_7 : Operation 265 [1/1] (0.00ns)   --->   "store float %win_buf_2_0_0, float* %win_buf_2_0_7_4" [topp.c:152]   --->   Operation 265 'store' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_7 : Operation 266 [1/1] (0.00ns)   --->   "br label %branch64.i" [topp.c:152]   --->   Operation 266 'br' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_7 : Operation 267 [1/1] (0.00ns)   --->   "store float %win_buf_2_0_0, float* %win_buf_2_0_7_3" [topp.c:152]   --->   Operation 267 'store' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_7 : Operation 268 [1/1] (0.00ns)   --->   "br label %branch64.i" [topp.c:152]   --->   Operation 268 'br' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_7 : Operation 269 [1/1] (0.00ns)   --->   "store float %win_buf_2_0_0, float* %win_buf_2_0_7_2" [topp.c:152]   --->   Operation 269 'store' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_7 : Operation 270 [1/1] (0.00ns)   --->   "br label %branch64.i" [topp.c:152]   --->   Operation 270 'br' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_7 : Operation 271 [1/1] (0.00ns)   --->   "store float %win_buf_2_0_0, float* %win_buf_2_0_7_1" [topp.c:152]   --->   Operation 271 'store' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_7 : Operation 272 [1/1] (0.00ns)   --->   "br label %branch64.i" [topp.c:152]   --->   Operation 272 'br' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_7 : Operation 273 [1/1] (0.00ns)   --->   "store float %win_buf_2_0_0, float* %win_buf_2_0_7" [topp.c:152]   --->   Operation 273 'store' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_7 : Operation 274 [1/1] (0.00ns)   --->   "br label %branch64.i" [topp.c:152]   --->   Operation 274 'br' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_7 : Operation 275 [1/1] (0.00ns)   --->   "store float %win_buf_2_0_0, float* %win_buf_2_0_7_7" [topp.c:152]   --->   Operation 275 'store' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+ST_7 : Operation 276 [1/1] (0.00ns)   --->   "br label %branch64.i" [topp.c:152]   --->   Operation 276 'br' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+ST_7 : Operation 277 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_loa = load float* %win_buf_2_2_7" [topp.c:153]   --->   Operation 277 'load' 'win_buf_2_2_7_loa' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 278 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_1_l = load float* %win_buf_2_2_7_1" [topp.c:153]   --->   Operation 278 'load' 'win_buf_2_2_7_1_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 279 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_2_l = load float* %win_buf_2_2_7_2" [topp.c:153]   --->   Operation 279 'load' 'win_buf_2_2_7_2_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 280 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_3_l = load float* %win_buf_2_2_7_3" [topp.c:153]   --->   Operation 280 'load' 'win_buf_2_2_7_3_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 281 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_4_l = load float* %win_buf_2_2_7_4" [topp.c:153]   --->   Operation 281 'load' 'win_buf_2_2_7_4_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 282 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_5_l = load float* %win_buf_2_2_7_5" [topp.c:153]   --->   Operation 282 'load' 'win_buf_2_2_7_5_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 283 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_6_l = load float* %win_buf_2_2_7_6" [topp.c:153]   --->   Operation 283 'load' 'win_buf_2_2_7_6_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 284 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_7_l = load float* %win_buf_2_2_7_7" [topp.c:153]   --->   Operation 284 'load' 'win_buf_2_2_7_7_l' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 285 [1/1] (2.47ns)   --->   "%win_buf_2_1_0 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %win_buf_2_2_7_loa, float %win_buf_2_2_7_1_l, float %win_buf_2_2_7_2_l, float %win_buf_2_2_7_3_l, float %win_buf_2_2_7_4_l, float %win_buf_2_2_7_5_l, float %win_buf_2_2_7_6_l, float %win_buf_2_2_7_7_l, i3 %tmp_28)" [topp.c:153]   --->   Operation 285 'mux' 'win_buf_2_1_0' <Predicate = true> <Delay = 2.47> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 286 [1/1] (1.36ns)   --->   "switch i3 %tmp_28, label %branch79.i [
+    i3 0, label %branch64.i.branch72.i_crit_edge
+    i3 1, label %branch73.i
+    i3 2, label %branch74.i
+    i3 3, label %branch75.i
+    i3 -4, label %branch76.i
+    i3 -3, label %branch77.i
+    i3 -2, label %branch78.i
+  ]" [topp.c:153]   --->   Operation 286 'switch' <Predicate = true> <Delay = 1.36>
+ST_7 : Operation 287 [1/1] (0.00ns)   --->   "store float %win_buf_2_1_0, float* %win_buf_2_1_7_6" [topp.c:153]   --->   Operation 287 'store' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_7 : Operation 288 [1/1] (0.00ns)   --->   "br label %branch72.i" [topp.c:153]   --->   Operation 288 'br' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_7 : Operation 289 [1/1] (0.00ns)   --->   "store float %win_buf_2_1_0, float* %win_buf_2_1_7_5" [topp.c:153]   --->   Operation 289 'store' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_7 : Operation 290 [1/1] (0.00ns)   --->   "br label %branch72.i" [topp.c:153]   --->   Operation 290 'br' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_7 : Operation 291 [1/1] (0.00ns)   --->   "store float %win_buf_2_1_0, float* %win_buf_2_1_7_4" [topp.c:153]   --->   Operation 291 'store' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_7 : Operation 292 [1/1] (0.00ns)   --->   "br label %branch72.i" [topp.c:153]   --->   Operation 292 'br' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_7 : Operation 293 [1/1] (0.00ns)   --->   "store float %win_buf_2_1_0, float* %win_buf_2_1_7_3" [topp.c:153]   --->   Operation 293 'store' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_7 : Operation 294 [1/1] (0.00ns)   --->   "br label %branch72.i" [topp.c:153]   --->   Operation 294 'br' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_7 : Operation 295 [1/1] (0.00ns)   --->   "store float %win_buf_2_1_0, float* %win_buf_2_1_7_2" [topp.c:153]   --->   Operation 295 'store' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_7 : Operation 296 [1/1] (0.00ns)   --->   "br label %branch72.i" [topp.c:153]   --->   Operation 296 'br' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_7 : Operation 297 [1/1] (0.00ns)   --->   "store float %win_buf_2_1_0, float* %win_buf_2_1_7_1" [topp.c:153]   --->   Operation 297 'store' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_7 : Operation 298 [1/1] (0.00ns)   --->   "br label %branch72.i" [topp.c:153]   --->   Operation 298 'br' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_7 : Operation 299 [1/1] (0.00ns)   --->   "store float %win_buf_2_1_0, float* %win_buf_2_1_7" [topp.c:153]   --->   Operation 299 'store' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_7 : Operation 300 [1/1] (0.00ns)   --->   "br label %branch72.i" [topp.c:153]   --->   Operation 300 'br' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_7 : Operation 301 [1/1] (0.00ns)   --->   "store float %win_buf_2_1_0, float* %win_buf_2_1_7_7" [topp.c:153]   --->   Operation 301 'store' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+ST_7 : Operation 302 [1/1] (0.00ns)   --->   "br label %branch72.i" [topp.c:153]   --->   Operation 302 'br' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+ST_7 : Operation 303 [2/2] (2.32ns)   --->   "%linbu_5_0_0_load = load float* %linbu_5_0_0_addr, align 4" [topp.c:155]   --->   Operation 303 'load' 'linbu_5_0_0_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_7 : Operation 304 [2/2] (2.32ns)   --->   "%linbu_5_0_1_load = load float* %linbu_5_0_1_addr, align 4" [topp.c:155]   --->   Operation 304 'load' 'linbu_5_0_1_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_7 : Operation 305 [2/2] (2.32ns)   --->   "%linbu_5_0_2_load = load float* %linbu_5_0_2_addr, align 4" [topp.c:155]   --->   Operation 305 'load' 'linbu_5_0_2_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_7 : Operation 306 [2/2] (2.32ns)   --->   "%linbu_5_0_3_load = load float* %linbu_5_0_3_addr, align 4" [topp.c:155]   --->   Operation 306 'load' 'linbu_5_0_3_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_7 : Operation 307 [2/2] (2.32ns)   --->   "%linbu_5_0_4_load = load float* %linbu_5_0_4_addr, align 4" [topp.c:155]   --->   Operation 307 'load' 'linbu_5_0_4_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_7 : Operation 308 [2/2] (2.32ns)   --->   "%linbu_5_0_5_load = load float* %linbu_5_0_5_addr, align 4" [topp.c:155]   --->   Operation 308 'load' 'linbu_5_0_5_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_7 : Operation 309 [2/2] (2.32ns)   --->   "%linbu_5_0_6_load = load float* %linbu_5_0_6_addr, align 4" [topp.c:155]   --->   Operation 309 'load' 'linbu_5_0_6_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_7 : Operation 310 [2/2] (2.32ns)   --->   "%linbu_5_0_7_load = load float* %linbu_5_0_7_addr, align 4" [topp.c:155]   --->   Operation 310 'load' 'linbu_5_0_7_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_7 : Operation 311 [2/2] (2.32ns)   --->   "%linbu_5_1_0_load = load float* %linbu_5_1_0_addr, align 4" [topp.c:156]   --->   Operation 311 'load' 'linbu_5_1_0_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_7 : Operation 312 [2/2] (2.32ns)   --->   "%linbu_5_1_1_load = load float* %linbu_5_1_1_addr, align 4" [topp.c:156]   --->   Operation 312 'load' 'linbu_5_1_1_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_7 : Operation 313 [2/2] (2.32ns)   --->   "%linbu_5_1_2_load = load float* %linbu_5_1_2_addr, align 4" [topp.c:156]   --->   Operation 313 'load' 'linbu_5_1_2_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_7 : Operation 314 [2/2] (2.32ns)   --->   "%linbu_5_1_3_load = load float* %linbu_5_1_3_addr, align 4" [topp.c:156]   --->   Operation 314 'load' 'linbu_5_1_3_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_7 : Operation 315 [2/2] (2.32ns)   --->   "%linbu_5_1_4_load = load float* %linbu_5_1_4_addr, align 4" [topp.c:156]   --->   Operation 315 'load' 'linbu_5_1_4_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_7 : Operation 316 [2/2] (2.32ns)   --->   "%linbu_5_1_5_load = load float* %linbu_5_1_5_addr, align 4" [topp.c:156]   --->   Operation 316 'load' 'linbu_5_1_5_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_7 : Operation 317 [2/2] (2.32ns)   --->   "%linbu_5_1_6_load = load float* %linbu_5_1_6_addr, align 4" [topp.c:156]   --->   Operation 317 'load' 'linbu_5_1_6_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_7 : Operation 318 [2/2] (2.32ns)   --->   "%linbu_5_1_7_load = load float* %linbu_5_1_7_addr, align 4" [topp.c:156]   --->   Operation 318 'load' 'linbu_5_1_7_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+
+State 8 <SV = 7> <Delay = 7.95>
+ST_8 : Operation 319 [1/2] (2.32ns)   --->   "%linbu_5_0_0_load = load float* %linbu_5_0_0_addr, align 4" [topp.c:155]   --->   Operation 319 'load' 'linbu_5_0_0_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 320 [1/2] (2.32ns)   --->   "%linbu_5_0_1_load = load float* %linbu_5_0_1_addr, align 4" [topp.c:155]   --->   Operation 320 'load' 'linbu_5_0_1_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 321 [1/2] (2.32ns)   --->   "%linbu_5_0_2_load = load float* %linbu_5_0_2_addr, align 4" [topp.c:155]   --->   Operation 321 'load' 'linbu_5_0_2_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 322 [1/2] (2.32ns)   --->   "%linbu_5_0_3_load = load float* %linbu_5_0_3_addr, align 4" [topp.c:155]   --->   Operation 322 'load' 'linbu_5_0_3_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 323 [1/2] (2.32ns)   --->   "%linbu_5_0_4_load = load float* %linbu_5_0_4_addr, align 4" [topp.c:155]   --->   Operation 323 'load' 'linbu_5_0_4_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 324 [1/2] (2.32ns)   --->   "%linbu_5_0_5_load = load float* %linbu_5_0_5_addr, align 4" [topp.c:155]   --->   Operation 324 'load' 'linbu_5_0_5_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 325 [1/2] (2.32ns)   --->   "%linbu_5_0_6_load = load float* %linbu_5_0_6_addr, align 4" [topp.c:155]   --->   Operation 325 'load' 'linbu_5_0_6_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 326 [1/2] (2.32ns)   --->   "%linbu_5_0_7_load = load float* %linbu_5_0_7_addr, align 4" [topp.c:155]   --->   Operation 326 'load' 'linbu_5_0_7_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 327 [1/1] (2.47ns)   --->   "%win_buf_0_2_0 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %linbu_5_0_0_load, float %linbu_5_0_1_load, float %linbu_5_0_2_load, float %linbu_5_0_3_load, float %linbu_5_0_4_load, float %linbu_5_0_5_load, float %linbu_5_0_6_load, float %linbu_5_0_7_load, i3 %tmp_28)" [topp.c:155]   --->   Operation 327 'mux' 'win_buf_0_2_0' <Predicate = true> <Delay = 2.47> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 328 [1/2] (2.32ns)   --->   "%linbu_5_1_0_load = load float* %linbu_5_1_0_addr, align 4" [topp.c:156]   --->   Operation 328 'load' 'linbu_5_1_0_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 329 [1/2] (2.32ns)   --->   "%linbu_5_1_1_load = load float* %linbu_5_1_1_addr, align 4" [topp.c:156]   --->   Operation 329 'load' 'linbu_5_1_1_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 330 [1/2] (2.32ns)   --->   "%linbu_5_1_2_load = load float* %linbu_5_1_2_addr, align 4" [topp.c:156]   --->   Operation 330 'load' 'linbu_5_1_2_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 331 [1/2] (2.32ns)   --->   "%linbu_5_1_3_load = load float* %linbu_5_1_3_addr, align 4" [topp.c:156]   --->   Operation 331 'load' 'linbu_5_1_3_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 332 [1/2] (2.32ns)   --->   "%linbu_5_1_4_load = load float* %linbu_5_1_4_addr, align 4" [topp.c:156]   --->   Operation 332 'load' 'linbu_5_1_4_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 333 [1/2] (2.32ns)   --->   "%linbu_5_1_5_load = load float* %linbu_5_1_5_addr, align 4" [topp.c:156]   --->   Operation 333 'load' 'linbu_5_1_5_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 334 [1/2] (2.32ns)   --->   "%linbu_5_1_6_load = load float* %linbu_5_1_6_addr, align 4" [topp.c:156]   --->   Operation 334 'load' 'linbu_5_1_6_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 335 [1/2] (2.32ns)   --->   "%linbu_5_1_7_load = load float* %linbu_5_1_7_addr, align 4" [topp.c:156]   --->   Operation 335 'load' 'linbu_5_1_7_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 336 [1/1] (2.47ns)   --->   "%win_buf_1_2_0 = call float @_ssdm_op_Mux.ap_auto.8float.i3(float %linbu_5_1_0_load, float %linbu_5_1_1_load, float %linbu_5_1_2_load, float %linbu_5_1_3_load, float %linbu_5_1_4_load, float %linbu_5_1_5_load, float %linbu_5_1_6_load, float %linbu_5_1_7_load, i3 %tmp_28)" [topp.c:156]   --->   Operation 336 'mux' 'win_buf_1_2_0' <Predicate = true> <Delay = 2.47> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 337 [1/1] (0.00ns)   --->   "%empty_418 = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_0, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 337 'specinterface' 'empty_418' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 338 [1/1] (0.00ns)   --->   "%empty_419 = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 338 'specinterface' 'empty_419' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 339 [1/1] (0.00ns)   --->   "%empty_420 = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 339 'specinterface' 'empty_420' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 340 [1/1] (0.00ns)   --->   "%empty_421 = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_3, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 340 'specinterface' 'empty_421' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 341 [1/1] (0.00ns)   --->   "%empty_422 = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_4, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 341 'specinterface' 'empty_422' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 342 [1/1] (0.00ns)   --->   "%empty_423 = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_5, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 342 'specinterface' 'empty_423' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 343 [1/1] (0.00ns)   --->   "%empty_424 = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_6, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 343 'specinterface' 'empty_424' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 344 [1/1] (0.00ns)   --->   "%empty_425 = call i32 (...)* @_ssdm_op_SpecInterface(float* %p1_7, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 344 'specinterface' 'empty_425' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 345 [1/1] (1.36ns)   --->   "switch i3 %tmp_28, label %case7.i.i [
+    i3 0, label %case0.i.i
+    i3 1, label %case1.i.i
+    i3 2, label %case2.i.i
+    i3 3, label %case3.i.i
+    i3 -4, label %case4.i.i
+    i3 -3, label %case5.i.i
+    i3 -2, label %case6.i.i
+  ]" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1120->topp.c:157]   --->   Operation 345 'switch' <Predicate = true> <Delay = 1.36>
+ST_8 : Operation 346 [1/1] (3.63ns)   --->   "%p1_6_read = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %p1_6)" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1115->topp.c:157]   --->   Operation 346 'read' 'p1_6_read' <Predicate = (tmp_28 == 6)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_8 : Operation 347 [1/1] (2.00ns)   --->   "br label %"aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64.exit"" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1119->topp.c:157]   --->   Operation 347 'br' <Predicate = (tmp_28 == 6)> <Delay = 2.00>
+ST_8 : Operation 348 [1/1] (3.63ns)   --->   "%p1_5_read = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %p1_5)" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1112->topp.c:157]   --->   Operation 348 'read' 'p1_5_read' <Predicate = (tmp_28 == 5)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_8 : Operation 349 [1/1] (2.00ns)   --->   "br label %"aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64.exit"" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1119->topp.c:157]   --->   Operation 349 'br' <Predicate = (tmp_28 == 5)> <Delay = 2.00>
+ST_8 : Operation 350 [1/1] (3.63ns)   --->   "%p1_4_read = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %p1_4)" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1109->topp.c:157]   --->   Operation 350 'read' 'p1_4_read' <Predicate = (tmp_28 == 4)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_8 : Operation 351 [1/1] (2.00ns)   --->   "br label %"aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64.exit"" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1119->topp.c:157]   --->   Operation 351 'br' <Predicate = (tmp_28 == 4)> <Delay = 2.00>
+ST_8 : Operation 352 [1/1] (3.63ns)   --->   "%p1_3_read = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %p1_3)" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1106->topp.c:157]   --->   Operation 352 'read' 'p1_3_read' <Predicate = (tmp_28 == 3)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_8 : Operation 353 [1/1] (2.00ns)   --->   "br label %"aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64.exit"" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1119->topp.c:157]   --->   Operation 353 'br' <Predicate = (tmp_28 == 3)> <Delay = 2.00>
+ST_8 : Operation 354 [1/1] (3.63ns)   --->   "%p1_2_read = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %p1_2)" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1103->topp.c:157]   --->   Operation 354 'read' 'p1_2_read' <Predicate = (tmp_28 == 2)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_8 : Operation 355 [1/1] (2.00ns)   --->   "br label %"aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64.exit"" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1119->topp.c:157]   --->   Operation 355 'br' <Predicate = (tmp_28 == 2)> <Delay = 2.00>
+ST_8 : Operation 356 [1/1] (3.63ns)   --->   "%p1_1_read = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %p1_1)" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1100->topp.c:157]   --->   Operation 356 'read' 'p1_1_read' <Predicate = (tmp_28 == 1)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_8 : Operation 357 [1/1] (2.00ns)   --->   "br label %"aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64.exit"" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1119->topp.c:157]   --->   Operation 357 'br' <Predicate = (tmp_28 == 1)> <Delay = 2.00>
+ST_8 : Operation 358 [1/1] (3.63ns)   --->   "%p1_0_read = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %p1_0)" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1097->topp.c:157]   --->   Operation 358 'read' 'p1_0_read' <Predicate = (tmp_28 == 0)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_8 : Operation 359 [1/1] (2.00ns)   --->   "br label %"aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64.exit"" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1119->topp.c:157]   --->   Operation 359 'br' <Predicate = (tmp_28 == 0)> <Delay = 2.00>
+ST_8 : Operation 360 [1/1] (3.63ns)   --->   "%p1_7_read = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %p1_7)" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1118->topp.c:157]   --->   Operation 360 'read' 'p1_7_read' <Predicate = (tmp_28 == 7)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_8 : Operation 361 [1/1] (2.00ns)   --->   "br label %"aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64.exit"" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1119->topp.c:157]   --->   Operation 361 'br' <Predicate = (tmp_28 == 7)> <Delay = 2.00>
+ST_8 : Operation 362 [1/1] (0.00ns)   --->   "%win_buf_2_2_0 = phi float [ %p1_0_read, %case0.i.i ], [ %p1_1_read, %case1.i.i ], [ %p1_2_read, %case2.i.i ], [ %p1_3_read, %case3.i.i ], [ %p1_4_read, %case4.i.i ], [ %p1_5_read, %case5.i.i ], [ %p1_6_read, %case6.i.i ], [ %p1_7_read, %case7.i.i ]" [aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1097->topp.c:157]   --->   Operation 362 'phi' 'win_buf_2_2_0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 363 [1/1] (1.36ns)   --->   "switch i3 %tmp_28, label %branch7.i [
+    i3 0, label %branch0.i
+    i3 1, label %branch1.i
+    i3 2, label %branch2.i
+    i3 3, label %branch3.i
+    i3 -4, label %branch4.i
+    i3 -3, label %branch5.i
+    i3 -2, label %branch6.i
+  ]" [topp.c:159]   --->   Operation 363 'switch' <Predicate = true> <Delay = 1.36>
+ST_8 : Operation 364 [1/1] (2.32ns)   --->   "store float %win_buf_1_2_0, float* %linbu_5_0_6_addr, align 4" [topp.c:159]   --->   Operation 364 'store' <Predicate = (tmp_28 == 6)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 365 [1/1] (2.32ns)   --->   "store float %win_buf_2_2_0, float* %linbu_5_1_6_addr, align 4" [topp.c:160]   --->   Operation 365 'store' <Predicate = (tmp_28 == 6)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 366 [1/1] (0.00ns)   --->   "br label %1"   --->   Operation 366 'br' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_8 : Operation 367 [1/1] (2.32ns)   --->   "store float %win_buf_1_2_0, float* %linbu_5_0_5_addr, align 4" [topp.c:159]   --->   Operation 367 'store' <Predicate = (tmp_28 == 5)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 368 [1/1] (2.32ns)   --->   "store float %win_buf_2_2_0, float* %linbu_5_1_5_addr, align 4" [topp.c:160]   --->   Operation 368 'store' <Predicate = (tmp_28 == 5)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 369 [1/1] (0.00ns)   --->   "br label %1"   --->   Operation 369 'br' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_8 : Operation 370 [1/1] (2.32ns)   --->   "store float %win_buf_1_2_0, float* %linbu_5_0_4_addr, align 4" [topp.c:159]   --->   Operation 370 'store' <Predicate = (tmp_28 == 4)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 371 [1/1] (2.32ns)   --->   "store float %win_buf_2_2_0, float* %linbu_5_1_4_addr, align 4" [topp.c:160]   --->   Operation 371 'store' <Predicate = (tmp_28 == 4)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 372 [1/1] (0.00ns)   --->   "br label %1"   --->   Operation 372 'br' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_8 : Operation 373 [1/1] (2.32ns)   --->   "store float %win_buf_1_2_0, float* %linbu_5_0_3_addr, align 4" [topp.c:159]   --->   Operation 373 'store' <Predicate = (tmp_28 == 3)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 374 [1/1] (2.32ns)   --->   "store float %win_buf_2_2_0, float* %linbu_5_1_3_addr, align 4" [topp.c:160]   --->   Operation 374 'store' <Predicate = (tmp_28 == 3)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 375 [1/1] (0.00ns)   --->   "br label %1"   --->   Operation 375 'br' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_8 : Operation 376 [1/1] (2.32ns)   --->   "store float %win_buf_1_2_0, float* %linbu_5_0_2_addr, align 4" [topp.c:159]   --->   Operation 376 'store' <Predicate = (tmp_28 == 2)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 377 [1/1] (2.32ns)   --->   "store float %win_buf_2_2_0, float* %linbu_5_1_2_addr, align 4" [topp.c:160]   --->   Operation 377 'store' <Predicate = (tmp_28 == 2)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 378 [1/1] (0.00ns)   --->   "br label %1"   --->   Operation 378 'br' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_8 : Operation 379 [1/1] (2.32ns)   --->   "store float %win_buf_1_2_0, float* %linbu_5_0_1_addr, align 4" [topp.c:159]   --->   Operation 379 'store' <Predicate = (tmp_28 == 1)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 380 [1/1] (2.32ns)   --->   "store float %win_buf_2_2_0, float* %linbu_5_1_1_addr, align 4" [topp.c:160]   --->   Operation 380 'store' <Predicate = (tmp_28 == 1)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 381 [1/1] (0.00ns)   --->   "br label %1"   --->   Operation 381 'br' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_8 : Operation 382 [1/1] (2.32ns)   --->   "store float %win_buf_1_2_0, float* %linbu_5_0_0_addr, align 4" [topp.c:159]   --->   Operation 382 'store' <Predicate = (tmp_28 == 0)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 383 [1/1] (2.32ns)   --->   "store float %win_buf_2_2_0, float* %linbu_5_1_0_addr, align 4" [topp.c:160]   --->   Operation 383 'store' <Predicate = (tmp_28 == 0)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 384 [1/1] (0.00ns)   --->   "br label %1"   --->   Operation 384 'br' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_8 : Operation 385 [1/1] (2.32ns)   --->   "store float %win_buf_1_2_0, float* %linbu_5_0_7_addr, align 4" [topp.c:159]   --->   Operation 385 'store' <Predicate = (tmp_28 == 7)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 386 [1/1] (2.32ns)   --->   "store float %win_buf_2_2_0, float* %linbu_5_1_7_addr, align 4" [topp.c:160]   --->   Operation 386 'store' <Predicate = (tmp_28 == 7)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31> <RAM>
+ST_8 : Operation 387 [1/1] (0.00ns)   --->   "br label %1"   --->   Operation 387 'br' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+ST_8 : Operation 388 [1/1] (1.36ns)   --->   "switch i3 %tmp_28, label %branch39.i [
+    i3 0, label %.branch32.i_crit_edge
+    i3 1, label %branch33.i
+    i3 2, label %branch34.i
+    i3 3, label %branch35.i
+    i3 -4, label %branch36.i
+    i3 -3, label %branch37.i
+    i3 -2, label %branch38.i
+  ]" [topp.c:162]   --->   Operation 388 'switch' <Predicate = true> <Delay = 1.36>
+ST_8 : Operation 389 [1/1] (0.00ns)   --->   "store float %win_buf_0_2_0, float* %win_buf_0_2_7_6" [topp.c:162]   --->   Operation 389 'store' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_8 : Operation 390 [1/1] (0.00ns)   --->   "br label %branch32.i" [topp.c:162]   --->   Operation 390 'br' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_8 : Operation 391 [1/1] (0.00ns)   --->   "store float %win_buf_0_2_0, float* %win_buf_0_2_7_5" [topp.c:162]   --->   Operation 391 'store' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_8 : Operation 392 [1/1] (0.00ns)   --->   "br label %branch32.i" [topp.c:162]   --->   Operation 392 'br' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_8 : Operation 393 [1/1] (0.00ns)   --->   "store float %win_buf_0_2_0, float* %win_buf_0_2_7_4" [topp.c:162]   --->   Operation 393 'store' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_8 : Operation 394 [1/1] (0.00ns)   --->   "br label %branch32.i" [topp.c:162]   --->   Operation 394 'br' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_8 : Operation 395 [1/1] (0.00ns)   --->   "store float %win_buf_0_2_0, float* %win_buf_0_2_7_3" [topp.c:162]   --->   Operation 395 'store' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_8 : Operation 396 [1/1] (0.00ns)   --->   "br label %branch32.i" [topp.c:162]   --->   Operation 396 'br' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_8 : Operation 397 [1/1] (0.00ns)   --->   "store float %win_buf_0_2_0, float* %win_buf_0_2_7_2" [topp.c:162]   --->   Operation 397 'store' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_8 : Operation 398 [1/1] (0.00ns)   --->   "br label %branch32.i" [topp.c:162]   --->   Operation 398 'br' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_8 : Operation 399 [1/1] (0.00ns)   --->   "store float %win_buf_0_2_0, float* %win_buf_0_2_7_1" [topp.c:162]   --->   Operation 399 'store' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_8 : Operation 400 [1/1] (0.00ns)   --->   "br label %branch32.i" [topp.c:162]   --->   Operation 400 'br' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_8 : Operation 401 [1/1] (0.00ns)   --->   "store float %win_buf_0_2_0, float* %win_buf_0_2_7" [topp.c:162]   --->   Operation 401 'store' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_8 : Operation 402 [1/1] (0.00ns)   --->   "br label %branch32.i" [topp.c:162]   --->   Operation 402 'br' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_8 : Operation 403 [1/1] (0.00ns)   --->   "store float %win_buf_0_2_0, float* %win_buf_0_2_7_7" [topp.c:162]   --->   Operation 403 'store' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+ST_8 : Operation 404 [1/1] (0.00ns)   --->   "br label %branch32.i" [topp.c:162]   --->   Operation 404 'br' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+ST_8 : Operation 405 [1/1] (1.36ns)   --->   "switch i3 %tmp_28, label %branch63.i [
+    i3 0, label %branch32.i.branch56.i_crit_edge
+    i3 1, label %branch57.i
+    i3 2, label %branch58.i
+    i3 3, label %branch59.i
+    i3 -4, label %branch60.i
+    i3 -3, label %branch61.i
+    i3 -2, label %branch62.i
+  ]" [topp.c:163]   --->   Operation 405 'switch' <Predicate = true> <Delay = 1.36>
+ST_8 : Operation 406 [1/1] (0.00ns)   --->   "store float %win_buf_1_2_0, float* %win_buf_1_2_7_6" [topp.c:163]   --->   Operation 406 'store' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_8 : Operation 407 [1/1] (0.00ns)   --->   "br label %branch56.i" [topp.c:163]   --->   Operation 407 'br' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_8 : Operation 408 [1/1] (0.00ns)   --->   "store float %win_buf_1_2_0, float* %win_buf_1_2_7_5" [topp.c:163]   --->   Operation 408 'store' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_8 : Operation 409 [1/1] (0.00ns)   --->   "br label %branch56.i" [topp.c:163]   --->   Operation 409 'br' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_8 : Operation 410 [1/1] (0.00ns)   --->   "store float %win_buf_1_2_0, float* %win_buf_1_2_7_4" [topp.c:163]   --->   Operation 410 'store' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_8 : Operation 411 [1/1] (0.00ns)   --->   "br label %branch56.i" [topp.c:163]   --->   Operation 411 'br' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_8 : Operation 412 [1/1] (0.00ns)   --->   "store float %win_buf_1_2_0, float* %win_buf_1_2_7_3" [topp.c:163]   --->   Operation 412 'store' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_8 : Operation 413 [1/1] (0.00ns)   --->   "br label %branch56.i" [topp.c:163]   --->   Operation 413 'br' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_8 : Operation 414 [1/1] (0.00ns)   --->   "store float %win_buf_1_2_0, float* %win_buf_1_2_7_2" [topp.c:163]   --->   Operation 414 'store' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_8 : Operation 415 [1/1] (0.00ns)   --->   "br label %branch56.i" [topp.c:163]   --->   Operation 415 'br' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_8 : Operation 416 [1/1] (0.00ns)   --->   "store float %win_buf_1_2_0, float* %win_buf_1_2_7_1" [topp.c:163]   --->   Operation 416 'store' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_8 : Operation 417 [1/1] (0.00ns)   --->   "br label %branch56.i" [topp.c:163]   --->   Operation 417 'br' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_8 : Operation 418 [1/1] (0.00ns)   --->   "store float %win_buf_1_2_0, float* %win_buf_1_2_7" [topp.c:163]   --->   Operation 418 'store' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_8 : Operation 419 [1/1] (0.00ns)   --->   "br label %branch56.i" [topp.c:163]   --->   Operation 419 'br' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_8 : Operation 420 [1/1] (0.00ns)   --->   "store float %win_buf_1_2_0, float* %win_buf_1_2_7_7" [topp.c:163]   --->   Operation 420 'store' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+ST_8 : Operation 421 [1/1] (0.00ns)   --->   "br label %branch56.i" [topp.c:163]   --->   Operation 421 'br' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+ST_8 : Operation 422 [1/1] (1.36ns)   --->   "switch i3 %tmp_28, label %branch87.i [
+    i3 0, label %branch56.i..preheader9.i.backedge_crit_edge
+    i3 1, label %branch81.i
+    i3 2, label %branch82.i
+    i3 3, label %branch83.i
+    i3 -4, label %branch84.i
+    i3 -3, label %branch85.i
+    i3 -2, label %branch86.i
+  ]" [topp.c:164]   --->   Operation 422 'switch' <Predicate = true> <Delay = 1.36>
+ST_8 : Operation 423 [1/1] (0.00ns)   --->   "store float %win_buf_2_2_0, float* %win_buf_2_2_7_6" [topp.c:164]   --->   Operation 423 'store' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_8 : Operation 424 [1/1] (0.00ns)   --->   "br label %.preheader9.i.backedge" [topp.c:164]   --->   Operation 424 'br' <Predicate = (tmp_28 == 6)> <Delay = 0.00>
+ST_8 : Operation 425 [1/1] (0.00ns)   --->   "store float %win_buf_2_2_0, float* %win_buf_2_2_7_5" [topp.c:164]   --->   Operation 425 'store' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_8 : Operation 426 [1/1] (0.00ns)   --->   "br label %.preheader9.i.backedge" [topp.c:164]   --->   Operation 426 'br' <Predicate = (tmp_28 == 5)> <Delay = 0.00>
+ST_8 : Operation 427 [1/1] (0.00ns)   --->   "store float %win_buf_2_2_0, float* %win_buf_2_2_7_4" [topp.c:164]   --->   Operation 427 'store' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_8 : Operation 428 [1/1] (0.00ns)   --->   "br label %.preheader9.i.backedge" [topp.c:164]   --->   Operation 428 'br' <Predicate = (tmp_28 == 4)> <Delay = 0.00>
+ST_8 : Operation 429 [1/1] (0.00ns)   --->   "store float %win_buf_2_2_0, float* %win_buf_2_2_7_3" [topp.c:164]   --->   Operation 429 'store' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_8 : Operation 430 [1/1] (0.00ns)   --->   "br label %.preheader9.i.backedge" [topp.c:164]   --->   Operation 430 'br' <Predicate = (tmp_28 == 3)> <Delay = 0.00>
+ST_8 : Operation 431 [1/1] (0.00ns)   --->   "store float %win_buf_2_2_0, float* %win_buf_2_2_7_2" [topp.c:164]   --->   Operation 431 'store' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_8 : Operation 432 [1/1] (0.00ns)   --->   "br label %.preheader9.i.backedge" [topp.c:164]   --->   Operation 432 'br' <Predicate = (tmp_28 == 2)> <Delay = 0.00>
+ST_8 : Operation 433 [1/1] (0.00ns)   --->   "store float %win_buf_2_2_0, float* %win_buf_2_2_7_1" [topp.c:164]   --->   Operation 433 'store' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_8 : Operation 434 [1/1] (0.00ns)   --->   "br label %.preheader9.i.backedge" [topp.c:164]   --->   Operation 434 'br' <Predicate = (tmp_28 == 1)> <Delay = 0.00>
+ST_8 : Operation 435 [1/1] (0.00ns)   --->   "store float %win_buf_2_2_0, float* %win_buf_2_2_7" [topp.c:164]   --->   Operation 435 'store' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_8 : Operation 436 [1/1] (0.00ns)   --->   "br label %.preheader9.i.backedge" [topp.c:164]   --->   Operation 436 'br' <Predicate = (tmp_28 == 0)> <Delay = 0.00>
+ST_8 : Operation 437 [1/1] (0.00ns)   --->   "store float %win_buf_2_2_0, float* %win_buf_2_2_7_7" [topp.c:164]   --->   Operation 437 'store' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+ST_8 : Operation 438 [1/1] (0.00ns)   --->   "br label %.preheader9.i.backedge" [topp.c:164]   --->   Operation 438 'br' <Predicate = (tmp_28 == 7)> <Delay = 0.00>
+ST_8 : Operation 439 [1/1] (0.00ns)   --->   "br label %.preheader9.i"   --->   Operation 439 'br' <Predicate = true> <Delay = 0.00>
+
+State 9 <SV = 4> <Delay = 1.78>
+ST_9 : Operation 440 [1/1] (0.00ns)   --->   "%oc_i = phi i5 [ %oc, %5 ], [ 0, %.preheader8.i.preheader ]"   --->   Operation 440 'phi' 'oc_i' <Predicate = (or_cond_i)> <Delay = 0.00>
+ST_9 : Operation 441 [1/1] (1.36ns)   --->   "%exitcond3_i = icmp eq i5 %oc_i, -16" [topp.c:169]   --->   Operation 441 'icmp' 'exitcond3_i' <Predicate = (or_cond_i)> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 442 [1/1] (0.00ns)   --->   "%empty_426 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)"   --->   Operation 442 'speclooptripcount' 'empty_426' <Predicate = (or_cond_i)> <Delay = 0.00>
+ST_9 : Operation 443 [1/1] (1.78ns)   --->   "%oc = add i5 %oc_i, 1" [topp.c:169]   --->   Operation 443 'add' 'oc' <Predicate = (or_cond_i)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 444 [1/1] (0.00ns)   --->   "br i1 %exitcond3_i, label %.loopexit.i.loopexit, label %.preheader.preheader" [topp.c:169]   --->   Operation 444 'br' <Predicate = (or_cond_i)> <Delay = 0.00>
+ST_9 : Operation 445 [1/1] (1.76ns)   --->   "br label %.preheader" [topp.c:172]   --->   Operation 445 'br' <Predicate = (or_cond_i & !exitcond3_i)> <Delay = 1.76>
+ST_9 : Operation 446 [1/1] (0.00ns)   --->   "br label %.loopexit.i"   --->   Operation 446 'br' <Predicate = (or_cond_i & exitcond3_i)> <Delay = 0.00>
+ST_9 : Operation 447 [1/1] (0.00ns)   --->   "br label %.preheader10.i" [topp.c:145]   --->   Operation 447 'br' <Predicate = (exitcond3_i) | (!or_cond_i)> <Delay = 0.00>
+
+State 10 <SV = 5> <Delay = 3.63>
+ST_10 : Operation 448 [1/1] (0.00ns)   --->   "%kr_i = phi i2 [ %kr, %.preheader.loopexit ], [ 0, %.preheader.preheader ]"   --->   Operation 448 'phi' 'kr_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 449 [1/1] (0.95ns)   --->   "%exitcond2_i = icmp eq i2 %kr_i, -1" [topp.c:172]   --->   Operation 449 'icmp' 'exitcond2_i' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 450 [1/1] (0.00ns)   --->   "%empty_427 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 450 'speclooptripcount' 'empty_427' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 451 [1/1] (1.56ns)   --->   "%kr = add i2 %kr_i, 1" [topp.c:172]   --->   Operation 451 'add' 'kr' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 452 [1/1] (0.00ns)   --->   "br i1 %exitcond2_i, label %4, label %.preheader7.i.preheader" [topp.c:172]   --->   Operation 452 'br' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 453 [1/1] (0.00ns)   --->   "%tmp_103_i = zext i2 %kr_i to i4" [topp.c:177]   --->   Operation 453 'zext' 'tmp_103_i' <Predicate = (!exitcond2_i)> <Delay = 0.00>
+ST_10 : Operation 454 [1/1] (0.00ns)   --->   "%p_shl_i = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %kr_i, i2 0)" [topp.c:177]   --->   Operation 454 'bitconcatenate' 'p_shl_i' <Predicate = (!exitcond2_i)> <Delay = 0.00>
+ST_10 : Operation 455 [1/1] (1.73ns)   --->   "%tmp_104_i = sub i4 %p_shl_i, %tmp_103_i" [topp.c:177]   --->   Operation 455 'sub' 'tmp_104_i' <Predicate = (!exitcond2_i)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 456 [1/1] (1.76ns)   --->   "br label %.preheader7.i" [topp.c:174]   --->   Operation 456 'br' <Predicate = (!exitcond2_i)> <Delay = 1.76>
+ST_10 : Operation 457 [1/1] (0.00ns)   --->   "%tmp_29 = trunc i5 %oc_i to i3" [topp.c:182]   --->   Operation 457 'trunc' 'tmp_29' <Predicate = (exitcond2_i)> <Delay = 0.00>
+ST_10 : Operation 458 [1/1] (1.36ns)   --->   "switch i3 %tmp_29, label %branch740.i [
+    i3 0, label %branch033.i
+    i3 1, label %branch134.i
+    i3 2, label %branch235.i
+    i3 3, label %branch336.i
+    i3 -4, label %branch437.i
+    i3 -3, label %branch538.i
+    i3 -2, label %branch639.i
+  ]" [topp.c:182]   --->   Operation 458 'switch' <Predicate = (exitcond2_i)> <Delay = 1.36>
+ST_10 : Operation 459 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %out_6, float 0.000000e+00)" [topp.c:182]   --->   Operation 459 'write' <Predicate = (exitcond2_i & tmp_29 == 6)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_10 : Operation 460 [1/1] (0.00ns)   --->   "br label %5" [topp.c:182]   --->   Operation 460 'br' <Predicate = (exitcond2_i & tmp_29 == 6)> <Delay = 0.00>
+ST_10 : Operation 461 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %out_5, float 0.000000e+00)" [topp.c:182]   --->   Operation 461 'write' <Predicate = (exitcond2_i & tmp_29 == 5)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_10 : Operation 462 [1/1] (0.00ns)   --->   "br label %5" [topp.c:182]   --->   Operation 462 'br' <Predicate = (exitcond2_i & tmp_29 == 5)> <Delay = 0.00>
+ST_10 : Operation 463 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %out_4, float 0.000000e+00)" [topp.c:182]   --->   Operation 463 'write' <Predicate = (exitcond2_i & tmp_29 == 4)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_10 : Operation 464 [1/1] (0.00ns)   --->   "br label %5" [topp.c:182]   --->   Operation 464 'br' <Predicate = (exitcond2_i & tmp_29 == 4)> <Delay = 0.00>
+ST_10 : Operation 465 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %out_3, float 0.000000e+00)" [topp.c:182]   --->   Operation 465 'write' <Predicate = (exitcond2_i & tmp_29 == 3)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_10 : Operation 466 [1/1] (0.00ns)   --->   "br label %5" [topp.c:182]   --->   Operation 466 'br' <Predicate = (exitcond2_i & tmp_29 == 3)> <Delay = 0.00>
+ST_10 : Operation 467 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %out_2, float 0.000000e+00)" [topp.c:182]   --->   Operation 467 'write' <Predicate = (exitcond2_i & tmp_29 == 2)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_10 : Operation 468 [1/1] (0.00ns)   --->   "br label %5" [topp.c:182]   --->   Operation 468 'br' <Predicate = (exitcond2_i & tmp_29 == 2)> <Delay = 0.00>
+ST_10 : Operation 469 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %out_1, float 0.000000e+00)" [topp.c:182]   --->   Operation 469 'write' <Predicate = (exitcond2_i & tmp_29 == 1)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_10 : Operation 470 [1/1] (0.00ns)   --->   "br label %5" [topp.c:182]   --->   Operation 470 'br' <Predicate = (exitcond2_i & tmp_29 == 1)> <Delay = 0.00>
+ST_10 : Operation 471 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %out_0, float 0.000000e+00)" [topp.c:182]   --->   Operation 471 'write' <Predicate = (exitcond2_i & tmp_29 == 0)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_10 : Operation 472 [1/1] (0.00ns)   --->   "br label %5" [topp.c:182]   --->   Operation 472 'br' <Predicate = (exitcond2_i & tmp_29 == 0)> <Delay = 0.00>
+ST_10 : Operation 473 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %out_7, float 0.000000e+00)" [topp.c:182]   --->   Operation 473 'write' <Predicate = (exitcond2_i & tmp_29 == 7)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_10 : Operation 474 [1/1] (0.00ns)   --->   "br label %5" [topp.c:182]   --->   Operation 474 'br' <Predicate = (exitcond2_i & tmp_29 == 7)> <Delay = 0.00>
+
+State 11 <SV = 6> <Delay = 1.76>
+ST_11 : Operation 475 [1/1] (0.00ns)   --->   "%kc_i = phi i2 [ 0, %.preheader7.i.preheader ], [ %kc, %.preheader7.i.loopexit ]"   --->   Operation 475 'phi' 'kc_i' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 476 [1/1] (0.95ns)   --->   "%exitcond1_i = icmp eq i2 %kc_i, -1" [topp.c:174]   --->   Operation 476 'icmp' 'exitcond1_i' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 477 [1/1] (0.00ns)   --->   "%empty_428 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 477 'speclooptripcount' 'empty_428' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 478 [1/1] (1.56ns)   --->   "%kc = add i2 %kc_i, 1" [topp.c:174]   --->   Operation 478 'add' 'kc' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 479 [1/1] (0.00ns)   --->   "br i1 %exitcond1_i, label %.preheader.loopexit, label %.preheader.i.preheader" [topp.c:174]   --->   Operation 479 'br' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 480 [1/1] (0.00ns)   --->   "%tmp_105_i = zext i2 %kc_i to i4" [topp.c:177]   --->   Operation 480 'zext' 'tmp_105_i' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_11 : Operation 481 [1/1] (1.73ns)   --->   "%tmp_106_i = add i4 %tmp_104_i, %tmp_105_i" [topp.c:177]   --->   Operation 481 'add' 'tmp_106_i' <Predicate = (!exitcond1_i)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 482 [1/1] (1.76ns)   --->   "br label %.preheader.i" [topp.c:176]   --->   Operation 482 'br' <Predicate = (!exitcond1_i)> <Delay = 1.76>
+ST_11 : Operation 483 [1/1] (0.00ns)   --->   "br label %.preheader"   --->   Operation 483 'br' <Predicate = (exitcond1_i)> <Delay = 0.00>
+
+State 12 <SV = 7> <Delay = 3.42>
+ST_12 : Operation 484 [1/1] (0.00ns)   --->   "%ic_1_i = phi i4 [ %ic, %3 ], [ 0, %.preheader.i.preheader ]"   --->   Operation 484 'phi' 'ic_1_i' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 485 [1/1] (1.30ns)   --->   "%exitcond_i = icmp eq i4 %ic_1_i, -8" [topp.c:176]   --->   Operation 485 'icmp' 'exitcond_i' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 486 [1/1] (0.00ns)   --->   "%empty_429 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 486 'speclooptripcount' 'empty_429' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 487 [1/1] (1.73ns)   --->   "%ic = add i4 %ic_1_i, 1" [topp.c:176]   --->   Operation 487 'add' 'ic' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 488 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %.preheader7.i.loopexit, label %3" [topp.c:176]   --->   Operation 488 'br' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 489 [1/1] (0.00ns)   --->   "%win_buf_0_0_7_loa = load float* %win_buf_0_0_7" [topp.c:177]   --->   Operation 489 'load' 'win_buf_0_0_7_loa' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 490 [1/1] (0.00ns)   --->   "%win_buf_0_0_7_1_l = load float* %win_buf_0_0_7_1" [topp.c:177]   --->   Operation 490 'load' 'win_buf_0_0_7_1_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 491 [1/1] (0.00ns)   --->   "%win_buf_0_0_7_2_l = load float* %win_buf_0_0_7_2" [topp.c:177]   --->   Operation 491 'load' 'win_buf_0_0_7_2_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 492 [1/1] (0.00ns)   --->   "%win_buf_0_0_7_3_l = load float* %win_buf_0_0_7_3" [topp.c:177]   --->   Operation 492 'load' 'win_buf_0_0_7_3_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 493 [1/1] (0.00ns)   --->   "%win_buf_0_0_7_4_l = load float* %win_buf_0_0_7_4" [topp.c:177]   --->   Operation 493 'load' 'win_buf_0_0_7_4_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 494 [1/1] (0.00ns)   --->   "%win_buf_0_0_7_5_l = load float* %win_buf_0_0_7_5" [topp.c:177]   --->   Operation 494 'load' 'win_buf_0_0_7_5_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 495 [1/1] (0.00ns)   --->   "%win_buf_0_0_7_6_l = load float* %win_buf_0_0_7_6" [topp.c:177]   --->   Operation 495 'load' 'win_buf_0_0_7_6_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 496 [1/1] (0.00ns)   --->   "%win_buf_0_0_7_7_l = load float* %win_buf_0_0_7_7" [topp.c:177]   --->   Operation 496 'load' 'win_buf_0_0_7_7_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 497 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_loa_4 = load float* %win_buf_0_1_7" [topp.c:177]   --->   Operation 497 'load' 'win_buf_0_1_7_loa_4' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 498 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_1_l_1 = load float* %win_buf_0_1_7_1" [topp.c:177]   --->   Operation 498 'load' 'win_buf_0_1_7_1_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 499 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_2_l_1 = load float* %win_buf_0_1_7_2" [topp.c:177]   --->   Operation 499 'load' 'win_buf_0_1_7_2_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 500 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_3_l_1 = load float* %win_buf_0_1_7_3" [topp.c:177]   --->   Operation 500 'load' 'win_buf_0_1_7_3_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 501 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_4_l_1 = load float* %win_buf_0_1_7_4" [topp.c:177]   --->   Operation 501 'load' 'win_buf_0_1_7_4_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 502 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_5_l_1 = load float* %win_buf_0_1_7_5" [topp.c:177]   --->   Operation 502 'load' 'win_buf_0_1_7_5_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 503 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_6_l_1 = load float* %win_buf_0_1_7_6" [topp.c:177]   --->   Operation 503 'load' 'win_buf_0_1_7_6_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 504 [1/1] (0.00ns)   --->   "%win_buf_0_1_7_7_l_1 = load float* %win_buf_0_1_7_7" [topp.c:177]   --->   Operation 504 'load' 'win_buf_0_1_7_7_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 505 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_loa_4 = load float* %win_buf_0_2_7" [topp.c:177]   --->   Operation 505 'load' 'win_buf_0_2_7_loa_4' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 506 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_1_l_1 = load float* %win_buf_0_2_7_1" [topp.c:177]   --->   Operation 506 'load' 'win_buf_0_2_7_1_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 507 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_2_l_1 = load float* %win_buf_0_2_7_2" [topp.c:177]   --->   Operation 507 'load' 'win_buf_0_2_7_2_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 508 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_3_l_1 = load float* %win_buf_0_2_7_3" [topp.c:177]   --->   Operation 508 'load' 'win_buf_0_2_7_3_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 509 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_4_l_1 = load float* %win_buf_0_2_7_4" [topp.c:177]   --->   Operation 509 'load' 'win_buf_0_2_7_4_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 510 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_5_l_1 = load float* %win_buf_0_2_7_5" [topp.c:177]   --->   Operation 510 'load' 'win_buf_0_2_7_5_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 511 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_6_l_1 = load float* %win_buf_0_2_7_6" [topp.c:177]   --->   Operation 511 'load' 'win_buf_0_2_7_6_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 512 [1/1] (0.00ns)   --->   "%win_buf_0_2_7_7_l_1 = load float* %win_buf_0_2_7_7" [topp.c:177]   --->   Operation 512 'load' 'win_buf_0_2_7_7_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 513 [1/1] (0.00ns)   --->   "%win_buf_1_0_7_loa = load float* %win_buf_1_0_7" [topp.c:177]   --->   Operation 513 'load' 'win_buf_1_0_7_loa' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 514 [1/1] (0.00ns)   --->   "%win_buf_1_0_7_1_l = load float* %win_buf_1_0_7_1" [topp.c:177]   --->   Operation 514 'load' 'win_buf_1_0_7_1_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 515 [1/1] (0.00ns)   --->   "%win_buf_1_0_7_2_l = load float* %win_buf_1_0_7_2" [topp.c:177]   --->   Operation 515 'load' 'win_buf_1_0_7_2_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 516 [1/1] (0.00ns)   --->   "%win_buf_1_0_7_3_l = load float* %win_buf_1_0_7_3" [topp.c:177]   --->   Operation 516 'load' 'win_buf_1_0_7_3_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 517 [1/1] (0.00ns)   --->   "%win_buf_1_0_7_4_l = load float* %win_buf_1_0_7_4" [topp.c:177]   --->   Operation 517 'load' 'win_buf_1_0_7_4_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 518 [1/1] (0.00ns)   --->   "%win_buf_1_0_7_5_l = load float* %win_buf_1_0_7_5" [topp.c:177]   --->   Operation 518 'load' 'win_buf_1_0_7_5_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 519 [1/1] (0.00ns)   --->   "%win_buf_1_0_7_6_l = load float* %win_buf_1_0_7_6" [topp.c:177]   --->   Operation 519 'load' 'win_buf_1_0_7_6_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 520 [1/1] (0.00ns)   --->   "%win_buf_1_0_7_7_l = load float* %win_buf_1_0_7_7" [topp.c:177]   --->   Operation 520 'load' 'win_buf_1_0_7_7_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 521 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_loa_4 = load float* %win_buf_1_1_7" [topp.c:177]   --->   Operation 521 'load' 'win_buf_1_1_7_loa_4' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 522 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_1_l_1 = load float* %win_buf_1_1_7_1" [topp.c:177]   --->   Operation 522 'load' 'win_buf_1_1_7_1_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 523 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_2_l_1 = load float* %win_buf_1_1_7_2" [topp.c:177]   --->   Operation 523 'load' 'win_buf_1_1_7_2_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 524 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_3_l_1 = load float* %win_buf_1_1_7_3" [topp.c:177]   --->   Operation 524 'load' 'win_buf_1_1_7_3_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 525 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_4_l_1 = load float* %win_buf_1_1_7_4" [topp.c:177]   --->   Operation 525 'load' 'win_buf_1_1_7_4_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 526 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_5_l_1 = load float* %win_buf_1_1_7_5" [topp.c:177]   --->   Operation 526 'load' 'win_buf_1_1_7_5_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 527 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_6_l_1 = load float* %win_buf_1_1_7_6" [topp.c:177]   --->   Operation 527 'load' 'win_buf_1_1_7_6_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 528 [1/1] (0.00ns)   --->   "%win_buf_1_1_7_7_l_1 = load float* %win_buf_1_1_7_7" [topp.c:177]   --->   Operation 528 'load' 'win_buf_1_1_7_7_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 529 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_loa_4 = load float* %win_buf_1_2_7" [topp.c:177]   --->   Operation 529 'load' 'win_buf_1_2_7_loa_4' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 530 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_1_l_1 = load float* %win_buf_1_2_7_1" [topp.c:177]   --->   Operation 530 'load' 'win_buf_1_2_7_1_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 531 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_2_l_1 = load float* %win_buf_1_2_7_2" [topp.c:177]   --->   Operation 531 'load' 'win_buf_1_2_7_2_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 532 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_3_l_1 = load float* %win_buf_1_2_7_3" [topp.c:177]   --->   Operation 532 'load' 'win_buf_1_2_7_3_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 533 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_4_l_1 = load float* %win_buf_1_2_7_4" [topp.c:177]   --->   Operation 533 'load' 'win_buf_1_2_7_4_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 534 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_5_l_1 = load float* %win_buf_1_2_7_5" [topp.c:177]   --->   Operation 534 'load' 'win_buf_1_2_7_5_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 535 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_6_l_1 = load float* %win_buf_1_2_7_6" [topp.c:177]   --->   Operation 535 'load' 'win_buf_1_2_7_6_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 536 [1/1] (0.00ns)   --->   "%win_buf_1_2_7_7_l_1 = load float* %win_buf_1_2_7_7" [topp.c:177]   --->   Operation 536 'load' 'win_buf_1_2_7_7_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 537 [1/1] (0.00ns)   --->   "%win_buf_2_0_7_loa = load float* %win_buf_2_0_7" [topp.c:177]   --->   Operation 537 'load' 'win_buf_2_0_7_loa' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 538 [1/1] (0.00ns)   --->   "%win_buf_2_0_7_1_l = load float* %win_buf_2_0_7_1" [topp.c:177]   --->   Operation 538 'load' 'win_buf_2_0_7_1_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 539 [1/1] (0.00ns)   --->   "%win_buf_2_0_7_2_l = load float* %win_buf_2_0_7_2" [topp.c:177]   --->   Operation 539 'load' 'win_buf_2_0_7_2_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 540 [1/1] (0.00ns)   --->   "%win_buf_2_0_7_3_l = load float* %win_buf_2_0_7_3" [topp.c:177]   --->   Operation 540 'load' 'win_buf_2_0_7_3_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 541 [1/1] (0.00ns)   --->   "%win_buf_2_0_7_4_l = load float* %win_buf_2_0_7_4" [topp.c:177]   --->   Operation 541 'load' 'win_buf_2_0_7_4_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 542 [1/1] (0.00ns)   --->   "%win_buf_2_0_7_5_l = load float* %win_buf_2_0_7_5" [topp.c:177]   --->   Operation 542 'load' 'win_buf_2_0_7_5_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 543 [1/1] (0.00ns)   --->   "%win_buf_2_0_7_6_l = load float* %win_buf_2_0_7_6" [topp.c:177]   --->   Operation 543 'load' 'win_buf_2_0_7_6_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 544 [1/1] (0.00ns)   --->   "%win_buf_2_0_7_7_l = load float* %win_buf_2_0_7_7" [topp.c:177]   --->   Operation 544 'load' 'win_buf_2_0_7_7_l' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 545 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_loa_4 = load float* %win_buf_2_1_7" [topp.c:177]   --->   Operation 545 'load' 'win_buf_2_1_7_loa_4' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 546 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_1_l_1 = load float* %win_buf_2_1_7_1" [topp.c:177]   --->   Operation 546 'load' 'win_buf_2_1_7_1_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 547 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_2_l_1 = load float* %win_buf_2_1_7_2" [topp.c:177]   --->   Operation 547 'load' 'win_buf_2_1_7_2_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 548 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_3_l_1 = load float* %win_buf_2_1_7_3" [topp.c:177]   --->   Operation 548 'load' 'win_buf_2_1_7_3_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 549 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_4_l_1 = load float* %win_buf_2_1_7_4" [topp.c:177]   --->   Operation 549 'load' 'win_buf_2_1_7_4_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 550 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_5_l_1 = load float* %win_buf_2_1_7_5" [topp.c:177]   --->   Operation 550 'load' 'win_buf_2_1_7_5_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 551 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_6_l_1 = load float* %win_buf_2_1_7_6" [topp.c:177]   --->   Operation 551 'load' 'win_buf_2_1_7_6_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 552 [1/1] (0.00ns)   --->   "%win_buf_2_1_7_7_l_1 = load float* %win_buf_2_1_7_7" [topp.c:177]   --->   Operation 552 'load' 'win_buf_2_1_7_7_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 553 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_loa_4 = load float* %win_buf_2_2_7" [topp.c:177]   --->   Operation 553 'load' 'win_buf_2_2_7_loa_4' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 554 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_1_l_1 = load float* %win_buf_2_2_7_1" [topp.c:177]   --->   Operation 554 'load' 'win_buf_2_2_7_1_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 555 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_2_l_1 = load float* %win_buf_2_2_7_2" [topp.c:177]   --->   Operation 555 'load' 'win_buf_2_2_7_2_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 556 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_3_l_1 = load float* %win_buf_2_2_7_3" [topp.c:177]   --->   Operation 556 'load' 'win_buf_2_2_7_3_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 557 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_4_l_1 = load float* %win_buf_2_2_7_4" [topp.c:177]   --->   Operation 557 'load' 'win_buf_2_2_7_4_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 558 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_5_l_1 = load float* %win_buf_2_2_7_5" [topp.c:177]   --->   Operation 558 'load' 'win_buf_2_2_7_5_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 559 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_6_l_1 = load float* %win_buf_2_2_7_6" [topp.c:177]   --->   Operation 559 'load' 'win_buf_2_2_7_6_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 560 [1/1] (0.00ns)   --->   "%win_buf_2_2_7_7_l_1 = load float* %win_buf_2_2_7_7" [topp.c:177]   --->   Operation 560 'load' 'win_buf_2_2_7_7_l_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 561 [1/1] (0.00ns)   --->   "%tmp_30 = trunc i4 %ic_1_i to i3" [topp.c:177]   --->   Operation 561 'trunc' 'tmp_30' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 562 [1/1] (0.00ns)   --->   "%tmp_111_i = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %tmp_106_i, i3 %tmp_30)" [topp.c:177]   --->   Operation 562 'bitconcatenate' 'tmp_111_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 563 [1/1] (3.42ns)   --->   "%empty_430 = call float @_ssdm_op_Mux.ap_auto.72float.i7(float %win_buf_0_0_7_loa, float %win_buf_0_0_7_1_l, float %win_buf_0_0_7_2_l, float %win_buf_0_0_7_3_l, float %win_buf_0_0_7_4_l, float %win_buf_0_0_7_5_l, float %win_buf_0_0_7_6_l, float %win_buf_0_0_7_7_l, float %win_buf_0_1_7_loa_4, float %win_buf_0_1_7_1_l_1, float %win_buf_0_1_7_2_l_1, float %win_buf_0_1_7_3_l_1, float %win_buf_0_1_7_4_l_1, float %win_buf_0_1_7_5_l_1, float %win_buf_0_1_7_6_l_1, float %win_buf_0_1_7_7_l_1, float %win_buf_0_2_7_loa_4, float %win_buf_0_2_7_1_l_1, float %win_buf_0_2_7_2_l_1, float %win_buf_0_2_7_3_l_1, float %win_buf_0_2_7_4_l_1, float %win_buf_0_2_7_5_l_1, float %win_buf_0_2_7_6_l_1, float %win_buf_0_2_7_7_l_1, float %win_buf_1_0_7_loa, float %win_buf_1_0_7_1_l, float %win_buf_1_0_7_2_l, float %win_buf_1_0_7_3_l, float %win_buf_1_0_7_4_l, float %win_buf_1_0_7_5_l, float %win_buf_1_0_7_6_l, float %win_buf_1_0_7_7_l, float %win_buf_1_1_7_loa_4, float %win_buf_1_1_7_1_l_1, float %win_buf_1_1_7_2_l_1, float %win_buf_1_1_7_3_l_1, float %win_buf_1_1_7_4_l_1, float %win_buf_1_1_7_5_l_1, float %win_buf_1_1_7_6_l_1, float %win_buf_1_1_7_7_l_1, float %win_buf_1_2_7_loa_4, float %win_buf_1_2_7_1_l_1, float %win_buf_1_2_7_2_l_1, float %win_buf_1_2_7_3_l_1, float %win_buf_1_2_7_4_l_1, float %win_buf_1_2_7_5_l_1, float %win_buf_1_2_7_6_l_1, float %win_buf_1_2_7_7_l_1, float %win_buf_2_0_7_loa, float %win_buf_2_0_7_1_l, float %win_buf_2_0_7_2_l, float %win_buf_2_0_7_3_l, float %win_buf_2_0_7_4_l, float %win_buf_2_0_7_5_l, float %win_buf_2_0_7_6_l, float %win_buf_2_0_7_7_l, float %win_buf_2_1_7_loa_4, float %win_buf_2_1_7_1_l_1, float %win_buf_2_1_7_2_l_1, float %win_buf_2_1_7_3_l_1, float %win_buf_2_1_7_4_l_1, float %win_buf_2_1_7_5_l_1, float %win_buf_2_1_7_6_l_1, float %win_buf_2_1_7_7_l_1, float %win_buf_2_2_7_loa_4, float %win_buf_2_2_7_1_l_1, float %win_buf_2_2_7_2_l_1, float %win_buf_2_2_7_3_l_1, float %win_buf_2_2_7_4_l_1, float %win_buf_2_2_7_5_l_1, float %win_buf_2_2_7_6_l_1, float %win_buf_2_2_7_7_l_1, i7 %tmp_111_i)" [topp.c:177]   --->   Operation 563 'mux' 'empty_430' <Predicate = (!exitcond_i)> <Delay = 3.42> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 564 [1/1] (0.00ns)   --->   "br label %.preheader.i" [topp.c:176]   --->   Operation 564 'br' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_12 : Operation 565 [1/1] (0.00ns)   --->   "br label %.preheader7.i"   --->   Operation 565 'br' <Predicate = (exitcond_i)> <Delay = 0.00>
+
+State 13 <SV = 6> <Delay = 0.00>
+ST_13 : Operation 566 [1/1] (0.00ns)   --->   "br label %.preheader8.i" [topp.c:169]   --->   Operation 566 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('r') with incoming values : ('r', topp.c:144) [123]  (1.77 ns)
+
+ <State 2>: 1.78ns
+The critical path consists of the following:
+	'phi' operation ('r') with incoming values : ('r', topp.c:144) [123]  (0 ns)
+	'add' operation ('r', topp.c:144) [126]  (1.78 ns)
+
+ <State 3>: 1.78ns
+The critical path consists of the following:
+	'phi' operation ('c') with incoming values : ('c', topp.c:145) [133]  (0 ns)
+	'add' operation ('c', topp.c:145) [136]  (1.78 ns)
+
+ <State 4>: 2.48ns
+The critical path consists of the following:
+	'phi' operation ('ic') with incoming values : ('ic', topp.c:146) [158]  (0 ns)
+	'mux' operation ('win_buf[0][0][0]', topp.c:148) [173]  (2.48 ns)
+	'store' operation (topp.c:148) of variable 'win_buf[0][0][0]', topp.c:148 on local variable 'win_buf[0][0][7]' [182]  (0 ns)
+
+ <State 5>: 2.48ns
+The critical path consists of the following:
+	'load' operation ('win_buf_0_2_7_loa', topp.c:149) on local variable 'win_buf[0][2][7]' [200]  (0 ns)
+	'mux' operation ('win_buf[0][1][0]', topp.c:149) [208]  (2.48 ns)
+	'store' operation (topp.c:149) of variable 'win_buf[0][1][0]', topp.c:149 on local variable 'win_buf[0][1][7]' [217]  (0 ns)
+
+ <State 6>: 2.48ns
+The critical path consists of the following:
+	'load' operation ('win_buf_1_1_7_loa', topp.c:150) on local variable 'win_buf[1][1][7]' [235]  (0 ns)
+	'mux' operation ('win_buf[1][0][0]', topp.c:150) [243]  (2.48 ns)
+	'store' operation (topp.c:150) of variable 'win_buf[1][0][0]', topp.c:150 on local variable 'win_buf[1][0][7]' [255]  (0 ns)
+
+ <State 7>: 2.48ns
+The critical path consists of the following:
+	'load' operation ('win_buf_1_2_7_loa', topp.c:151) on local variable 'win_buf[1][2][7]' [270]  (0 ns)
+	'mux' operation ('win_buf[1][1][0]', topp.c:151) [278]  (2.48 ns)
+	'store' operation (topp.c:151) of variable 'win_buf[1][1][0]', topp.c:151 on local variable 'win_buf[1][1][7]' [290]  (0 ns)
+
+ <State 8>: 7.96ns
+The critical path consists of the following:
+	fifo read on port 'p1_6' (aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1115->topp.c:157) [403]  (3.63 ns)
+	multiplexor before 'phi' operation ('win_buf[2][2][0]', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1097->topp.c:157) with incoming values : ('p1_6_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1115->topp.c:157) ('p1_5_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1112->topp.c:157) ('p1_4_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1109->topp.c:157) ('p1_3_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1106->topp.c:157) ('p1_2_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1103->topp.c:157) ('p1_1_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1100->topp.c:157) ('p1_0_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1097->topp.c:157) ('p1_7_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1118->topp.c:157) [427]  (2 ns)
+	'phi' operation ('win_buf[2][2][0]', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1097->topp.c:157) with incoming values : ('p1_6_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1115->topp.c:157) ('p1_5_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1112->topp.c:157) ('p1_4_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1109->topp.c:157) ('p1_3_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1106->topp.c:157) ('p1_2_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1103->topp.c:157) ('p1_1_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1100->topp.c:157) ('p1_0_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1097->topp.c:157) ('p1_7_read', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1118->topp.c:157) [427]  (0 ns)
+	'store' operation (topp.c:160) of variable 'win_buf[2][2][0]', aesl_mux_load.8[31 x [31 x float]]P.i3.i64.i64:1097->topp.c:157 on array 'linbu_5_1_2' [447]  (2.32 ns)
+
+ <State 9>: 1.78ns
+The critical path consists of the following:
+	'phi' operation ('oc') with incoming values : ('oc', topp.c:169) [549]  (0 ns)
+	'add' operation ('oc', topp.c:169) [552]  (1.78 ns)
+
+ <State 10>: 3.63ns
+The critical path consists of the following:
+	fifo write on port 'out_6' (topp.c:182) [668]  (3.63 ns)
+
+ <State 11>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('ic') with incoming values : ('ic', topp.c:176) [578]  (1.77 ns)
+
+ <State 12>: 3.42ns
+The critical path consists of the following:
+	'phi' operation ('ic') with incoming values : ('ic', topp.c:176) [578]  (0 ns)
+	'mux' operation ('empty_430', topp.c:177) [658]  (3.42 ns)
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

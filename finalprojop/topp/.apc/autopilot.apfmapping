@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="topp.h" path="Z:\thietkephancunglab\finalproj\topp.h"/>
+    <originFiles name="topp.c" path="Z:\thietkephancunglab\finalprojop\topp.c"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_topp.c" path="Z:\thietkephancunglab\finalproj\tb_topp.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

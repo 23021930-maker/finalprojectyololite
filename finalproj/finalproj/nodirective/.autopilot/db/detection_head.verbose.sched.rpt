@@ -1,0 +1,606 @@
+
+
+================================================================
+== Vivado HLS Report for 'detection_head'
+================================================================
+* Date:           Sun Jun  7 19:29:33 2026
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        finalproj
+* Solution:       nodirective
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.677|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  393505|  393505|  393505|  393505|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+--------+--------+----------+-----------+-----------+------+----------+
+        |                     |     Latency     | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min  |   max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+--------+--------+----------+-----------+-----------+------+----------+
+        |- Loop 1             |  393504|  393504|     24594|          -|          -|    16|    no    |
+        | + Loop 1.1          |   24592|   24592|      3074|          -|          -|     8|    no    |
+        |  ++ Loop 1.1.1      |    3072|    3072|       384|          -|          -|     8|    no    |
+        |   +++ Loop 1.1.1.1  |     352|     352|        11|          -|          -|    32|    no    |
+        +---------------------+--------+--------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 45
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond3)
+3 --> 
+	4  / (!exitcond2)
+	2  / (exitcond2)
+4 --> 
+	5  / (!exitcond1)
+	3  / (exitcond1)
+5 --> 
+	6  / (!exitcond)
+	16  / (exitcond)
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	5  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	4  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 46 [1/1] (1.76ns)   --->   "br label %.loopexit" [topp.c:320]   --->   Operation 46 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 1.78>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%oc = phi i5 [ 0, %0 ], [ %oc_1, %.loopexit.loopexit ]"   --->   Operation 47 'phi' 'oc' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (1.36ns)   --->   "%exitcond3 = icmp eq i5 %oc, -16" [topp.c:320]   --->   Operation 48 'icmp' 'exitcond3' <Predicate = true> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)"   --->   Operation 49 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (1.78ns)   --->   "%oc_1 = add i5 %oc, 1" [topp.c:320]   --->   Operation 50 'add' 'oc_1' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "br i1 %exitcond3, label %5, label %.preheader4.preheader" [topp.c:320]   --->   Operation 51 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_cast = zext i5 %oc to i12" [topp.c:322]   --->   Operation 52 'zext' 'tmp_cast' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (1.76ns)   --->   "br label %.preheader4" [topp.c:322]   --->   Operation 53 'br' <Predicate = (!exitcond3)> <Delay = 1.76>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "ret void" [topp.c:339]   --->   Operation 54 'ret' <Predicate = (exitcond3)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.76>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%r = phi i4 [ 0, %.preheader4.preheader ], [ %r_3, %.preheader4.loopexit ]"   --->   Operation 55 'phi' 'r' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (1.30ns)   --->   "%exitcond2 = icmp eq i4 %r, -8" [topp.c:322]   --->   Operation 56 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 57 'speclooptripcount' 'empty_17' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (1.73ns)   --->   "%r_3 = add i4 %r, 1" [topp.c:322]   --->   Operation 58 'add' 'r_3' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %.loopexit.loopexit, label %.preheader.preheader" [topp.c:322]   --->   Operation 59 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_s = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %r, i3 0)" [topp.c:322]   --->   Operation 60 'bitconcatenate' 'tmp_s' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_60_cast = zext i7 %tmp_s to i8" [topp.c:325]   --->   Operation 61 'zext' 'tmp_60_cast' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (1.76ns)   --->   "br label %.preheader" [topp.c:325]   --->   Operation 62 'br' <Predicate = (!exitcond2)> <Delay = 1.76>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 63 'br' <Predicate = (exitcond2)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 3.41>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%c = phi i4 [ %c_3, %4 ], [ 0, %.preheader.preheader ]"   --->   Operation 64 'phi' 'c' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (1.30ns)   --->   "%exitcond1 = icmp eq i4 %c, -8" [topp.c:325]   --->   Operation 65 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%empty_18 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 66 'speclooptripcount' 'empty_18' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 67 [1/1] (1.73ns)   --->   "%c_3 = add i4 %c, 1" [topp.c:325]   --->   Operation 67 'add' 'c_3' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %.preheader4.loopexit, label %1" [topp.c:325]   --->   Operation 68 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%tmp_10_cast = zext i4 %c to i8" [topp.c:332]   --->   Operation 69 'zext' 'tmp_10_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_4 : Operation 70 [1/1] (1.87ns)   --->   "%tmp_46 = add i8 %tmp_10_cast, %tmp_60_cast" [topp.c:332]   --->   Operation 70 'add' 'tmp_46' <Predicate = (!exitcond1)> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%tmp_63_cast = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %tmp_46, i5 0)" [topp.c:332]   --->   Operation 71 'bitconcatenate' 'tmp_63_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_65_cast = call i12 @_ssdm_op_BitConcatenate.i12.i8.i4(i8 %tmp_46, i4 0)" [topp.c:335]   --->   Operation 72 'bitconcatenate' 'tmp_65_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_4 : Operation 73 [1/1] (1.54ns)   --->   "%tmp_47 = add i12 %tmp_cast, %tmp_65_cast" [topp.c:335]   --->   Operation 73 'add' 'tmp_47' <Predicate = (!exitcond1)> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "%tmp_66_cast = zext i12 %tmp_47 to i64" [topp.c:335]   --->   Operation 74 'zext' 'tmp_66_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "%out_addr = getelementptr [1024 x float]* %out_r, i64 0, i64 %tmp_66_cast" [topp.c:335]   --->   Operation 75 'getelementptr' 'out_addr' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_4 : Operation 76 [1/1] (1.76ns)   --->   "br label %2" [topp.c:329]   --->   Operation 76 'br' <Predicate = (!exitcond1)> <Delay = 1.76>
+ST_4 : Operation 77 [1/1] (0.00ns)   --->   "br label %.preheader4"   --->   Operation 77 'br' <Predicate = (exitcond1)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 8.67>
+ST_5 : Operation 78 [1/1] (0.00ns)   --->   "%x_assign = phi float [ 0.000000e+00, %1 ], [ %sum, %3 ]"   --->   Operation 78 'phi' 'x_assign' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 79 [1/1] (0.00ns)   --->   "%ic = phi i6 [ 0, %1 ], [ %ic_1, %3 ]"   --->   Operation 79 'phi' 'ic' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 80 [1/1] (1.42ns)   --->   "%exitcond = icmp eq i6 %ic, -32" [topp.c:329]   --->   Operation 80 'icmp' 'exitcond' <Predicate = true> <Delay = 1.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 81 [1/1] (0.00ns)   --->   "%empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)"   --->   Operation 81 'speclooptripcount' 'empty_19' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 82 [1/1] (1.82ns)   --->   "%ic_1 = add i6 %ic, 1" [topp.c:329]   --->   Operation 82 'add' 'ic_1' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 83 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %4, label %3" [topp.c:329]   --->   Operation 83 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_11_cast = zext i6 %ic to i13" [topp.c:332]   --->   Operation 84 'zext' 'tmp_11_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_5 : Operation 85 [1/1] (1.67ns)   --->   "%tmp_48 = add i13 %tmp_63_cast, %tmp_11_cast" [topp.c:332]   --->   Operation 85 'add' 'tmp_48' <Predicate = (!exitcond)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%tmp_67_cast = zext i13 %tmp_48 to i64" [topp.c:332]   --->   Operation 86 'zext' 'tmp_67_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_5 : Operation 87 [1/1] (0.00ns)   --->   "%f5_addr = getelementptr [2048 x float]* @f5, i64 0, i64 %tmp_67_cast" [topp.c:332]   --->   Operation 87 'getelementptr' 'f5_addr' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_5 : Operation 88 [2/2] (3.25ns)   --->   "%f5_load = load float* %f5_addr, align 4" [topp.c:332]   --->   Operation 88 'load' 'f5_load' <Predicate = (!exitcond)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_5 : Operation 89 [1/1] (0.00ns)   --->   "%tmp_to_int_i = bitcast float %x_assign to i32" [topp.c:306->topp.c:335]   --->   Operation 89 'bitcast' 'tmp_to_int_i' <Predicate = (exitcond)> <Delay = 0.00>
+ST_5 : Operation 90 [1/1] (0.99ns)   --->   "%tmp_neg_i = xor i32 %tmp_to_int_i, -2147483648" [topp.c:306->topp.c:335]   --->   Operation 90 'xor' 'tmp_neg_i' <Predicate = (exitcond)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_i = bitcast i32 %tmp_neg_i to float" [topp.c:306->topp.c:335]   --->   Operation 91 'bitcast' 'tmp_i' <Predicate = (exitcond)> <Delay = 0.00>
+ST_5 : Operation 92 [9/9] (7.68ns)   --->   "%tmp_1_i = call float @llvm.exp.f32(float %tmp_i) nounwind" [topp.c:306->topp.c:335]   --->   Operation 92 'fexp' 'tmp_1_i' <Predicate = (exitcond)> <Delay = 7.68> <Core = "FExp">   --->   Core 126 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 3.25>
+ST_6 : Operation 93 [1/2] (3.25ns)   --->   "%f5_load = load float* %f5_addr, align 4" [topp.c:332]   --->   Operation 93 'load' 'f5_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+
+State 7 <SV = 6> <Delay = 5.70>
+ST_7 : Operation 94 [4/4] (5.70ns)   --->   "%tmp_12 = fmul float %f5_load, 0.000000e+00" [topp.c:332]   --->   Operation 94 'fmul' 'tmp_12' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 5.70>
+ST_8 : Operation 95 [3/4] (5.70ns)   --->   "%tmp_12 = fmul float %f5_load, 0.000000e+00" [topp.c:332]   --->   Operation 95 'fmul' 'tmp_12' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 5.70>
+ST_9 : Operation 96 [2/4] (5.70ns)   --->   "%tmp_12 = fmul float %f5_load, 0.000000e+00" [topp.c:332]   --->   Operation 96 'fmul' 'tmp_12' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 5.70>
+ST_10 : Operation 97 [1/4] (5.70ns)   --->   "%tmp_12 = fmul float %f5_load, 0.000000e+00" [topp.c:332]   --->   Operation 97 'fmul' 'tmp_12' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.25>
+ST_11 : Operation 98 [5/5] (7.25ns)   --->   "%sum = fadd float %x_assign, %tmp_12" [topp.c:332]   --->   Operation 98 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 7.25>
+ST_12 : Operation 99 [4/5] (7.25ns)   --->   "%sum = fadd float %x_assign, %tmp_12" [topp.c:332]   --->   Operation 99 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 7.25>
+ST_13 : Operation 100 [3/5] (7.25ns)   --->   "%sum = fadd float %x_assign, %tmp_12" [topp.c:332]   --->   Operation 100 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 7.25>
+ST_14 : Operation 101 [2/5] (7.25ns)   --->   "%sum = fadd float %x_assign, %tmp_12" [topp.c:332]   --->   Operation 101 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 7.25>
+ST_15 : Operation 102 [1/5] (7.25ns)   --->   "%sum = fadd float %x_assign, %tmp_12" [topp.c:332]   --->   Operation 102 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 103 [1/1] (0.00ns)   --->   "br label %2" [topp.c:329]   --->   Operation 103 'br' <Predicate = true> <Delay = 0.00>
+
+State 16 <SV = 5> <Delay = 7.68>
+ST_16 : Operation 104 [8/9] (7.68ns)   --->   "%tmp_1_i = call float @llvm.exp.f32(float %tmp_i) nounwind" [topp.c:306->topp.c:335]   --->   Operation 104 'fexp' 'tmp_1_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 126 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 17 <SV = 6> <Delay = 7.68>
+ST_17 : Operation 105 [7/9] (7.68ns)   --->   "%tmp_1_i = call float @llvm.exp.f32(float %tmp_i) nounwind" [topp.c:306->topp.c:335]   --->   Operation 105 'fexp' 'tmp_1_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 126 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 18 <SV = 7> <Delay = 7.68>
+ST_18 : Operation 106 [6/9] (7.68ns)   --->   "%tmp_1_i = call float @llvm.exp.f32(float %tmp_i) nounwind" [topp.c:306->topp.c:335]   --->   Operation 106 'fexp' 'tmp_1_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 126 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 19 <SV = 8> <Delay = 7.68>
+ST_19 : Operation 107 [5/9] (7.68ns)   --->   "%tmp_1_i = call float @llvm.exp.f32(float %tmp_i) nounwind" [topp.c:306->topp.c:335]   --->   Operation 107 'fexp' 'tmp_1_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 126 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 20 <SV = 9> <Delay = 7.68>
+ST_20 : Operation 108 [4/9] (7.68ns)   --->   "%tmp_1_i = call float @llvm.exp.f32(float %tmp_i) nounwind" [topp.c:306->topp.c:335]   --->   Operation 108 'fexp' 'tmp_1_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 126 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 21 <SV = 10> <Delay = 7.68>
+ST_21 : Operation 109 [3/9] (7.68ns)   --->   "%tmp_1_i = call float @llvm.exp.f32(float %tmp_i) nounwind" [topp.c:306->topp.c:335]   --->   Operation 109 'fexp' 'tmp_1_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 126 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 22 <SV = 11> <Delay = 7.68>
+ST_22 : Operation 110 [2/9] (7.68ns)   --->   "%tmp_1_i = call float @llvm.exp.f32(float %tmp_i) nounwind" [topp.c:306->topp.c:335]   --->   Operation 110 'fexp' 'tmp_1_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 126 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 23 <SV = 12> <Delay = 7.68>
+ST_23 : Operation 111 [1/9] (7.68ns)   --->   "%tmp_1_i = call float @llvm.exp.f32(float %tmp_i) nounwind" [topp.c:306->topp.c:335]   --->   Operation 111 'fexp' 'tmp_1_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 126 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 24 <SV = 13> <Delay = 7.25>
+ST_24 : Operation 112 [5/5] (7.25ns)   --->   "%tmp_2_i = fadd float %tmp_1_i, 1.000000e+00" [topp.c:306->topp.c:335]   --->   Operation 112 'fadd' 'tmp_2_i' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 14> <Delay = 7.25>
+ST_25 : Operation 113 [4/5] (7.25ns)   --->   "%tmp_2_i = fadd float %tmp_1_i, 1.000000e+00" [topp.c:306->topp.c:335]   --->   Operation 113 'fadd' 'tmp_2_i' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 15> <Delay = 7.25>
+ST_26 : Operation 114 [3/5] (7.25ns)   --->   "%tmp_2_i = fadd float %tmp_1_i, 1.000000e+00" [topp.c:306->topp.c:335]   --->   Operation 114 'fadd' 'tmp_2_i' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 16> <Delay = 7.25>
+ST_27 : Operation 115 [2/5] (7.25ns)   --->   "%tmp_2_i = fadd float %tmp_1_i, 1.000000e+00" [topp.c:306->topp.c:335]   --->   Operation 115 'fadd' 'tmp_2_i' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 17> <Delay = 7.25>
+ST_28 : Operation 116 [1/5] (7.25ns)   --->   "%tmp_2_i = fadd float %tmp_1_i, 1.000000e+00" [topp.c:306->topp.c:335]   --->   Operation 116 'fadd' 'tmp_2_i' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 18> <Delay = 6.07>
+ST_29 : Operation 117 [16/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 117 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 19> <Delay = 6.07>
+ST_30 : Operation 118 [15/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 118 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 20> <Delay = 6.07>
+ST_31 : Operation 119 [14/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 119 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 21> <Delay = 6.07>
+ST_32 : Operation 120 [13/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 120 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 22> <Delay = 6.07>
+ST_33 : Operation 121 [12/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 121 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 23> <Delay = 6.07>
+ST_34 : Operation 122 [11/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 122 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 24> <Delay = 6.07>
+ST_35 : Operation 123 [10/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 123 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 25> <Delay = 6.07>
+ST_36 : Operation 124 [9/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 124 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 26> <Delay = 6.07>
+ST_37 : Operation 125 [8/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 125 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 27> <Delay = 6.07>
+ST_38 : Operation 126 [7/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 126 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 28> <Delay = 6.07>
+ST_39 : Operation 127 [6/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 127 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 29> <Delay = 6.07>
+ST_40 : Operation 128 [5/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 128 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 30> <Delay = 6.07>
+ST_41 : Operation 129 [4/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 129 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 31> <Delay = 6.07>
+ST_42 : Operation 130 [3/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 130 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 32> <Delay = 6.07>
+ST_43 : Operation 131 [2/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 131 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 33> <Delay = 6.07>
+ST_44 : Operation 132 [1/16] (6.07ns)   --->   "%tmp_3_i = fdiv float 1.000000e+00, %tmp_2_i" [topp.c:306->topp.c:335]   --->   Operation 132 'fdiv' 'tmp_3_i' <Predicate = true> <Delay = 6.07> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 34> <Delay = 3.25>
+ST_45 : Operation 133 [1/1] (3.25ns)   --->   "store float %tmp_3_i, float* %out_addr, align 4" [topp.c:335]   --->   Operation 133 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_45 : Operation 134 [1/1] (0.00ns)   --->   "br label %.preheader" [topp.c:325]   --->   Operation 134 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('oc') with incoming values : ('oc', topp.c:320) [5]  (1.77 ns)
+
+ <State 2>: 1.78ns
+The critical path consists of the following:
+	'phi' operation ('oc') with incoming values : ('oc', topp.c:320) [5]  (0 ns)
+	'add' operation ('oc', topp.c:320) [8]  (1.78 ns)
+
+ <State 3>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('c') with incoming values : ('c', topp.c:325) [24]  (1.77 ns)
+
+ <State 4>: 3.42ns
+The critical path consists of the following:
+	'phi' operation ('c') with incoming values : ('c', topp.c:325) [24]  (0 ns)
+	'add' operation ('tmp_46', topp.c:332) [31]  (1.87 ns)
+	'add' operation ('tmp_47', topp.c:335) [34]  (1.55 ns)
+
+ <State 5>: 8.68ns
+The critical path consists of the following:
+	'phi' operation ('sum') with incoming values : ('sum', topp.c:332) [39]  (0 ns)
+	'xor' operation ('tmp_neg_i', topp.c:306->topp.c:335) [56]  (0.993 ns)
+	'fexp' operation ('tmp_1_i', topp.c:306->topp.c:335) [58]  (7.68 ns)
+
+ <State 6>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('f5_load', topp.c:332) on array 'f5' [50]  (3.25 ns)
+
+ <State 7>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_12', topp.c:332) [51]  (5.7 ns)
+
+ <State 8>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_12', topp.c:332) [51]  (5.7 ns)
+
+ <State 9>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_12', topp.c:332) [51]  (5.7 ns)
+
+ <State 10>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_12', topp.c:332) [51]  (5.7 ns)
+
+ <State 11>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', topp.c:332) [52]  (7.26 ns)
+
+ <State 12>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', topp.c:332) [52]  (7.26 ns)
+
+ <State 13>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', topp.c:332) [52]  (7.26 ns)
+
+ <State 14>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', topp.c:332) [52]  (7.26 ns)
+
+ <State 15>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', topp.c:332) [52]  (7.26 ns)
+
+ <State 16>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_1_i', topp.c:306->topp.c:335) [58]  (7.68 ns)
+
+ <State 17>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_1_i', topp.c:306->topp.c:335) [58]  (7.68 ns)
+
+ <State 18>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_1_i', topp.c:306->topp.c:335) [58]  (7.68 ns)
+
+ <State 19>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_1_i', topp.c:306->topp.c:335) [58]  (7.68 ns)
+
+ <State 20>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_1_i', topp.c:306->topp.c:335) [58]  (7.68 ns)
+
+ <State 21>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_1_i', topp.c:306->topp.c:335) [58]  (7.68 ns)
+
+ <State 22>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_1_i', topp.c:306->topp.c:335) [58]  (7.68 ns)
+
+ <State 23>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_1_i', topp.c:306->topp.c:335) [58]  (7.68 ns)
+
+ <State 24>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_2_i', topp.c:306->topp.c:335) [59]  (7.26 ns)
+
+ <State 25>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_2_i', topp.c:306->topp.c:335) [59]  (7.26 ns)
+
+ <State 26>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_2_i', topp.c:306->topp.c:335) [59]  (7.26 ns)
+
+ <State 27>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_2_i', topp.c:306->topp.c:335) [59]  (7.26 ns)
+
+ <State 28>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_2_i', topp.c:306->topp.c:335) [59]  (7.26 ns)
+
+ <State 29>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 30>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 31>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 32>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 33>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 34>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 35>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 36>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 37>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 38>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 39>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 40>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 41>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 42>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 43>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 44>: 6.08ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_3_i', topp.c:306->topp.c:335) [60]  (6.08 ns)
+
+ <State 45>: 3.25ns
+The critical path consists of the following:
+	'store' operation (topp.c:335) of variable 'tmp_3_i', topp.c:306->topp.c:335 on array 'out_r' [61]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
